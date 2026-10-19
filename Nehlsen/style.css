@@ -27,3 +27,7 @@ footer .footer-brand { display:inline-block;width:238px;max-width:100%;line-heig
 @media(max-width:760px){ .client-row { gap:28px 36px; } .client-row img { height:28px;max-width:130px; } .client-row li.tall img { height:44px; } .clients-head p { font-size:15px; } .clients-head { margin-bottom:42px; } }
 @media(prefers-reduced-motion:reduce){ .client-row img { transition:none; } }
 @media print{ .client-row img { filter:none;opacity:1; } }
+
+/* Footer-CTA: Gespräch buchen */
+.footer-cta { display:inline-flex;align-items:center;gap:14px;margin-top:22px;padding:12px 22px;background:var(--lime);color:var(--ink);font-weight:700;text-decoration:none;transition:background .2s; }
+.footer-cta:hover { background:#c3e83a;color:var(--ink); }
