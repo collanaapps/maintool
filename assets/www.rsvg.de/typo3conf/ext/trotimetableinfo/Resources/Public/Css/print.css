@@ -1,0 +1,55 @@
+body.print-route-active > * {
+    display: none!important;
+}
+
+.print-route-active #print-view {
+    display: block!important;
+}
+
+.print-route-active .fahrplan_head,
+.print-route-active .print-tarif,
+.print-route-active .fahrplan-block {
+    background: none!important;
+    color: #000!important;
+}
+
+.print-route-active .fahrplan_head .col-2,
+.print-route-active .fahrplan-block .col-2 {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+.print-route-active .fahrplan_head .col-2:last-child,
+.print-route-active .fahrplan-block .col-2:last-child {
+    display: none!important;
+}
+
+.print-route-active li.toggle,
+.print-route-active li.via {
+    display: none!important;
+}
+
+.print-route-active .fahrplan_print {
+    display: none!important;
+}
+
+.print-route-active .dot.hide-via {
+    border: none;
+    color: transparent;
+}
+
+.print-route-active .fahrplan_detail h5 > br {
+    display: none;
+}
+
+.print-route-active .route-segment-lightrail,
+.print-route-active .route-segment-regionaltrains,
+.print-route-active .route-segment-suburbantrains {
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+}
+
+.print-route-active .shadow {
+    box-shadow: none!important;
+}

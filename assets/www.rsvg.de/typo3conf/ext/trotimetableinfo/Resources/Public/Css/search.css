@@ -1,0 +1,246 @@
+.btn-change-direction {
+    border: 1px solid #ced4da!important;
+    width: 100%;
+}
+
+.btn-change-direction > img {
+    height: 1em;
+}
+
+.station-list {
+    position: relative;
+}
+
+.station-list::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: .625rem;
+    bottom: .625rem;
+    left: calc(.625rem - 1px);
+    height: calc(100% - 1.25rem);
+    width: 2px;
+    background: #212529;
+}
+
+.station-list li,
+.station-list.unfolded .via {
+    display: flex;
+    align-items: center;
+}
+
+.station-list .via,
+.station-list.unfolded .toggle {
+    display: none;
+}
+
+.station-list .dot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 1.25rem;
+    width: 1.25rem;
+    background: #fff;
+    border: 2px solid #212529;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.station-list .dot > i {
+    line-height: 16px;
+}
+
+.station-list .dot,
+.station-list .spacer {
+    flex: 0 0 1.25rem;
+    margin-right: 1.25rem;
+}
+
+.trotimetableinfo-list-form button:not(:disabled) .fa-circle-notch {
+    display: none;
+}
+
+.table_mehr {
+    transition: transform .3s ease;
+}
+
+.collapsed .table_mehr {
+    transform: rotate(180deg);
+}
+
+#print-view {
+    display: none;
+}
+
+.route-segment-list {
+    display: flex;
+    position: relative;
+}
+
+.route-segment {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 .25rem;
+}
+
+.route-segment-bus {
+    border: 2px solid #212529;
+    background: #fff;
+    color: #212529;
+}
+
+.route-segment-lightrail,
+.route-segment-regionaltrains,
+.route-segment-suburbantrains {
+    border: 2px solid #fff;
+    color: #fff;
+    background: #0088c7;
+}
+
+.fahrplan_detail .route-segment-lightrail,
+.fahrplan_detail .route-segment-regionaltrains,
+.fahrplan_detail .route-segment-suburbantrains {
+    border: 2px solid #0088c7;
+}
+
+.route-segment-walk {
+    padding: 0;
+    font-size: 1.2em;
+}
+
+.route-segment-seperator {
+    padding: 0;
+    opacity: .9;
+    width: .75rem;
+    margin: 0 .25rem;
+}
+
+.route-segment-ellipsis {
+    align-items: flex-end;
+}
+
+#routes > .route {
+    animation-name: search-fade-in;
+    animation-duration: .5s;
+    animation-timing-function: ease;
+}
+
+.bootstrap-autocomplete .dropdown-item {
+    white-space: normal;
+}
+
+@keyframes search-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.trotimetableinfo-search-backdrop {
+    background: rgba(0,0,0,.8);
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    transition: opacity .1s ease-in, visibility .1s ease-in;
+}
+
+#trotimetableinfo-search.open .trotimetableinfo-search-backdrop {
+    opacity: 1;
+    visibility: visible;
+}
+
+body.modal-open .trotimetableinfo-search-backdrop {
+    opacity: 0!important;
+    visibility: hidden!important;
+}
+
+.trotimetableinfo-search-container {
+    background-color: #fff;
+    width: 100%;
+    border: 1px solid #dcdcdc;
+    z-index: 1010!important;
+}
+
+.trotimetableinfo-search-container .nav-item {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.timepick__container {
+    position: absolute;
+    z-index: 99999;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,.25);
+    line-height: 1.125em;
+    font-size: 18px;
+}
+
+.timepick__container:not(.timepick__show) {
+    display: none;
+}
+
+.timepick__time {
+    width: 230px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.timepick__input {
+    max-width: calc(50% - 10px);
+    flex: 0 0 calc(50% - 10px);
+    height: 40px;
+    padding: .5rem 1rem;
+    border: none;
+    border-bottom: 1px solid #ced4da;
+}
+
+.timepick__divider {
+    flex: 0 0 20px;
+    text-align: center;
+}
+
+.fahrplan-block {
+    cursor: pointer;
+}
+
+.print-tarif {
+    background-color: transparent!important;
+    color: inherit!important;
+    border-bottom: 1px solid #ced4da;
+}
+
+.bootstrap-select .dropdown-menu.inner {
+    min-width: auto!important;
+}
+
+@media(min-width: 992px) {   
+    .trotimetableinfo-search-container {
+        width: 60%;
+    }
+}
+
+.other-date-warning {
+    padding: 20px;
+    background-color: #fff;
+    color: #dc3545;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.other-date-warning > i {
+    font-size: 28px;
+}

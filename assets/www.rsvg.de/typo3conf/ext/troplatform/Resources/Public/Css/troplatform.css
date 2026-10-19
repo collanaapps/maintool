@@ -1,0 +1,79 @@
+#error-box:not(.show),
+.distance-plan:not(.show),
+.choose-time:not(.show) {
+    display: none;
+}
+
+.distance-plan .route {
+    display: flex;
+    justify-content: space-between;
+}
+
+.distance-plan .visualized {
+    display: flex;
+    justify-content: space-between;
+    background: #389a99;
+    height: 10px;
+    align-items: flex-end;
+    margin: 20px 0 0;
+}
+
+.distance-plan .visualized .stop {
+    background: #389a99;
+    border-radius: 4px;
+    height: 20px;
+    width: 10px;
+}
+
+.choose-time .times .time {
+    margin: 0 0 .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.choose-time .times .time > span {
+    width: 100px;
+    flex: 0 0 100px;
+}
+
+.choose-time .times .time .bikes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    flex: 0 0 100px;
+    padding: 2px 0;
+    background: #fff;
+    border: 1px solid #9a9a9a;
+    transition: background .2s;
+}
+
+.choose-time .times .time.selected .bikes,
+.choose-time .times .time:hover .bikes {
+    background: #ccebff;
+}
+
+.choose-time .times .time.unavailable .bikes {
+    background: #ffc0c0;
+}
+
+.choose-time .times .time .bikes i {
+    margin: 0 0 0 2px;
+}
+
+.note {
+    font-size: 14px;
+}
+
+.note b {
+    font-weight: 400;
+    color: #f7b75f;
+}
+
+.spinner {
+    display: flex;
+    padding: 20px 0;
+    justify-content: center;
+}
