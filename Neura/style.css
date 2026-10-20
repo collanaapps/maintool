@@ -146,11 +146,12 @@ dialog>img{display:block;margin:auto;max-width:90vw;max-height:82vh;width:auto;h
 :root{--grad:linear-gradient(to right,#00b5d9,#006d80);--glass:rgba(50,50,50,.6);--glass-bd:rgba(120,120,120,.25);--card-sh:0 10px 24px rgba(17,24,39,.06)}
 body{font-size:20px;line-height:1.65;letter-spacing:.02em;color:#334155}
 p{margin-bottom:24px}
-.wrap{width:auto;max-width:none;margin-inline:20px}
+/* Inhalte zentriert im 1440px-Container (wie Original bei 1920px), nur der Hero ist randlos */
+.wrap{width:auto;max-width:1440px;margin-inline:auto;padding-inline:20px;box-sizing:border-box}
 .section{padding-top:110px;padding-bottom:110px}
 
 /* Header: schwebende Glas-Leiste mit runden Ecken über dem Hero */
-.site-header{position:fixed;top:10px;left:10px;right:10px;background:var(--glass);border:1px solid var(--glass-bd);border-radius:22px;-webkit-backdrop-filter:blur(30px);backdrop-filter:blur(30px);box-shadow:none}
+.site-header{position:fixed;top:10px;left:0;right:0;margin-inline:auto;width:calc(100% - 20px);max-width:1440px;background:var(--glass);border:1px solid var(--glass-bd);border-radius:22px;-webkit-backdrop-filter:blur(30px);backdrop-filter:blur(30px);box-shadow:none}
 .navrow{height:72px;margin-inline:20px 10px}
 .brand img{width:150px}
 nav{gap:6px}
@@ -223,8 +224,8 @@ footer strong{color:#dedede}
 @media(max-width:1100px){nav a{font-size:14px;padding:8px}}
 @media(max-width:760px){
  body{font-size:17px}
- .wrap{margin-inline:16px}
- .site-header{top:8px;left:8px;right:8px;border-radius:18px}
+ .wrap{padding-inline:16px}
+ .site-header{top:8px;width:calc(100% - 16px);border-radius:18px}
  .navrow{height:62px;margin-inline:16px 10px}
  .brand img{width:120px}
  .navtoggle{border-color:rgba(255,255,255,.25);border-radius:10px}.navtoggle span{background:#fff}
@@ -240,11 +241,19 @@ footer strong{color:#dedede}
  .intro-visual{border-radius:20px}
  footer{padding:60px 0 50px}
 }
-.hero.wrap{margin-inline:0}
+.hero.wrap{max-width:none;margin-inline:0;padding-inline:0}
 /* Abschnittskopf wie auf neura-robotics.com: Überschrift links, Text rechts */
-.clients-head{max-width:none;text-align:left;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin:0 0 70px}
-.clients-head h2{margin:0}
+/* Logo-Abschnitt: Einleitungstext IMMER unter der Überschrift */
+.clients-head{max-width:860px;text-align:left;display:block;margin:0 0 70px}
+.clients-head h2{margin:0 0 24px}
 footer a{text-decoration:none}
 footer a:hover{text-decoration:underline}
-@media(max-width:760px){.clients-head{grid-template-columns:1fr;gap:16px;margin-bottom:44px}}
+@media(max-width:760px){.clients-head{margin-bottom:44px}}
 @media(max-width:760px){.navtoggle{border:0}}
+/* Hero-Text und maintool-Logo an der Containerkante ausrichten (Original: H1 bei ~41 % Höhe, bündig mit dem Inhalt) */
+.hero-copy{left:max(20px,calc((100vw - 1440px)/2 + 20px));top:41%;bottom:auto}
+.hero-image>.hero-maintool-logo{right:max(20px,calc((100vw - 1440px)/2 + 20px));top:auto;bottom:14%}
+@media(max-width:760px){.hero-copy{left:16px;top:auto;bottom:9%}.hero-image>.hero-maintool-logo{right:16px;top:96px;bottom:auto}}
+
+/* Feste Vorgaben (Regelwerk §5) – nicht überschreibbar */
+.clients-head{display:block!important}.clients-head h2{grid-column:auto}.client-row{flex-wrap:nowrap!important}
