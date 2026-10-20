@@ -9,9 +9,26 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
 <script>try{if(localStorage.getItem('nehlsen_ok')==='1')document.documentElement.classList.add('unlocked')}catch(e){}</script>
+<style>
+#gate{position:fixed;inset:0;z-index:99999;background:#f7f7f7;display:flex;align-items:center;justify-content:center;padding:24px;font-family:'Open Sans',-apple-system,Arial,sans-serif}
+html.unlocked #gate{display:none}
+html:not(.unlocked) body>*:not(#gate){display:none!important}
+html:not(.unlocked) body{overflow:hidden;margin:0}
+.gate-card{background:#fff;width:100%;max-width:400px;padding:48px 40px;text-align:center;box-shadow:-24px 24px #b0d823;display:flex;flex-direction:column;align-items:center}
+.gate-mark{color:#3cac17;line-height:0;margin-bottom:22px}
+.gate-mark svg{width:46px;height:46px;fill:none;stroke:#3cac17;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.gate-card h1{font-size:26px;font-weight:700;color:#313842;margin:0 0 12px}
+.gate-card p{font-size:15px;color:#595e65;margin:0 0 26px}
+.gate-card input{width:100%;padding:13px 16px;font:16px 'Open Sans',Arial,sans-serif;border:1px solid #ccc;background:#fff;color:#313842;margin-bottom:18px;box-sizing:border-box}
+.gate-card input:focus{outline:none;border-color:#3cac17}
+.gate-btn{width:100%;padding:13px 23px;background:#3cac17;color:#fff;font-weight:700;font-size:16px;border:0;cursor:pointer;font-family:'Open Sans',Arial,sans-serif}
+.gate-btn:hover{background:#319d0e}
+.gate-error{color:#db2853;font-size:14px;margin:18px 0 0}
+@media(max-width:760px){.gate-card{padding:38px 26px;box-shadow:-16px 16px #b0d823}}
+</style>
 </head>
 <body>
-<div id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title"><form id="gate-form" class="gate-card"><span class="gate-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span><h1 id="gate-title">Geschützter Bereich</h1><p>Bitte gib das Passwort ein, um diese Seite anzusehen.</p><input id="gate-input" type="password" autocomplete="current-password" placeholder="Passwort" aria-label="Passwort" required><button type="submit" class="button gate-btn">Zugang</button><p id="gate-error" class="gate-error" hidden>Falsches Passwort. Bitte erneut versuchen.</p></form></div>
+<div id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title"><form id="gate-form" class="gate-card"><span class="gate-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span><h1 id="gate-title">Geschützter Bereich</h1><p>Bitte gib das Passwort ein, um diese Seite anzusehen.</p><input id="gate-input" type="password" autocomplete="current-password" placeholder="Passwort" aria-label="Passwort" required><button type="submit" class="gate-btn">Zugang</button><p id="gate-error" class="gate-error" hidden>Falsches Passwort. Bitte erneut versuchen.</p></form></div>
 <a class="skip" href="#inhalt">Zum Inhalt</a>
 <header class="site-header">
  <div class="navrow wrap"><a class="brand" href="#" aria-label="Nehlsen – zum Seitenanfang"><img src="assets/nehlsen-logo.svg" width="166" height="41" alt="Nehlsen"></a>
