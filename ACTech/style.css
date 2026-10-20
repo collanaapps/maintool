@@ -1,8 +1,9 @@
-/* collana maintool × ACTech – CI nach https://www.actech.de (generiert) */
+/* collana maintool × ACTech – CI nach https://www.actech.com/de (generiert) */
 @font-face{font-family:'Source Sans 3';src:url('assets/sourcesans3-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:'Source Sans 3';src:url('assets/sourcesans3-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
 @font-face{font-family:'Barlow';src:url('assets/barlow-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
-:root{--primary:#ed8b00;--primary-dark:#d07a00;--on-primary:#ffffff;--text:#333333;--head:#002855;--ink:#000000;--light:#f2f4f7;--line:#e3e3e3;--hbg:#000000;--htx:#ffffff;--hbd:#000000;--fbg:#002855;--ftx:#ffffff;--fhd:#ffffff;--flk:#ed8b00;--h3:#002855;--r:0px}
+@font-face{font-family:'Barlow';src:url('assets/barlow-300.woff2') format('woff2');font-weight:300;font-style:normal;font-display:swap}
+:root{--primary:#ed8b00;--primary-dark:#d07a00;--on-primary:#000000;--text:#333333;--head:#002855;--ink:#000000;--light:#f2f4f7;--line:#e3e3e3;--hbg:#000000;--htx:#ffffff;--hbd:#000000;--fbg:#002855;--ftx:#ffffff;--fhd:#ffffff;--flk:#ed8b00;--h3:#002855;--r:0px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:100px}
 body{margin:0;color:var(--text);font:16px/1.7 'Source Sans 3',Arial,Helvetica,sans-serif;background:#fff}
@@ -12,7 +13,7 @@ a{color:var(--primary);text-underline-offset:4px}
 a:hover{text-decoration:none}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--primary);outline-offset:4px}
 strong{color:var(--ink)}
-h1,h2,h3{font-family:'Barlow',Arial,Helvetica,sans-serif;font-weight:700;line-height:1.2;letter-spacing:0.02em;margin:0 0 24px;text-transform:uppercase;color:var(--head)}
+h1,h2,h3{font-family:'Barlow',Arial,Helvetica,sans-serif;font-weight:700;line-height:1.2;letter-spacing:0;margin:0 0 24px;text-transform:uppercase;color:var(--head)}
 h2{font-size:clamp(26px,2.4vw,36px)}
 h3{font-size:20px;color:var(--h3)}
 p{margin:0 0 22px}
@@ -24,7 +25,7 @@ img{max-width:100%;height:auto}
 .site-header a{text-decoration:none}
 .navrow{height:88px;display:flex;align-items:center;justify-content:space-between;gap:40px}
 .brand{display:flex;flex-shrink:0;align-items:center}
-.brand img{width:150px;max-height:60px;object-fit:contain;object-position:left center;height:auto}
+.brand img{width:197px;max-height:60px;object-fit:contain;object-position:left center;height:auto}
 nav{display:flex;align-items:center;gap:32px}
 nav a{color:var(--htx);text-transform:none;font-size:15px;font-weight:600;padding:6px 0;border-bottom:2px solid transparent}
 nav a:hover{color:var(--primary);border-bottom-color:var(--primary)}
@@ -110,7 +111,7 @@ dialog>img{display:block;margin:auto;max-width:90vw;max-height:82vh;width:auto;h
 @media(max-width:1100px){.wrap{width:92%}.navrow{gap:20px}nav{gap:18px}nav a{font-size:13px}.split,.intro,.detail-pair{gap:35px}.hero-copy{left:40%}}
 @media(max-width:760px){
  html{scroll-padding-top:80px}
- .navrow{height:72px}.brand img{width:140px;max-height:48px}
+ .navrow{height:72px}.brand img{width:107px;max-height:48px}
  .navtoggle{display:flex;flex-direction:column;justify-content:center;gap:5px;background:transparent;border:1px solid var(--hbd);width:44px;height:40px;padding:8px}
  .navtoggle span{display:block;background:var(--htx);height:2px;width:100%}
  nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--hbg);padding:12px 4% 20px;flex-direction:column;align-items:stretch;gap:0;border-bottom:3px solid var(--primary);box-shadow:0 8px 16px rgba(0,0,0,.08)}
@@ -136,3 +137,139 @@ dialog>img{display:block;margin:auto;max-width:90vw;max-height:82vh;width:auto;h
 @media print{.navtoggle,nav,.video-shell,.dialog-close{display:none}.site-header,footer{-webkit-print-color-adjust:exact;print-color-adjust:exact}.site-header{position:static}.section{padding-block:25px}.hero-image{height:350px}.split{break-inside:avoid}.client-row img{filter:none;opacity:1}}
 
 
+
+/* ===== Lead-Theme (nach Original-Website, siehe design.md) ===== */
+/* ACTech – Theme nach actech.com/de (Analyse 20.10.2026, siehe design.md)
+   Tokens: Seite schwarz #000, Text weiß, Akzent Orange #ed8b00, Navy #002855 (Footer, H2 auf Weiß),
+   Header 135px schwarz, Container 1280px (1240 @1440), Überschriften Barlow (statt Stratum2) Versal, eckig. */
+:root{--or:#ed8b00;--or-d:#ff9d1a;--navy:#002855;--edge:max(110px,calc((100vw - 1260px)/2))}
+body{background:#000;color:#fff;font-size:16px;line-height:1.5}
+strong{color:#fff}
+p{margin-bottom:20px}
+a{color:var(--or)}
+.wrap{width:calc(100% - 200px);max-width:1280px;margin-inline:auto;padding-inline:10px;box-sizing:border-box}
+.section{padding-top:100px;padding-bottom:100px}
+html{scroll-padding-top:150px}
+
+/* Header: schwarz, 135px, sticky (Original fixed) */
+.site-header{position:sticky;top:0;background:#000;border-bottom:0;box-shadow:none}
+.navrow{height:135px;align-items:center}
+.brand img{width:197px;max-height:none}
+nav{gap:36px;align-self:flex-end;padding-bottom:28px}
+nav a{font-size:17.6px;font-weight:600;color:#fff;padding:10px 4px;border-bottom:2px solid transparent}
+nav a:hover{color:var(--or);border-bottom-color:var(--or)}
+
+/* Hero: randlos, 560px, Text oben links an der Containerkante */
+.hero-image{height:560px;background:#000}
+.hero-shade{background:linear-gradient(90deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.45) 38%,rgba(0,0,0,0) 65%)}
+.hero-copy{left:var(--edge);right:auto;top:80px;transform:none;max-width:680px}
+.hero h1{font-size:50px;line-height:1;font-weight:300;text-transform:none;letter-spacing:0;text-shadow:none;margin-bottom:46px;color:#fff}
+.hero h1::first-line{font-size:60px;font-weight:700;text-transform:uppercase}
+.hero-image>.hero-maintool-logo{top:auto;bottom:40px;right:var(--edge);width:200px}
+
+/* Buttons: Orange, eckig, 18px/600; schwarze Schrift für AA-Kontrast */
+.button,.footer-cta{gap:14px;padding:13px 30px;border-radius:0;background:var(--or);color:#000!important;font-size:18px;font-weight:600;letter-spacing:.3px;text-transform:none}
+.button:hover,.footer-cta:hover{background:var(--or-d)}
+.button>span,.footer-cta>span{font-size:16px}
+
+/* Typografie */
+h1,h2,h3{color:#fff;letter-spacing:0}
+h2{font-size:clamp(28px,2.5vw,36px);line-height:1.2;font-weight:700;text-transform:uppercase;margin-bottom:32px}
+h3{font-family:'Source Sans 3',Arial,sans-serif;font-size:24px;line-height:1.2;font-weight:700;text-transform:none;color:#fff}
+/* „Mehr"-Links = Outline-Button (2px Orange) */
+.more{display:inline-block;color:#fff;font-weight:600;font-size:18px;letter-spacing:.3px;text-decoration:none;border:2px solid var(--or);padding:6px 30px;transition:background .2s,color .2s}
+.more:before{content:none}
+.more:hover{background:var(--or);color:#000}
+
+/* Intro als weiße Box wie „ALL IN" (Navy-Überschrift, schwarzer Text) */
+.intro{background:#fff;color:#000;gap:0;padding:0;align-items:stretch;margin-top:100px;margin-bottom:0}
+.wrap.intro{width:calc(100% - 220px);max-width:1260px;padding-inline:0}
+.intro-visual{background:#f2f4f7;border:0;border-radius:0;padding:40px 30px;display:flex;align-items:center}
+.intro-copy{padding:50px 60px}
+.intro h2{color:var(--navy);font-size:clamp(34px,3.4vw,50px);line-height:1}
+.intro strong{color:#000}
+.intro .more{color:var(--navy)}
+.intro .more:hover{color:#000}
+
+/* Abschnitte: schwarz */
+.split-section,.overview,.mobile-section{background:#000}
+.split-section figure .image-button,.reverse figure .image-button{background:#f2f4f7;padding:24px}
+figcaption{color:#bdbdbd;font-size:13px}
+
+/* Kacheln: auf Schwarz, Icon orange, feine Linie */
+.overview{border-top:0}
+.topic-grid{gap:40px}
+.topic-grid>a{background:transparent;border:0;border-top:1px solid #333;border-radius:0;box-shadow:none;padding:30px 0 6px;color:#fff}
+.topic-grid>a:hover{transform:none;box-shadow:none}
+.topic-grid>a:hover .more{background:var(--or);color:#000}
+.topic-grid p{color:#d0d0d0}
+.topic-symbol svg{stroke:var(--or);stroke-width:1.6}
+
+.video-shell{border-radius:0}
+
+.checks li{padding-left:28px}
+.checks li:before{content:'✓';color:var(--or)}
+
+.detail-pair article{border-top:2px solid var(--or);padding-top:30px}
+details{border-color:#333}
+summary{color:#fff;font-weight:700;list-style:none;display:flex;justify-content:space-between}
+summary::-webkit-details-marker{display:none}
+summary:after{content:'+';color:var(--or);font-size:24px;line-height:1}
+details[open] summary:after{content:'\2212'}
+.mobile-section{border-top:0}
+
+/* Logo-Abschnitt als weißes CTA-Band (Navy-Versal) */
+.clients{background:#fff;color:#333}
+.clients h2{color:var(--navy)}
+.clients-head{max-width:860px;text-align:left;margin:0 0 60px}
+.clients-head h2{margin:0 0 20px}
+.client-row img{opacity:.75}
+
+/* Footer: Navy mit Linienmuster */
+footer{background:var(--navy) url('assets/footer-bg.jpg') center/cover no-repeat;border-top:0;color:#fff;padding:60px 0}
+footer h2{font-family:'Source Sans 3',Arial,sans-serif;font-size:20px;font-weight:700;text-transform:none;letter-spacing:0;color:#fff}
+footer p{font-size:16px}
+footer a{color:#fff;text-decoration:none}
+footer a:hover{color:var(--or);text-decoration:underline}
+footer .footer-download{color:var(--or)}
+footer .footer-cta:hover{color:#000!important;text-decoration:none}
+footer strong{color:#fff}
+
+@media(max-width:1100px){
+ .wrap{width:calc(100% - 60px)}
+ .wrap.intro{width:calc(100% - 80px)}
+ :root{--edge:40px}
+ nav{gap:16px}nav a{font-size:15px}
+ .brand img{width:160px}
+ .intro-copy{padding:40px 36px}
+}
+@media(max-width:760px){
+ :root{--edge:30px}
+ .wrap{width:calc(100% - 40px)}
+ .wrap.intro{width:calc(100% - 60px);margin-top:60px}
+ .site-header{position:sticky}
+ .navrow{height:80px}
+ .brand img{width:107px}
+ html{scroll-padding-top:90px}
+ .navtoggle{border:0;width:44px;height:40px;padding:6px 2px;gap:8px}
+ .navtoggle span{background:#fff;height:3px}
+ nav{top:80px;background:#000;border-bottom:2px solid var(--or);box-shadow:none;padding:6px 30px 20px;align-self:auto}
+ nav a{border-bottom:1px solid #333;font-size:17px}
+ nav a:hover{border-bottom-color:#333}
+ .hero-image{height:560px}
+ .hero-shade{background:linear-gradient(180deg,rgba(0,0,0,.7) 0%,rgba(0,0,0,.35) 55%,rgba(0,0,0,.1))}
+ .hero-copy{left:30px;right:30px;top:50px;bottom:auto}
+ .hero h1{font-size:30px;line-height:1.1;margin-bottom:34px}
+ .hero h1::first-line{font-size:34px}
+ .hero-image>.hero-maintool-logo{bottom:26px;right:30px;width:150px;top:auto}
+ .section{padding-top:60px;padding-bottom:60px}
+ h2{font-size:28px}
+ .intro-copy{padding:30px 22px}.intro-visual{padding:20px 14px}
+ .topic-grid{gap:24px 16px}.topic-grid>a{padding:22px 0 4px}
+ .more{padding:6px 18px;font-size:16px}
+ footer{background-size:auto 100%}
+}
+.hero.wrap{width:100%;max-width:none;margin-inline:0;padding-inline:0}
+
+/* Feste Vorgaben (Regelwerk §5) – nicht überschreibbar */
+.clients-head{display:block!important}.clients-head h2{grid-column:auto}.client-row{flex-wrap:nowrap!important}

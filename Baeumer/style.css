@@ -1,4 +1,4 @@
-/* collana maintool × Bäumer – CI nach https://www.baeumer.com (generiert) */
+/* collana maintool × Bäumer – CI nach https://www.baeumer.com/de/ (generiert) */
 @font-face{font-family:'Open Sans';src:url('assets/opensans-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:'Open Sans';src:url('assets/opensans-600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:'Open Sans';src:url('assets/opensans-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
@@ -24,7 +24,7 @@ img{max-width:100%;height:auto}
 .site-header a{text-decoration:none}
 .navrow{height:88px;display:flex;align-items:center;justify-content:space-between;gap:40px}
 .brand{display:flex;flex-shrink:0;align-items:center}
-.brand img{width:170px;max-height:60px;object-fit:contain;object-position:left center;height:auto}
+.brand img{width:118px;max-height:60px;object-fit:contain;object-position:left center;height:auto}
 nav{display:flex;align-items:center;gap:32px}
 nav a{color:var(--htx);text-transform:none;font-size:15px;font-weight:600;padding:6px 0;border-bottom:2px solid transparent}
 nav a:hover{color:var(--primary);border-bottom-color:var(--primary)}
@@ -110,7 +110,7 @@ dialog>img{display:block;margin:auto;max-width:90vw;max-height:82vh;width:auto;h
 @media(max-width:1100px){.wrap{width:92%}.navrow{gap:20px}nav{gap:18px}nav a{font-size:13px}.split,.intro,.detail-pair{gap:35px}.hero-copy{left:40%}}
 @media(max-width:760px){
  html{scroll-padding-top:80px}
- .navrow{height:72px}.brand img{width:140px;max-height:48px}
+ .navrow{height:72px}.brand img{width:118px;max-height:48px}
  .navtoggle{display:flex;flex-direction:column;justify-content:center;gap:5px;background:transparent;border:1px solid var(--hbd);width:44px;height:40px;padding:8px}
  .navtoggle span{display:block;background:var(--htx);height:2px;width:100%}
  nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--hbg);padding:12px 4% 20px;flex-direction:column;align-items:stretch;gap:0;border-bottom:3px solid var(--primary);box-shadow:0 8px 16px rgba(0,0,0,.08)}
@@ -136,3 +136,126 @@ dialog>img{display:block;margin:auto;max-width:90vw;max-height:82vh;width:auto;h
 @media print{.navtoggle,nav,.video-shell,.dialog-close{display:none}.site-header,footer{-webkit-print-color-adjust:exact;print-color-adjust:exact}.site-header{position:static}.section{padding-block:25px}.hero-image{height:350px}.split{break-inside:avoid}.client-row img{filter:none;opacity:1}}
 
 
+
+/* ===== Lead-Theme (nach Original-Website, siehe design.md) ===== */
+/* Bäumer – Theme nach baeumer.com/de (Analyse 20.10.2026, siehe design.md)
+   Tokens: Text/Überschriften #444, Blau #2557a0 (Logo, Links, Teaser-Box .9), Beerenrot #c92756 (CTA, Versal 14px/700),
+   Grau #f9f9f9, Header 68px weiß volle Breite, Container 85 % / max 1200px (Padding 15px), eckig. */
+:root{--blue:#2557a0;--red:#c92756;--red-d:#b0224b;--grey:#f9f9f9;--edge:max(7.5vw,calc((100vw - 1200px)/2));--pad:15px}
+body{font-size:16px;line-height:1.5;color:#444;font-weight:400}
+p{margin-bottom:20px}
+a{color:var(--blue)}
+.wrap{width:85%;max-width:1200px;margin-inline:auto;padding-inline:var(--pad);box-sizing:border-box}
+.section{padding-top:100px;padding-bottom:100px}
+html{scroll-padding-top:90px}
+
+/* Header: weiß, 68px, volle Breite mit 30px Rand */
+.site-header{position:sticky;top:0;background:#fff;border-bottom:1px solid #f0f0f0;box-shadow:none}
+.site-header .navrow{width:auto;max-width:none;padding-inline:30px;height:68px}
+.brand img{width:118px;max-height:none}
+nav{gap:30px}
+nav a{font-size:16px;font-weight:600;color:#444;padding:22px 0 20px;border-bottom:2px solid transparent}
+nav a:hover{color:var(--blue);border-bottom-color:var(--blue)}
+
+/* Hero: randlos, Höhe wie Video (33.85vw), blaue Teaser-Box an der rechten Containerkante */
+.hero-image{height:max(460px,33.85vw);background:#dbdbdb}
+.hero-shade{display:none}
+.hero-copy{left:auto;right:calc(var(--edge) + var(--pad));top:50%;transform:translateY(-50%);width:537px;max-width:46%;background:rgba(37,87,160,.9);padding:30px 45px 36px;box-sizing:border-box}
+.hero h1{color:#fff;font-size:28px;line-height:1.35;font-weight:600;text-shadow:none;margin-bottom:26px;letter-spacing:0;text-transform:none}
+.hero-image>.hero-maintool-logo{top:auto;bottom:30px;right:auto;left:calc(var(--edge) + var(--pad));width:180px}
+
+/* Buttons: Beerenrot, eckig, Versal 14px/700 */
+.button,.footer-cta{gap:12px;padding:15px;border-radius:0;background:var(--red);color:#fff!important;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0;line-height:21px}
+.button:hover,.footer-cta:hover{background:var(--red-d)}
+.button>span,.footer-cta>span{font-size:13px}
+
+/* Typografie */
+h1,h2,h3{color:#444;letter-spacing:0;font-weight:600}
+h2{font-size:clamp(22px,2vw,28px);line-height:1.35;margin-bottom:26px}
+h3{font-size:18px;line-height:1.5;color:#444}
+.more{color:var(--blue);font-weight:600;text-decoration:none}
+.more:before{content:none}
+.more:hover{text-decoration:underline}
+
+/* Intro wie Teaser: Bild links, graues Textfeld rechts */
+.intro{gap:0;align-items:stretch}
+.intro-visual{background:#fff;border:0;border-radius:0;padding:0 30px 0 0;display:flex;align-items:center}
+.intro-copy{background:var(--grey);padding:65px 45px 65px 65px}
+
+/* Abschnitte */
+.split-section,.mobile-section{background:#fff}
+.overview,.clients{background:var(--grey)}
+.split-section figure .image-button{background:#fff}
+figcaption{color:#767676;font-size:13px}
+
+/* Übersicht: Kopf zentriert wie Abschnitts-Intros, weiße Kacheln */
+.overview{border-top:0}
+.overview h2{max-width:600px;margin:0 auto 50px;text-align:center}
+.topic-grid{gap:30px}
+.topic-grid>a{background:#fff;border:0;border-radius:0;box-shadow:none;padding:30px 30px 26px}
+.topic-grid>a:hover{transform:none;box-shadow:none}
+.topic-grid>a:hover .more{text-decoration:underline}
+.topic-grid h3{margin:14px 0 8px}
+.topic-symbol svg{stroke:var(--blue);stroke-width:1.5}
+
+.video-shell{border-radius:0}
+#video h2{text-align:center}
+
+.checks li:before{content:'✓';color:var(--blue)}
+
+/* Details wie Tabs: graue Linie, blaue Beschriftung */
+.detail-pair article{border-top:2px solid var(--blue);padding-top:30px}
+details{border-color:#dbdbdb}
+summary{color:var(--blue);font-weight:600}
+
+/* Mobile-App-Abschnitt als blaues Band (wie Suchband vor dem Footer) */
+.mobile-section{background:var(--blue);color:#fff;border-top:0}
+.mobile-section h2,.mobile-section strong{color:#fff}
+.mobile-section .checks li:before{color:#fff}
+.mobile-section figcaption{color:#e6ecf5}
+
+/* Referenzen: grau, Kopf zentriert, Text unter der Überschrift */
+.clients-head{max-width:600px;margin:0 auto 55px;text-align:center}
+.clients-head h2{margin:0 0 20px}
+
+/* Footer: weiß, Titel 18px/600, Text 14px */
+footer{background:#fff;border-top:1px solid #dbdbdb;color:#444;padding:60px 0 50px}
+footer h2{font-size:18px;font-weight:600;letter-spacing:0;color:#444}
+footer p{font-size:14px;line-height:1.5}
+footer a{color:var(--blue);text-decoration:none}
+footer a:hover{color:var(--blue);text-decoration:underline}
+footer .footer-cta:hover{text-decoration:none}
+footer strong{color:#444}
+
+@media(max-width:1100px){
+ nav{gap:16px}nav a{font-size:14px}
+ .hero-copy{max-width:55%;padding:26px 30px}
+ .intro-copy{padding:40px 30px}
+}
+@media(max-width:760px){
+ :root{--edge:0px}
+ .wrap{width:100%;padding-inline:15px}
+ .site-header .navrow{height:62px;padding-inline:15px}
+ html{scroll-padding-top:75px}
+ .navtoggle{border:0;border-left:1px solid #dbdbdb;border-radius:0;width:46px;height:36px;padding:8px 0 8px 14px;gap:6px}
+ .navtoggle span{background:#444;height:2px}
+ nav{top:62px;background:#fff;border-bottom:1px solid #dbdbdb;box-shadow:0 6px 12px rgba(0,0,0,.05);padding:6px 15px 16px}
+ nav a{padding:13px 0;border-bottom:1px solid #f0f0f0}
+ nav a:hover{border-bottom-color:#f0f0f0}
+ .hero-image{height:auto;background:#fff}
+ .hero-image>img{height:300px}
+ .hero-copy{position:relative;right:auto;left:auto;top:auto;transform:none;width:auto;max-width:none;background:var(--blue);padding:26px 15px 30px}
+ .hero h1{font-size:22px}
+ .hero-image>.hero-maintool-logo{left:15px;top:220px;bottom:auto;width:140px}
+ .section{padding-top:56px;padding-bottom:56px}
+ h2{font-size:22px}
+ .intro-visual{padding:0}
+ .intro-copy{padding:30px 15px}
+ .topic-grid{gap:12px}.topic-grid>a{padding:20px 16px}
+ .wrap.intro{padding-inline:15px}
+ footer{padding:44px 0 36px}
+}
+.hero.wrap{width:100%;max-width:none;margin-inline:0;padding-inline:0}
+
+/* Feste Vorgaben (Regelwerk §5) – nicht überschreibbar */
+.clients-head{display:block!important}.clients-head h2{grid-column:auto}.client-row{flex-wrap:nowrap!important}

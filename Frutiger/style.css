@@ -2,7 +2,8 @@
 @font-face{font-family:'Inter';src:url('assets/inter.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:'Inter';src:url('assets/inter.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
 @font-face{font-family:'Inter';src:url('assets/inter.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
-:root{--primary:#d52b1e;--primary-dark:#b5231a;--on-primary:#ffffff;--text:#2a2a2a;--head:#2a2a2a;--ink:#2a2a2a;--light:#f1efec;--line:#e3e3e3;--hbg:#ffffff;--htx:#2a2a2a;--hbd:#e5e2de;--fbg:#cec9c3;--ftx:#2a2a2a;--fhd:#2a2a2a;--flk:#2a2a2a;--h3:#2a2a2a;--r:30px}
+@font-face{font-family:'Noto Serif';src:url('assets/notoserif-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+:root{--primary:#d52b1e;--primary-dark:#333333;--on-primary:#ffffff;--text:#2a2a2a;--head:#2a2a2a;--ink:#2a2a2a;--light:#f1efec;--line:#e6e6e6;--hbg:#ffffff;--htx:#2a2a2a;--hbd:#e5e2de;--fbg:#cec9c3;--ftx:#2a2a2a;--fhd:#2a2a2a;--flk:#2a2a2a;--h3:#2a2a2a;--r:9999px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:100px}
 body{margin:0;color:var(--text);font:16px/1.7 'Inter',Arial,Helvetica,sans-serif;background:#fff}
@@ -24,7 +25,7 @@ img{max-width:100%;height:auto}
 .site-header a{text-decoration:none}
 .navrow{height:88px;display:flex;align-items:center;justify-content:space-between;gap:40px}
 .brand{display:flex;flex-shrink:0;align-items:center}
-.brand img{width:60px;max-height:60px;object-fit:contain;object-position:left center;height:auto}
+.brand img{width:65px;max-height:60px;object-fit:contain;object-position:left center;height:auto}
 nav{display:flex;align-items:center;gap:32px}
 nav a{color:var(--htx);text-transform:none;font-size:15px;font-weight:600;padding:6px 0;border-bottom:2px solid transparent}
 nav a:hover{color:var(--primary);border-bottom-color:var(--primary)}
@@ -110,7 +111,7 @@ dialog>img{display:block;margin:auto;max-width:90vw;max-height:82vh;width:auto;h
 @media(max-width:1100px){.wrap{width:92%}.navrow{gap:20px}nav{gap:18px}nav a{font-size:13px}.split,.intro,.detail-pair{gap:35px}.hero-copy{left:40%}}
 @media(max-width:760px){
  html{scroll-padding-top:80px}
- .navrow{height:72px}.brand img{width:60px;max-height:48px}
+ .navrow{height:72px}.brand img{width:65px;max-height:48px}
  .navtoggle{display:flex;flex-direction:column;justify-content:center;gap:5px;background:transparent;border:1px solid var(--hbd);width:44px;height:40px;padding:8px}
  .navtoggle span{display:block;background:var(--htx);height:2px;width:100%}
  nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--hbg);padding:12px 4% 20px;flex-direction:column;align-items:stretch;gap:0;border-bottom:3px solid var(--primary);box-shadow:0 8px 16px rgba(0,0,0,.08)}
@@ -136,3 +137,137 @@ dialog>img{display:block;margin:auto;max-width:90vw;max-height:82vh;width:auto;h
 @media print{.navtoggle,nav,.video-shell,.dialog-close{display:none}.site-header,footer{-webkit-print-color-adjust:exact;print-color-adjust:exact}.site-header{position:static}.section{padding-block:25px}.hero-image{height:350px}.split{break-inside:avoid}.client-row img{filter:none;opacity:1}}
 
 
+
+/* ===== Lead-Theme (nach Original-Website, siehe design.md) ===== */
+/* Frutiger AG – Theme nach frutiger.com (Analyse 20.10.2026, siehe design.md)
+   Tokens: Text #2a2a2a, Rot #d52b1e (nur Logo/Hover), Button #333, Linie #e6e6e6, Label-Grau #949da4,
+   Footer Steingrau #cec9c3. Container 1780px inkl. 48px Rand. Pillen-Buttons, eckige Bilder.
+   Hero-Claim Noto Serif auf weissen, versetzten Textboxen. */
+:root{--red:#d52b1e;--ink:#2a2a2a;--btn:#333;--ln:#e6e6e6;--stone:#cec9c3;--g:48px;--edge:max(var(--g),calc((100vw - 1780px)/2 + var(--g)))}
+body{font-size:16px;line-height:1.5;letter-spacing:.0225em;color:var(--ink)}
+p{margin-bottom:20px}
+.wrap{width:auto;max-width:1780px;margin-inline:auto;padding-inline:var(--g);box-sizing:border-box}
+.section{padding-top:clamp(72px,8vw,128px);padding-bottom:clamp(72px,8vw,128px)}
+main>.section+.section,main>section+section:not(.hero+section){border-top:1px solid var(--ln)}
+
+/* Header: transparent über dem Hero, Logo links, Navigation mittig weiss */
+.site-header{position:absolute;top:0;left:0;right:0;background:transparent;border:0;z-index:20}
+.navrow{height:144px;align-items:flex-start;padding-top:40px}
+.brand img{width:65px;max-height:none}
+nav{position:absolute;left:50%;transform:translateX(-50%);top:40px;gap:4px;height:30px}
+nav a{color:#fff;font-size:14px;font-weight:500;letter-spacing:.0225em;padding:4px 10px;border:0;line-height:21px}
+nav a:hover{color:#fff;text-decoration:underline;text-underline-offset:6px;border:0}
+html{scroll-padding-top:30px}
+
+/* Hero: randlos 100vh, abgedunkelt, Claim unten links in weissen Boxen */
+.hero-image{height:max(600px,100vh);max-height:1100px}
+.hero-shade{background:rgba(20,20,20,.38)}
+.hero-copy{left:var(--edge);right:auto;top:auto;bottom:clamp(40px,6vw,72px);transform:none;max-width:min(900px,70vw);text-indent:clamp(20px,4.4vw,63px)}
+.hero h1{display:inline;font-family:'Noto Serif','Times New Roman',serif;font-weight:400;font-size:clamp(26px,3.35vw,64px);line-height:1.66;letter-spacing:-.02em;color:var(--ink);text-shadow:none;background:#fff;padding:.25em .33em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.hero .button{display:flex;width:fit-content;text-indent:0;margin-top:clamp(22px,2.4vw,34px);background:#fff;color:var(--ink)!important}
+.hero .button:hover{background:var(--red);color:#fff!important}
+.hero-image>.hero-maintool-logo{top:auto;bottom:clamp(44px,6vw,76px);right:var(--edge);width:clamp(140px,12vw,210px)}
+
+/* Buttons: Pille #333, weiss 16px/500, Höhe 48px, Hover Rot */
+.button,.footer-cta{min-height:48px;gap:10px;padding:0 24px;border-radius:9999px;background:var(--btn);color:#fff!important;font-size:16px;font-weight:500;letter-spacing:.0225em;text-transform:none;transition:background .2s,color .2s}
+.button:hover,.footer-cta:hover{background:var(--red)}
+.button>span,.footer-cta>span{font-size:15px}
+
+/* Typografie */
+h1,h2,h3{letter-spacing:0;color:var(--ink)}
+h2{font-size:clamp(30px,3.35vw,48px);font-weight:700;line-height:1.1;margin-bottom:32px}
+h3{font-size:18px;font-weight:700;line-height:1.3;color:var(--ink)}
+a{color:var(--ink)}
+.more{color:var(--ink);font-weight:500;text-decoration:underline;text-underline-offset:4px}
+.more:before{content:none}
+.more:hover,a:hover .more{color:var(--red)}
+.intro-copy>p:first-of-type{font-size:clamp(19px,1.67vw,24px);line-height:1.34;letter-spacing:.02em}
+
+/* Bilder eckig auf Steinton-Fläche */
+.intro{gap:clamp(40px,4.6vw,66px)}
+.intro-visual{background:#f1efec;border:0;border-radius:0;padding:clamp(20px,3vw,48px)}
+.split{gap:clamp(40px,4.6vw,66px)}
+.split-section,.overview,.clients,.mobile-section{background:#fff}
+.mobile-section{border-top:1px solid var(--ln)}
+.split figure .image-button{background:#f1efec;padding:clamp(18px,2.6vw,40px)}
+.phone-figure .image-button{background:none!important;padding:0!important}
+figcaption{display:table;margin:14px 0 0;padding:4px 8px;background:rgba(160,166,172,.2);color:var(--ink);font-size:12px;font-weight:500;letter-spacing:.03em;text-align:left}
+
+/* Kacheln: keine Boxen, Linie oben, Hover Titel rot */
+.overview h2{max-width:none;margin-bottom:56px}
+.topic-grid{gap:48px 24px}
+.topic-grid>a{background:none;border:0;border-top:1px solid var(--ln);border-radius:0;box-shadow:none;padding:28px 0 0;color:var(--ink)}
+.topic-grid>a:hover{transform:none;box-shadow:none}
+.topic-grid>a:hover h3{color:var(--red)}
+.topic-grid h3{margin:16px 0 8px}
+.topic-symbol svg{stroke:var(--ink);stroke-width:1.5}
+
+/* Video */
+.video-shell{border-radius:0}
+.play{width:auto;height:48px;padding:0 26px 0 28px;border-radius:9999px;background:var(--btn);font-size:18px;box-shadow:none}
+.video-start:hover .play{background:var(--red)}
+
+/* Listen: rote Quadrate wie Logo */
+.checks li{padding-left:22px}
+.checks li:before{content:'';top:.6em;width:7px;height:7px;background:var(--red)}
+
+/* Detail-Paar wie News-Zeilen mit Linien */
+.detail-pair article{border-top:1px solid var(--ln);padding-top:36px}
+details{border-color:var(--ln)}
+summary{list-style:none;display:flex;justify-content:space-between;gap:16px;font-weight:700;font-size:18px;color:var(--ink)}
+summary::-webkit-details-marker{display:none}
+summary:after{content:'+';font-weight:400;font-size:24px;line-height:1}
+details[open] summary:after{content:'–'}
+summary:hover{color:var(--red)}
+
+/* Referenzen */
+.clients{border-top:1px solid var(--ln)}
+.clients-head{max-width:900px;text-align:left;display:block;margin:0 0 64px}
+.clients-head h2{margin:0 0 20px}
+
+/* Footer: Steingrau, Labels 18px/700, unterstrichene Links */
+footer{background:var(--stone);border-top:0;color:var(--ink);padding:clamp(56px,6vw,96px) 0}
+footer h2{font-size:18px;font-weight:700;letter-spacing:0;color:var(--ink);margin-bottom:22px}
+footer p{font-size:16px}
+footer a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+footer a:hover{color:#000;text-decoration-thickness:2px}
+footer .footer-download{font-weight:500}
+footer .footer-cta{text-decoration:none;margin-top:26px}
+footer .footer-cta:hover{color:#fff!important}
+footer strong{color:var(--ink)}
+
+/* Passwort-Gate */
+#gate .gate-card{border-radius:0;border-bottom:0;box-shadow:none}
+#gate .gate-btn{background:var(--btn);font-weight:500}
+#gate .gate-btn:hover{background:var(--red)}
+#gate .gate-logo{width:80px}
+
+@media(max-width:1100px){nav a{font-size:13px;padding:4px 6px}nav{gap:0}}
+@media(max-width:760px){
+ :root{--g:24px}
+ .navrow{height:96px;padding-top:24px}
+ .brand img{width:50px}
+ .navtoggle{display:block;position:relative;z-index:40;width:auto;height:30px;margin-top:10px;padding:0 0 0 24px;border:0;background:none;color:#fff;font:500 16px/30px 'Inter',Arial,sans-serif}
+ .navtoggle:after{content:'Menü'}
+ .navtoggle span{position:absolute;left:0;width:16px;height:1.5px;background:currentColor}
+ .navtoggle span:nth-child(1){top:9px}.navtoggle span:nth-child(2){top:14.5px}.navtoggle span:nth-child(3){top:20px}
+ .navtoggle[aria-expanded=true]{color:var(--ink)}
+ nav{display:none;position:fixed;inset:0;transform:none;height:auto;background:#fff;padding:120px 24px 40px;flex-direction:column;align-items:flex-start;gap:4px;z-index:30;border:0;box-shadow:none}
+ nav:before{content:'';position:absolute;left:0;right:0;top:96px;border-top:1px solid var(--ink)}
+ nav.open{display:flex}
+ nav a{color:var(--ink);font-size:24px;font-weight:700;padding:8px 0;border:0}
+ nav a:hover{color:var(--red);text-decoration:none}
+ .hero-image{height:640px}
+ .hero-copy{left:24px;right:24px;bottom:28px;max-width:none;text-indent:28px}
+ .hero h1{font-size:23px}
+ .hero-image>.hero-maintool-logo{top:110px;bottom:auto;right:24px;width:130px}
+ .section{padding-top:64px;padding-bottom:64px}
+ h2{font-size:30px}
+ .topic-grid{gap:28px 16px}
+ .topic-grid>a{padding:20px 0 0}
+ .clients-head{margin-bottom:40px}
+ footer{padding:56px 0}
+}
+
+/* Feste Vorgaben (Regelwerk §5) – nicht überschreibbar */
+.clients-head{display:block!important}.clients-head h2{grid-column:auto}.client-row{flex-wrap:nowrap!important}

@@ -1,8 +1,10 @@
 /* collana maintool × Marti Gruppe – CI nach https://www.marti.com/ch_de/ (generiert) */
 @font-face{font-family:'Inter';src:url('assets/inter.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Inter';src:url('assets/inter.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
 @font-face{font-family:'Inter';src:url('assets/inter.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
-@font-face{font-family:'Inter';src:url('assets/inter.woff2') format('woff2');font-weight:800;font-style:normal;font-display:swap}
-:root{--primary:#f9c623;--primary-dark:#e0ad0f;--on-primary:#1a1818;--text:#1a1818;--head:#1a1818;--ink:#1a1818;--light:#f8f8f8;--line:#e3e3e3;--hbg:#ffffff;--htx:#1a1818;--hbd:#e6e6e6;--fbg:#f9c623;--ftx:#1a1818;--fhd:#1a1818;--flk:#1a1818;--h3:#1a1818;--r:0px}
+@font-face{font-family:'Roboto Condensed';src:url('assets/robotocond.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Roboto Condensed';src:url('assets/robotocond.woff2') format('woff2');font-weight:800;font-style:normal;font-display:swap}
+:root{--primary:#f9c623;--primary-dark:#e8b30c;--on-primary:#1a1818;--text:#1a1818;--head:#1a1818;--ink:#1a1818;--light:#f8f8f8;--line:#e3e3e3;--hbg:#ffffff;--htx:#1a1818;--hbd:#ffffff;--fbg:#f9c623;--ftx:#1a1818;--fhd:#1a1818;--flk:#1a1818;--h3:#1a1818;--r:30px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:100px}
 body{margin:0;color:var(--text);font:16px/1.7 'Inter',Arial,Helvetica,sans-serif;background:#fff}
@@ -12,7 +14,7 @@ a{color:var(--primary);text-underline-offset:4px}
 a:hover{text-decoration:none}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--primary);outline-offset:4px}
 strong{color:var(--ink)}
-h1,h2,h3{font-family:'Inter',Arial,Helvetica,sans-serif;font-weight:800;line-height:1.2;letter-spacing:0;margin:0 0 24px;text-transform:uppercase;color:var(--head)}
+h1,h2,h3{font-family:'Roboto Condensed',Arial,Helvetica,sans-serif;font-weight:800;line-height:1.2;letter-spacing:0;margin:0 0 24px;text-transform:uppercase;color:var(--head)}
 h2{font-size:clamp(26px,2.4vw,36px)}
 h3{font-size:20px;color:var(--h3)}
 p{margin:0 0 22px}
@@ -24,7 +26,7 @@ img{max-width:100%;height:auto}
 .site-header a{text-decoration:none}
 .navrow{height:88px;display:flex;align-items:center;justify-content:space-between;gap:40px}
 .brand{display:flex;flex-shrink:0;align-items:center}
-.brand img{width:70px;max-height:60px;object-fit:contain;object-position:left center;height:auto}
+.brand img{width:120px;max-height:60px;object-fit:contain;object-position:left center;height:auto}
 nav{display:flex;align-items:center;gap:32px}
 nav a{color:var(--htx);text-transform:uppercase;font-size:15px;font-weight:600;padding:6px 0;border-bottom:2px solid transparent}
 nav a:hover{color:var(--primary);border-bottom-color:var(--primary)}
@@ -110,7 +112,7 @@ dialog>img{display:block;margin:auto;max-width:90vw;max-height:82vh;width:auto;h
 @media(max-width:1100px){.wrap{width:92%}.navrow{gap:20px}nav{gap:18px}nav a{font-size:13px}.split,.intro,.detail-pair{gap:35px}.hero-copy{left:40%}}
 @media(max-width:760px){
  html{scroll-padding-top:80px}
- .navrow{height:72px}.brand img{width:70px;max-height:48px}
+ .navrow{height:72px}.brand img{width:120px;max-height:48px}
  .navtoggle{display:flex;flex-direction:column;justify-content:center;gap:5px;background:transparent;border:1px solid var(--hbd);width:44px;height:40px;padding:8px}
  .navtoggle span{display:block;background:var(--htx);height:2px;width:100%}
  nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--hbg);padding:12px 4% 20px;flex-direction:column;align-items:stretch;gap:0;border-bottom:3px solid var(--primary);box-shadow:0 8px 16px rgba(0,0,0,.08)}
@@ -136,3 +138,153 @@ dialog>img{display:block;margin:auto;max-width:90vw;max-height:82vh;width:auto;h
 @media print{.navtoggle,nav,.video-shell,.dialog-close{display:none}.site-header,footer{-webkit-print-color-adjust:exact;print-color-adjust:exact}.site-header{position:static}.section{padding-block:25px}.hero-image{height:350px}.split{break-inside:avoid}.client-row img{filter:none;opacity:1}}
 footer{border-top-color:#1a1818}footer a:hover{color:#1a1818;text-decoration:underline}.footer-cta{background:#1a1818!important;color:#f9c623!important}.footer-cta:hover{opacity:.85}
 
+
+/* ===== Lead-Theme (nach Original-Website, siehe design.md) ===== */
+/* Marti Gruppe – Theme nach marti.com/ch_de (Analyse 20.10.2026, siehe design.md)
+   Tokens: Marti-Gelb #f9c623, Schwarz #1a1818, Grau-Fläche #f8f8f8, Link-Grau (AA) #6b6c6b.
+   Überschriften Helvetica Neue Condensed 800 Versal -> Roboto Condensed; Text Helvetica Neue 500 -> Inter 500.
+   Fluides Layout: Seitenrand 6vw + 24px (110px bei 1440, 139px bei 1920), keine max-width.
+   Hero: Bild-Box 70 % rechtsbündig, weisse H1-Box überlappt von links (Containerkante). Eckig, Pillen-Buttons. */
+:root{--y:#f9c623;--k:#1a1818;--g:calc(6vw + 24px);--grey:#f8f8f8;--lk:#6b6c6b;--cond:'Roboto Condensed','Arial Narrow',Arial,sans-serif}
+body{font-size:20px;line-height:1.5;font-weight:500;color:var(--k)}
+html{scroll-padding-top:40px}
+p{margin-bottom:24px}
+.wrap{width:auto;max-width:none;margin-inline:0;padding-inline:var(--g);box-sizing:border-box}
+.section{padding-top:clamp(64px,6vw,110px);padding-bottom:clamp(64px,6vw,110px)}
+
+/* Header: keine Leiste. Links oben Linkliste (wie „Marti Gruppe"/Menü-Unterlinks), rundes Logo fixed oben rechts */
+.site-header{position:absolute;top:0;left:0;right:auto;width:30vw;background:transparent;border:0;z-index:20}
+.navrow.wrap{height:auto;flex-direction:column;align-items:flex-start;gap:0;padding:40px 0 0 var(--g);margin:0}
+.brand{position:fixed;top:clamp(20px,3vw,43px);right:clamp(20px,4.7vw,68px);z-index:30}
+.brand img{width:clamp(64px,8.3vw,120px);max-height:none;border-radius:50%}
+nav{flex-direction:column;align-items:flex-start;gap:4px}
+nav a{white-space:nowrap;color:var(--k);font-size:clamp(16px,1.35vw,26px);font-weight:500;line-height:1.35;padding:1px 0;border-bottom:3px solid transparent;text-transform:none}
+nav a:hover{color:var(--k);border-bottom-color:var(--y)}
+
+/* Hero: Bild-Box 70vw × 16:9 rechts oben, weisse H1-Box überlappt um ~100px (bei 1440) */
+.hero-image{height:auto;overflow:visible;background:#fff;padding-top:32.4vw;padding-bottom:clamp(30px,3vw,50px)}
+.hero-image>img:first-child{position:absolute;top:0;left:30vw;width:70vw;height:39.4vw;object-fit:cover}
+.hero-shade{display:none}
+.hero-copy{position:relative;z-index:3;left:auto;right:auto;top:auto;transform:none;margin-left:var(--g);max-width:min(68vw,1250px);background:#fff;padding:clamp(24px,3vw,43px) clamp(24px,3vw,48px) 0 0}
+.hero h1{display:inline;color:var(--k);text-shadow:none;font-size:clamp(42px,5.4vw,110px);font-weight:800;line-height:1.06;letter-spacing:0;
+ background:linear-gradient(transparent 52%,var(--y) 52%,var(--y) 90%,transparent 90%);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.hero .button{display:flex;width:fit-content;margin-top:clamp(26px,2.6vw,40px)}
+.hero-image>.hero-maintool-logo{top:calc(39.4vw + clamp(24px,2.5vw,40px));right:var(--g);left:auto;height:auto;width:clamp(140px,12vw,230px)}
+
+/* Buttons: Pille 30px, Marti-Gelb, dunkle Schrift 17px/500, Chevron statt Pfeil */
+.button,.footer-cta{gap:12px;padding:9px 22px 9px 26px;border-radius:30px;font-weight:500;font-size:17px;line-height:1.5;text-transform:none;letter-spacing:0;background:var(--y);color:var(--k)!important;transition:background .2s,color .2s}
+.button>span,.footer-cta>span{font-size:0;line-height:0;display:inline-flex}
+.button>span:before,.footer-cta>span:before{content:'›';font-size:26px;line-height:20px;font-weight:700}
+.button:hover{background:var(--k);color:#fff!important}
+.footer-cta{background:var(--k);color:#fff!important}
+.footer-cta>span:before{color:var(--y)}
+.footer-cta:hover{background:#fff;color:var(--k)!important}
+
+/* Typografie: Condensed Heavy Versalien */
+h1,h2,h3{font-family:var(--cond);color:var(--k);letter-spacing:0;text-transform:uppercase}
+h2{font-size:clamp(34px,4.17vw,62px);font-weight:800;line-height:1.08;margin-bottom:30px}
+h3{font-size:22px;font-weight:700;line-height:1.3}
+strong{color:var(--k)}
+a{color:var(--k)}
+.more{color:var(--lk);font-weight:500;font-size:18px;text-decoration:none;display:inline-flex;align-items:center;gap:12px}
+.more:before{content:none}
+.more:after{content:'›';color:var(--y);font-weight:700;font-size:28px;line-height:18px}
+.more:hover,a:hover .more{color:var(--k)}
+
+/* Intro: Bild auf grauer Fläche mit Versatz-Block */
+.intro{grid-template-columns:1fr 1fr;gap:clamp(40px,5vw,90px)}
+.intro-visual{background:var(--grey);border:0;border-radius:0;padding:clamp(20px,2.4vw,36px)}
+.bc-note img{object-position:left center}
+
+/* Abschnitte: weiss / #f8f8f8 wie „Kompetenzen" */
+.overview,.split-section{background:var(--grey)}
+.clients,.mobile-section{background:#fff;border-top:0}
+.split{gap:clamp(40px,5vw,90px)}
+.split-section figure .image-button{background:#fff;box-shadow:clamp(16px,2.5vw,36px) clamp(16px,2.5vw,36px) 0 #fff;padding:0}
+.split-section figure .image-button img{box-shadow:none}
+.reverse figure .image-button{background:var(--grey);box-shadow:clamp(16px,2.5vw,36px) clamp(16px,2.5vw,36px) 0 var(--grey);padding:0}
+figcaption{color:var(--lk);font-size:13px;text-align:left;margin-top:clamp(28px,3.5vw,52px)}
+
+/* Kacheln wie Story-Textpanels: weiss, eckig, ohne Schatten; Hover gelbe Kante */
+.overview h2{max-width:none}
+.topic-grid{gap:clamp(16px,1.7vw,25px)}
+.topic-grid>a{background:#fff;border:0;border-radius:0;box-shadow:none;padding:34px 30px 30px;color:var(--k);transition:box-shadow .2s}
+.topic-grid>a:hover{transform:none;box-shadow:inset 0 5px 0 var(--y)}
+.topic-grid h3{margin:14px 0 10px}
+.topic-grid p{font-size:18px;color:var(--k)}
+.topic-symbol svg{stroke:var(--k);stroke-width:1.6}
+
+/* Video: eckig, gelber runder Play-Button wie Vimeo-Splash */
+.video-shell{border-radius:0;background:var(--grey)}
+.video-start{background:var(--grey)}
+.play{width:80px;height:80px;border-radius:50%;background:var(--y);color:#fff;font-size:30px;padding-left:6px;box-shadow:none}
+.video-start:hover .play{background:var(--k);color:var(--y)}
+
+/* Listen: gelbe Chevrons */
+.checks li{padding-left:24px}
+.checks li:before{content:'›';color:var(--y);font-weight:700;font-size:28px;line-height:1;top:-1px}
+
+/* Detail-Paar: graue Flächen, Akkordeon mit Linien */
+.detail-pair{gap:clamp(24px,2.5vw,40px)}
+.detail-pair article{border-top:0;background:var(--grey);padding:clamp(28px,3vw,52px)}
+details{border-color:#dcdcdc}
+summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:var(--cond);font-weight:700;font-size:20px;text-transform:uppercase;color:var(--k)}
+summary::-webkit-details-marker{display:none}
+summary:after{content:'›';color:var(--y);font-size:30px;line-height:1;transform:rotate(90deg);transition:transform .2s}
+details[open] summary:after{transform:rotate(-90deg)}
+
+/* Referenzen: Text unter der Überschrift (Vorgabe) */
+.clients-head{max-width:900px;text-align:left;display:block;margin:0 0 60px}
+.clients-head h2{margin:0 0 22px}
+
+/* Footer: Marti-Gelb vollflächig, dunkle Schrift, „Marti Gruppe"-Stil 28px/500 */
+footer{background:var(--y);border-top:0;color:var(--k);padding:clamp(56px,6vw,90px) 0 clamp(48px,5vw,70px)}
+footer h2{font-family:'Inter',Arial,sans-serif;text-transform:none;font-size:28px;font-weight:500;letter-spacing:0;color:var(--k);margin-bottom:24px}
+footer p{font-size:18px;font-weight:500}
+footer a{color:var(--k);text-decoration:none}
+footer a:hover{color:var(--k);text-decoration:underline;text-decoration-thickness:2px}
+footer .footer-download{font-weight:600}
+footer .footer-cta:hover{text-decoration:none}
+footer strong{color:var(--k)}
+
+/* Passwort-Gate: eckige Karte, Pillenfelder */
+#gate .gate-card{border-radius:0;border-bottom:0;box-shadow:none}
+#gate .gate-card h1{font-family:var(--cond);font-weight:800;font-size:30px}
+#gate .gate-logo{width:110px;border-radius:50%}
+#gate .gate-btn{font-weight:500}
+#gate .gate-btn:hover{background:var(--k);color:#fff}
+
+@media(max-width:1100px){nav a{font-size:16px}.topic-grid>a{padding:26px 22px}}
+@media(max-width:760px){
+ :root{--g:20px}
+ body{font-size:17px}
+ .site-header{width:100%}
+ .navrow.wrap{flex-direction:row;align-items:center;justify-content:space-between;height:96px;padding:0 20px}
+ .brand{position:static}
+ .brand img{width:56px}
+ .navtoggle{display:flex;position:fixed;top:20px;right:20px;z-index:40;width:56px;height:56px;border-radius:50%;background:var(--k);border:0;padding:17px 15px;gap:5px}
+ .navtoggle span{background:var(--y);height:4px;border-radius:2px}
+ nav{display:none;position:fixed;inset:0;background:var(--y);padding:120px 20px 40px;flex-direction:column;align-items:flex-start;gap:6px;z-index:35;border:0;box-shadow:none}
+ nav.open{display:flex}
+ nav a{font-family:var(--cond);font-weight:800;font-size:40px;line-height:1.1;text-transform:uppercase;border:0;padding:4px 0;white-space:normal}
+ nav a:hover{border:0;text-decoration:underline;text-decoration-color:var(--k)}
+ .hero-image{padding-top:calc(96px + (100vw - 40px)*.5625 - 44px);padding-bottom:20px}
+ .hero-image>img:first-child{top:96px;left:20px;width:calc(100% - 40px);height:calc((100vw - 40px)*.5625);object-position:center 50%}
+ .hero-copy{margin:0 20px;max-width:none;padding:22px 22px 0 0}
+ .hero h1{font-size:38px}
+ .hero-image>.hero-maintool-logo{top:31px;left:92px;right:auto;width:118px}
+ .section{padding-top:60px;padding-bottom:60px}
+ h2{font-size:34px}
+ .intro{grid-template-columns:1fr}
+ .split-section figure .image-button,.reverse figure .image-button{box-shadow:14px 14px 0 #fff}
+ .reverse figure .image-button{box-shadow:14px 14px 0 var(--grey)}
+ figcaption{margin-top:30px}
+ .topic-grid>a{padding:22px 18px}
+ .topic-grid p{font-size:15px}
+ .clients-head{margin-bottom:40px}
+ footer h2{font-size:24px}
+ footer p{font-size:16px}
+}
+
+/* Feste Vorgaben (Regelwerk §5) – nicht überschreibbar */
+.clients-head{display:block!important}.clients-head h2{grid-column:auto}.client-row{flex-wrap:nowrap!important}

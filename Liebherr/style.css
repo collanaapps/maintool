@@ -1,18 +1,18 @@
 /* collana maintool × Liebherr – CI nach https://www.liebherr.com/de-de/mobil-und-raupenkrane/mobil-und-raupenkrane-3824154 (generiert) */
-@font-face{font-family:'Inter';src:url('assets/inter-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'Inter';src:url('assets/inter-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
-@font-face{font-family:'Inter';src:url('assets/inter-700.woff2') format('woff2');font-weight:900;font-style:normal;font-display:swap}
-:root{--primary:#ffd000;--primary-dark:#e6bb00;--on-primary:#000000;--text:#000000;--head:#000000;--ink:#000000;--light:#f0f3f6;--line:#e3e3e3;--hbg:#ffffff;--htx:#000000;--hbd:#e5e8ed;--fbg:#000000;--ftx:#e5e8ed;--fhd:#ffffff;--flk:#e5e8ed;--h3:#000000;--r:0px}
+@font-face{font-family:'Barlow';src:url('assets/barlow-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Barlow';src:url('assets/barlow-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Barlow';src:url('assets/barlow-800.woff2') format('woff2');font-weight:800;font-style:normal;font-display:swap}
+:root{--primary:#ffd000;--primary-dark:#e6bb00;--on-primary:#000000;--text:#000000;--head:#000000;--ink:#000000;--light:#f0f3f6;--line:#e3e3e3;--hbg:#ffffff;--htx:#000000;--hbd:#d3d8dd;--fbg:#000000;--ftx:#e5e8ed;--fhd:#ffffff;--flk:#e5e8ed;--h3:#000000;--r:0px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:100px}
-body{margin:0;color:var(--text);font:16px/1.7 'Inter',Arial,Helvetica,sans-serif;background:#fff}
+body{margin:0;color:var(--text);font:16px/1.7 'Barlow',Arial,Helvetica,sans-serif;background:#fff}
 button,a{-webkit-tap-highlight-color:transparent}
 button{font:inherit}
 a{color:var(--primary);text-underline-offset:4px}
 a:hover{text-decoration:none}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--primary);outline-offset:4px}
 strong{color:var(--ink)}
-h1,h2,h3{font-family:'Inter',Arial,Helvetica,sans-serif;font-weight:900;line-height:1.2;letter-spacing:0;margin:0 0 24px;text-transform:none;color:var(--head)}
+h1,h2,h3{font-family:'Barlow',Arial,Helvetica,sans-serif;font-weight:800;line-height:1.2;letter-spacing:0;margin:0 0 24px;text-transform:none;color:var(--head)}
 h2{font-size:clamp(26px,2.4vw,36px)}
 h3{font-size:20px;color:var(--h3)}
 p{margin:0 0 22px}
@@ -24,7 +24,7 @@ img{max-width:100%;height:auto}
 .site-header a{text-decoration:none}
 .navrow{height:88px;display:flex;align-items:center;justify-content:space-between;gap:40px}
 .brand{display:flex;flex-shrink:0;align-items:center}
-.brand img{width:180px;max-height:60px;object-fit:contain;object-position:left center;height:auto}
+.brand img{width:161px;max-height:60px;object-fit:contain;object-position:left center;height:auto}
 nav{display:flex;align-items:center;gap:32px}
 nav a{color:var(--htx);text-transform:none;font-size:15px;font-weight:600;padding:6px 0;border-bottom:2px solid transparent}
 nav a:hover{color:var(--primary);border-bottom-color:var(--primary)}
@@ -136,3 +136,122 @@ dialog>img{display:block;margin:auto;max-width:90vw;max-height:82vh;width:auto;h
 @media print{.navtoggle,nav,.video-shell,.dialog-close{display:none}.site-header,footer{-webkit-print-color-adjust:exact;print-color-adjust:exact}.site-header{position:static}.section{padding-block:25px}.hero-image{height:350px}.split{break-inside:avoid}.client-row img{filter:none;opacity:1}}
 
 a,.more,summary,.checks li:before{color:#000}a.button,.footer-cta{color:#000}nav a:hover{color:#000}footer a:hover{color:#ffd000}.topic-symbol svg{stroke:#000}
+
+/* ===== Lead-Theme (nach Original-Website, siehe design.md) ===== */
+/* Liebherr Mobil- und Raupenkrane – Theme nach liebherr.com (Analyse 20.10.2026, siehe design.md)
+   Tokens: Gelb #ffd000 (nur CTA), Schwarz #000 (Text, Überschriften, Rahmen), Steel #f0f3f6 (Abschnitte),
+   Linien #d3d8dd, Footer #000 / #e5e8ed; Container 1280px + 32px; alles eckig; Barlow statt LiebherrHead/-Text. */
+:root{--ly:#ffd000;--ly-d:#f2c600;--ls:#f0f3f6;--ll:#d3d8dd;--arrow:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 12'%3E%3Cpath d='M0 6h20M15 1l5 5-5 5' fill='none' stroke='%23000' stroke-width='1.8'/%3E%3C/svg%3E")}
+body{font-size:18px;line-height:28px;color:#000}
+p{margin-bottom:20px}
+.wrap{width:auto;max-width:1280px;margin-inline:auto;padding-inline:32px;box-sizing:border-box}
+.section{padding-top:64px;padding-bottom:64px}
+html{scroll-padding-top:20px}
+
+/* Header: statisch, weiß, zweizeilig – Logo oben, Versal-Navigation darunter */
+.site-header{position:relative;background:#fff;border-bottom:1px solid var(--ll)}
+.navrow{height:auto;flex-wrap:wrap;justify-content:flex-start;gap:0;padding-top:34px}
+.brand{flex:0 0 100%;margin-bottom:26px}
+.brand img{width:161px;max-height:22px}
+nav{gap:26px}
+nav a{font-size:13.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#000;padding:0 0 14px;border-bottom:3px solid transparent}
+nav a:hover{color:#000;border-bottom-color:var(--ly)}
+
+/* Hero: randlos, 484px, dunkler Verlauf unten links, Titel unten links an der Containerkante */
+.hero-image{height:484px;background:#000}
+.hero-image>img{object-position:center 55%}
+.hero-shade{background:linear-gradient(20deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.35) 38%,rgba(0,0,0,0) 65%)}
+.hero-copy{left:max(32px,calc((100vw - 1280px)/2 + 32px));right:auto;top:auto;bottom:32px;transform:none;max-width:820px}
+.hero h1{font-size:40px;line-height:44px;font-weight:800;color:#fff;text-shadow:none;margin-bottom:24px}
+.hero-image>.hero-maintool-logo{top:32px;right:max(32px,calc((100vw - 1280px)/2 + 32px));width:clamp(150px,13vw,200px)}
+
+/* Buttons: Gelb, 1px schwarzer Rahmen, Versal 14px/700 .8px, langer Pfeil → */
+.button,.footer-cta{gap:18px;padding:12px 19px;border:1px solid #000;border-radius:0;background:var(--ly);color:#000!important;font-size:14px;line-height:18px;font-weight:700;letter-spacing:.8px;text-transform:uppercase}
+.button:hover,.footer-cta:hover{background:var(--ly-d)}
+.button>span,.footer-cta>span{font-size:0;width:22px;height:12px;background:var(--arrow) center/contain no-repeat;transition:transform .2s}
+.button:hover>span,.footer-cta:hover>span{transform:translateX(4px)}
+
+/* Typografie */
+h1,h2,h3{color:#000;font-weight:800;letter-spacing:0}
+h2{font-size:clamp(28px,2.8vw,40px);line-height:1.1;margin-bottom:24px}
+h3{font-size:24px;line-height:1.15;color:#000}
+a{color:#000}
+
+/* „Mehr"-Links als Outline-Button MEHR ERFAHREN → */
+.more{display:inline-flex;align-items:center;gap:16px;padding:12px 19px;border:1px solid #000;color:#000;background:transparent;font-size:14px;line-height:18px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;text-decoration:none;transition:background .2s,color .2s}
+.more:before{content:none}
+.more:after{content:'';width:22px;height:12px;background:var(--arrow) center/contain no-repeat}
+a.more:hover,.topic-grid>a:hover .more{background:#000;color:#fff}
+a.more:hover:after,.topic-grid>a:hover .more:after{filter:invert(1)}
+
+/* Intro */
+.intro-visual{background:var(--ls);border:0;border-radius:0;padding:32px 28px}
+
+/* Kacheln: weiß, eckig, auf Steel-Grund */
+.overview{background:var(--ls)}
+.overview h2{max-width:none;margin-bottom:40px}
+.topic-grid{gap:32px}
+.topic-grid>a{background:#fff;border:0;border-bottom:4px solid transparent;border-radius:0;box-shadow:none;padding:32px 28px 28px}
+.topic-grid>a:hover{transform:none;box-shadow:none;border-bottom-color:var(--ly)}
+.topic-grid p{font-size:16px;line-height:24px}
+.topic-symbol svg{stroke:#000;stroke-width:1.6}
+
+.video-shell{border-radius:0}
+
+/* Flexarticle-Rhythmus: Split-Abschnitte auf Steel, Text links / Bild rechts */
+.split-section{background:var(--ls)}
+.split{gap:32px}
+figcaption{color:#51585d;font-size:13px}
+
+/* Checks + Details */
+.checks li{padding-left:28px}
+.checks li:before{content:'';top:.55em;width:14px;height:8px;border-left:2px solid #000;border-bottom:2px solid #000;transform:rotate(-45deg)}
+.detail-pair article{border-top:1px solid var(--ll);padding-top:32px}
+details{border-color:var(--ll)}
+summary{color:#000;font-weight:700;letter-spacing:.8px;text-transform:uppercase;font-size:14px}
+
+/* Mobil-App-Abschnitt schwarz wie „Das Kundenportal MyLiebherr" */
+.mobile-section{background:#000;color:#fff;border-top:0}
+.mobile-section h2,.mobile-section strong{color:#fff}
+.mobile-section .checks li:before{border-color:var(--ly)}
+.mobile-section figcaption{color:#c8ccd0}
+
+.clients{background:var(--ls)}
+
+/* Footer: schwarz, Köpfe weiß 16px, Links #e5e8ed klein mit Laufweite */
+footer{background:#000;border-top:0;color:#e5e8ed;padding:64px 0}
+.footer-grid{border-top:1px solid #51585d;padding-top:40px}
+footer h2{font-size:16px;font-weight:700;letter-spacing:0;color:#fff;margin-bottom:16px}
+footer p{font-size:14px;line-height:22px;color:#e5e8ed;letter-spacing:.4px}
+footer a{color:#e5e8ed;text-decoration:none;font-size:14px;letter-spacing:.8px}
+footer a:hover{color:var(--ly)}
+footer a.footer-cta{font-size:14px;color:#000!important}
+footer .footer-download{font-weight:700}
+
+@media(max-width:1100px){nav{gap:18px}nav a{font-size:12.5px}}
+@media(max-width:760px){
+ body{font-size:16px;line-height:24px}
+ .wrap{padding-inline:20px}
+ .navrow{height:68px;flex-wrap:nowrap;justify-content:space-between;padding-top:0}
+ .brand{flex:0 0 auto;margin:0}
+ .brand img{width:130px}
+ .navtoggle{border:0;width:40px;padding:8px;gap:7px}
+ .navtoggle span{background:#000;height:1.5px}
+ nav{top:68px;padding:0 20px 16px;border-bottom:1px solid var(--ll);box-shadow:0 8px 16px rgba(0,0,0,.08)}
+ nav a{font-size:15px;padding:16px 0;border-bottom:1px solid var(--ll)}
+ nav a:hover{border-bottom-color:var(--ly)}
+ .hero-image{height:520px}
+ .hero-shade{background:linear-gradient(0deg,rgba(0,0,0,.78) 10%,rgba(0,0,0,0) 70%)}
+ .hero-copy{left:24px;right:24px;bottom:24px}
+ .hero h1{font-size:30px;line-height:34px}
+ .hero .button{display:flex;justify-content:center}
+ .hero-image>.hero-maintool-logo{top:20px;right:20px;width:140px}
+ .section{padding-top:48px;padding-bottom:48px}
+ h2{font-size:28px;line-height:32px}
+ .topic-grid{gap:16px}.topic-grid>a{padding:22px 16px}.topic-grid h3{font-size:18px}
+ .more{padding:10px 14px;gap:12px}
+ footer{padding:48px 0}
+}
+
+/* Feste Vorgaben (Regelwerk §5) – nicht überschreibbar */
+.clients-head{display:block!important}.clients-head h2{grid-column:auto}.client-row{flex-wrap:nowrap!important}

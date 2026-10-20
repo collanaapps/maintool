@@ -2,7 +2,7 @@
 @font-face{font-family:'Mukta';src:url('assets/mukta-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:'Mukta';src:url('assets/mukta-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
 @font-face{font-family:'Mukta';src:url('assets/mukta-800.woff2') format('woff2');font-weight:800;font-style:normal;font-display:swap}
-:root{--primary:#007bbe;--primary-dark:#006aa4;--on-primary:#ffffff;--text:#222222;--head:#000000;--ink:#000000;--light:#f5f5f5;--line:#e3e3e3;--hbg:#ffffff;--htx:#007bbe;--hbd:#e6e6e6;--fbg:#f5f5f5;--ftx:#000000;--fhd:#000000;--flk:#007bbe;--h3:#007bbe;--r:0px}
+:root{--primary:#007bbe;--primary-dark:#006aa4;--on-primary:#ffffff;--text:#222222;--head:#000000;--ink:#000000;--light:#f5f5f5;--line:#e3e3e3;--hbg:#ffffff;--htx:#007bbe;--hbd:#ffffff;--fbg:#f5f5f5;--ftx:#000000;--fhd:#000000;--flk:#000000;--h3:#000000;--r:0px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:100px}
 body{margin:0;color:var(--text);font:16px/1.7 'Mukta',Arial,Helvetica,sans-serif;background:#fff}
@@ -24,7 +24,7 @@ img{max-width:100%;height:auto}
 .site-header a{text-decoration:none}
 .navrow{height:88px;display:flex;align-items:center;justify-content:space-between;gap:40px}
 .brand{display:flex;flex-shrink:0;align-items:center}
-.brand img{width:60px;max-height:60px;object-fit:contain;object-position:left center;height:auto}
+.brand img{width:100px;max-height:60px;object-fit:contain;object-position:left center;height:auto}
 nav{display:flex;align-items:center;gap:32px}
 nav a{color:var(--htx);text-transform:uppercase;font-size:15px;font-weight:600;padding:6px 0;border-bottom:2px solid transparent}
 nav a:hover{color:var(--primary);border-bottom-color:var(--primary)}
@@ -110,7 +110,7 @@ dialog>img{display:block;margin:auto;max-width:90vw;max-height:82vh;width:auto;h
 @media(max-width:1100px){.wrap{width:92%}.navrow{gap:20px}nav{gap:18px}nav a{font-size:13px}.split,.intro,.detail-pair{gap:35px}.hero-copy{left:40%}}
 @media(max-width:760px){
  html{scroll-padding-top:80px}
- .navrow{height:72px}.brand img{width:60px;max-height:48px}
+ .navrow{height:72px}.brand img{width:100px;max-height:48px}
  .navtoggle{display:flex;flex-direction:column;justify-content:center;gap:5px;background:transparent;border:1px solid var(--hbd);width:44px;height:40px;padding:8px}
  .navtoggle span{display:block;background:var(--htx);height:2px;width:100%}
  nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--hbg);padding:12px 4% 20px;flex-direction:column;align-items:stretch;gap:0;border-bottom:3px solid var(--primary);box-shadow:0 8px 16px rgba(0,0,0,.08)}
@@ -136,3 +136,136 @@ dialog>img{display:block;margin:auto;max-width:90vw;max-height:82vh;width:auto;h
 @media print{.navtoggle,nav,.video-shell,.dialog-close{display:none}.site-header,footer{-webkit-print-color-adjust:exact;print-color-adjust:exact}.site-header{position:static}.section{padding-block:25px}.hero-image{height:350px}.split{break-inside:avoid}.client-row img{filter:none;opacity:1}}
 
 
+
+/* ===== Lead-Theme (nach Original-Website, siehe design.md) ===== */
+/* Gasser Felstechnik – Theme nach felstechnik.ch (Analyse 20.10.2026, siehe design.md)
+   Tokens: Blau #007bbe, Text #000, Fläche #f5f5f5; Frutiger LT -> Mukta 400/700/800.
+   Container 80 % / max 1200px; Hero- und Footer-Box mit 48px Rand; Schnittecken (clip-path 20 %).
+   Eckige Outline-Buttons mit Pfeil →. */
+:root{--b:#007bbe;--grey:#f5f5f5;--cut:polygon(20% 0,100% 0,100% 80%,80% 100%,0 100%,0 20%);--edge:max(10vw,calc((100vw - 1200px)/2))}
+body{font-size:17px;line-height:1.7;color:#000}
+p{margin-bottom:17px}
+.wrap{width:80%;max-width:1200px;margin-inline:auto;padding-inline:0}
+.section{padding-top:clamp(56px,5vw,80px);padding-bottom:clamp(56px,5vw,80px)}
+
+/* Header: weiss, statisch; Navigation an der Containerkante, Logo in Schnittecken-Box rechts */
+.site-header{position:relative;background:#fff;border:0;z-index:20}
+.navrow{height:98px;align-items:flex-end;padding-bottom:22px;justify-content:flex-start}
+.brand{position:absolute;top:92px;right:42px;width:150px;height:150px;background:#fff;clip-path:var(--cut);justify-content:center;align-items:center;z-index:5}
+.brand img{width:100px;max-height:none}
+nav{gap:30px}
+nav a{color:var(--b);font-size:19px;font-weight:800;line-height:1;text-transform:uppercase;padding:0 0 4px;border-bottom:2px solid transparent}
+nav a:hover{color:var(--b);border-bottom-color:var(--b)}
+html{scroll-padding-top:20px}
+
+/* Hero: Box mit 48px Rand, Duoton Blau, Text links an der Containerkante */
+.hero.wrap{padding-inline:48px}
+.hero-image{height:500px;background:var(--b)}
+.hero-image>img:first-child{filter:grayscale(1) brightness(1.25);mix-blend-mode:multiply}
+.hero-shade{background:linear-gradient(90deg,rgba(0,60,100,.35),rgba(0,60,100,0) 60%)}
+.hero-copy{left:calc(var(--edge) - 48px);right:auto;top:50%;transform:translateY(-50%);max-width:680px}
+.hero h1{font-size:clamp(28px,2.65vw,40px);font-weight:800;line-height:1.2;color:#fff;text-shadow:none;margin-bottom:40px;text-transform:none}
+.hero-image>.hero-maintool-logo{top:auto;bottom:34px;right:72px;width:clamp(140px,12vw,190px)}
+
+/* Buttons: eckige Outline, 1px, Pfeil → */
+.button,.footer-cta{gap:10px;padding:12px 35px;border:1px solid #fff;border-radius:0;background:transparent;color:#fff!important;font-size:15px;font-weight:400;text-transform:none;line-height:1.2}
+.button:hover{background:#fff;color:var(--b)!important}
+.button>span,.footer-cta>span{font-size:0}
+.button>span:before,.footer-cta>span:before{content:'→';font-size:15px}
+.footer-cta{border-color:var(--b);color:var(--b)!important;padding:10px 16px}
+.footer-cta:hover{background:var(--b);color:#fff!important}
+
+/* Typografie */
+h1,h2,h3{letter-spacing:0;color:#000}
+h2{font-size:28px;font-weight:700;line-height:1.15;margin-bottom:18px}
+h3{font-size:23px;font-weight:700;line-height:1.1;color:#000}
+.intro h2{color:var(--b);font-weight:800;text-transform:uppercase;font-size:clamp(30px,3.2vw,46px);line-height:1.05}
+a{color:#000}
+.more{display:inline-flex;align-items:center;gap:6px;border:1px solid #000;padding:8px 12px;color:#000;font-size:15px;font-weight:400;line-height:1.2;text-decoration:none;background:#fff;transition:background .2s,color .2s}
+.more:before{content:none}
+.more:after{content:'→'}
+.more:hover,a:hover .more{background:var(--b);border-color:var(--b);color:#fff}
+.intro .more{border-color:var(--b);color:var(--b)}
+.intro .more:hover{color:#fff}
+
+/* Intro-Bild mit blauer Schnitt-Ecke (wie Teaser-Grafiken) */
+.intro-visual{position:relative;background:var(--grey);border:0;border-radius:0;padding:clamp(18px,2.4vw,34px)}
+.intro-visual:after{content:'';position:absolute;left:0;bottom:0;width:90px;height:90px;background:var(--b);clip-path:polygon(0 0,0 100%,100% 100%)}
+.split-section,.overview,.clients,.mobile-section{background:#fff;border-top:0}
+figcaption{color:#444;font-size:13px}
+
+/* Kompetenz-Kacheln: #f5f5f5, blaue Bildspalte links, Outline-Button */
+.overview h2{max-width:none;margin-bottom:30px}
+.topic-grid{grid-template-columns:repeat(2,1fr);gap:20px 20px}
+.topic-grid>a{display:grid;grid-template-columns:80px 1fr;align-content:start;background:var(--grey);border:0;border-radius:0;box-shadow:none;padding:0;color:#000}
+.topic-grid>a:hover{transform:none;box-shadow:none}
+.topic-symbol{grid-row:1/span 3;height:100%;min-height:150px;background:var(--b);justify-content:center}
+.topic-symbol svg{stroke:#fff;stroke-width:1.5;width:38px;height:38px}
+.topic-grid>a>h3,.topic-grid>a>p,.topic-grid>a>.more{grid-column:2;margin-left:22px;margin-right:22px}
+.topic-grid h3{margin-top:26px;margin-bottom:10px}
+.topic-grid p{font-size:16px;margin-bottom:14px}
+.topic-grid .more{justify-self:start;margin-bottom:26px}
+
+/* Video */
+.video-shell{border-radius:0}
+
+/* Listen: blaue Pfeile */
+.checks li{padding-left:26px}
+.checks li:before{content:'→';color:var(--b);font-weight:700}
+
+/* Detail-Paar als graue Karten */
+.detail-pair{gap:20px}
+.detail-pair article{border-top:0;background:var(--grey);padding:36px 36px 30px}
+details{border-color:#dcdcdc}
+summary{list-style:none;display:flex;justify-content:space-between;gap:12px;color:var(--b);font-weight:700}
+summary::-webkit-details-marker{display:none}
+summary:after{content:'⌄';font-size:22px;line-height:.8;transition:transform .2s}
+details[open] summary:after{transform:rotate(180deg)}
+
+/* Referenzen */
+.clients-head{max-width:840px;text-align:left;display:block;margin:0 0 50px}
+.clients-head h2{margin:0 0 14px}
+
+/* Footer: graue Box mit 48px Rand + blaue Schnitt-Ecke */
+footer{position:relative;z-index:0;background:#fff;border-top:0;color:#000;padding:70px 0 130px}
+footer:before{content:'';position:absolute;z-index:-1;top:0;left:48px;right:48px;bottom:48px;background:var(--grey)}
+footer:after{content:'';position:absolute;left:0;bottom:0;width:100px;height:100px;background:var(--b);clip-path:var(--cut)}
+footer h2{font-size:17px;font-weight:700;letter-spacing:0;color:#000;margin-bottom:14px}
+footer p{font-size:15px}
+footer a{color:#000;text-decoration:underline;font-size:15px}
+footer a:hover{color:var(--b)}
+footer .footer-download{font-weight:700}
+footer .footer-cta{text-decoration:none}
+footer strong{color:#000}
+
+/* Passwort-Gate: Schnittecken-Karte */
+#gate .gate-card{border-radius:0;border-bottom:0;box-shadow:none;clip-path:polygon(12% 0,100% 0,100% 88%,88% 100%,0 100%,0 12%)}
+#gate .gate-logo{width:110px}
+
+@media(max-width:1100px){nav{gap:18px}nav a{font-size:15px}.brand{width:120px;height:120px}.brand img{width:80px}}
+@media(max-width:760px){
+ .site-header{box-shadow:0 2px 20px rgba(0,0,0,.1)}
+ .navrow{height:80px;align-items:center;padding-bottom:0;justify-content:space-between}
+ .brand{position:static;width:auto;height:auto;clip-path:none;background:none}
+ .brand img{width:44px}
+ .navtoggle{border:0;width:40px;height:40px;padding:10px 6px;gap:6px}
+ .navtoggle span{background:var(--b)}
+ nav{top:80px;left:10%;right:10%;padding:8px 22px 12px;border-top:3px solid var(--b);border-bottom:0;box-shadow:0 8px 16px rgba(0,0,0,.1)}
+ nav a{text-transform:none;font-size:15px;font-weight:700;padding:12px 0;border-bottom:1px solid #eee}
+ nav a:hover{border-bottom-color:#eee;text-decoration:underline}
+ .hero.wrap{padding-inline:0}
+ .hero-image{height:380px}
+ .hero-copy{left:10%;right:10%;top:auto;bottom:34px;transform:none}
+ .hero h1{font-size:26px;margin-bottom:24px}
+ .hero-image>.hero-maintool-logo{top:22px;bottom:auto;right:10%;width:120px}
+ .intro h2{font-size:30px}
+ .topic-grid{grid-template-columns:1fr}
+ .topic-grid>a{grid-template-columns:64px 1fr}
+ .topic-grid p{font-size:15px}
+ .detail-pair article{padding:26px 22px}
+ footer:before{left:0;right:0}
+ footer{padding-bottom:120px}
+}
+
+/* Feste Vorgaben (Regelwerk §5) – nicht überschreibbar */
+.clients-head{display:block!important}.clients-head h2{grid-column:auto}.client-row{flex-wrap:nowrap!important}

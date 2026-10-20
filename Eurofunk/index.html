@@ -10,14 +10,14 @@
 <link rel="stylesheet" href="style.css">
 <script>try{if(localStorage.getItem('eurofunk_ok')==='1')document.documentElement.classList.add('unlocked')}catch(e){}</script>
 <style>
-#gate{position:fixed;inset:0;z-index:99999;background:#f2f2f2;display:flex;align-items:center;justify-content:center;padding:24px;font-family:'Open Sans',-apple-system,Arial,sans-serif}
+#gate{position:fixed;inset:0;z-index:99999;background:#f7f7f7;display:flex;align-items:center;justify-content:center;padding:24px;font-family:'Open Sans',-apple-system,Arial,sans-serif}
 html.unlocked #gate{display:none}
 html:not(.unlocked) body>*:not(#gate){display:none!important}
 html:not(.unlocked) body{overflow:hidden;margin:0}
 .gate-card{background:#fff;width:100%;max-width:420px;padding:44px 40px 40px;text-align:center;border-bottom:5px solid #e4003a;border-radius:0px;box-shadow:0 10px 30px rgba(0,0,0,.08);display:flex;flex-direction:column;align-items:center}
 .gate-logo{width:190px;max-height:80px;object-fit:contain;height:auto;margin-bottom:26px}
 .gate-card h1{font-size:24px;font-weight:700;text-transform:none;color:#e4003a;margin:0 0 12px}
-.gate-card p{font-size:15px;color:#676767;margin:0 0 26px}
+.gate-card p{font-size:15px;color:#444444;margin:0 0 26px}
 .gate-card input{width:100%;padding:13px 16px;font:16px 'Open Sans',Arial,sans-serif;border:1px solid #cccccc;border-radius:0px;background:#fff;color:#222222;margin-bottom:18px;box-sizing:border-box}
 .gate-card input:focus{outline:none;border-color:#e4003a}
 .gate-btn{width:100%;padding:13px 23px;background:#e4003a;color:#ffffff;font-weight:700;font-size:15px;border:0;border-radius:0px;cursor:pointer;font-family:'Open Sans',Arial,sans-serif}
@@ -30,7 +30,7 @@ html:not(.unlocked) body{overflow:hidden;margin:0}
 <div id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title"><form id="gate-form" class="gate-card"><img class="gate-logo" src="assets/logo.png" alt="eurofunk"><h1 id="gate-title">Geschützter Bereich</h1><p>Bitte gib das Passwort ein, um diese Seite anzusehen.</p><input id="gate-input" type="password" autocomplete="current-password" placeholder="Passwort" aria-label="Passwort" required><button type="submit" class="gate-btn">Zugang</button><p id="gate-error" class="gate-error" hidden>Falsches Passwort. Bitte erneut versuchen.</p></form></div>
 <a class="skip" href="#inhalt">Zum Inhalt</a>
 <header class="site-header">
- <div class="navrow wrap"><a class="brand" href="#" aria-label="eurofunk – zum Seitenanfang"><img src="assets/logo.png" alt="eurofunk"></a>
+ <div class="navrow wrap"><a class="brand" href="#" aria-label="eurofunk – zum Seitenanfang"><img src="assets/logo-white.png" alt="eurofunk"></a>
  <button class="navtoggle" aria-expanded="false" aria-controls="navigation" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
  <nav id="navigation" aria-label="Hauptnavigation"><a href="#ueberblick">Instandhaltung</a><a href="#planung">Aufträge & Planung</a><a href="#anlagen">Anlagen & Material</a><a href="#mobil">Mobile App</a></nav></div>
 </header>

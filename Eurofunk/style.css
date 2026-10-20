@@ -2,7 +2,7 @@
 @font-face{font-family:'Open Sans';src:url('assets/opensans-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:'Open Sans';src:url('assets/opensans-600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:'Open Sans';src:url('assets/opensans-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
-:root{--primary:#e4003a;--primary-dark:#c20031;--on-primary:#ffffff;--text:#676767;--head:#e4003a;--ink:#222222;--light:#f2f2f2;--line:#e3e3e3;--hbg:#ffffff;--htx:#222222;--hbd:#e8e8e8;--fbg:#e4003a;--ftx:#ffffff;--fhd:#ffffff;--flk:#ffffff;--h3:#e4003a;--r:0px}
+:root{--primary:#e4003a;--primary-dark:#c20031;--on-primary:#ffffff;--text:#444444;--head:#e4003a;--ink:#222222;--light:#f7f7f7;--line:#e5e5e5;--hbg:#ffffff;--htx:#222222;--hbd:#e8e8e8;--fbg:#e4003a;--ftx:#ffffff;--fhd:#ffffff;--flk:#ffffff;--h3:#e4003a;--r:0px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:100px}
 body{margin:0;color:var(--text);font:16px/1.7 'Open Sans',Arial,Helvetica,sans-serif;background:#fff}
@@ -24,14 +24,14 @@ img{max-width:100%;height:auto}
 .site-header a{text-decoration:none}
 .navrow{height:88px;display:flex;align-items:center;justify-content:space-between;gap:40px}
 .brand{display:flex;flex-shrink:0;align-items:center}
-.brand img{width:180px;max-height:60px;object-fit:contain;object-position:left center;height:auto}
+.brand img{width:182px;max-height:60px;object-fit:contain;object-position:left center;height:auto}
 nav{display:flex;align-items:center;gap:32px}
 nav a{color:var(--htx);text-transform:none;font-size:15px;font-weight:600;padding:6px 0;border-bottom:2px solid transparent}
 nav a:hover{color:var(--primary);border-bottom-color:var(--primary)}
 .navtoggle{display:none}
 .hero.wrap{width:100%;max-width:none;padding:0}
 .hero-image{height:clamp(440px,46vw,640px);position:relative;overflow:hidden;background:var(--ink)}
-.hero-image>img{width:100%;height:100%;object-fit:cover;object-position:35% 50%}
+.hero-image>img{width:100%;height:100%;object-fit:cover;object-position:center 50%}
 .hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,20,25,0) 22%,rgba(20,20,25,.5) 55%,rgba(20,20,25,.78))}
 .hero-copy{position:absolute;top:50%;right:7%;left:47%;transform:translateY(-35%)}
 .hero-kicker{display:inline-block;margin:0 0 14px;padding:4px 12px;background:var(--primary);color:var(--on-primary);text-transform:uppercase;letter-spacing:.1em;font-size:13px;font-weight:700;border-radius:var(--r)}
@@ -136,3 +136,128 @@ dialog>img{display:block;margin:auto;max-width:90vw;max-height:82vh;width:auto;h
 @media print{.navtoggle,nav,.video-shell,.dialog-close{display:none}.site-header,footer{-webkit-print-color-adjust:exact;print-color-adjust:exact}.site-header{position:static}.section{padding-block:25px}.hero-image{height:350px}.split{break-inside:avoid}.client-row img{filter:none;opacity:1}}
 footer{border-top-color:#222222}footer a:hover{color:#ffffff;text-decoration:underline}.footer-cta{background:#ffffff!important;color:#e4003a!important}.footer-cta:hover{opacity:.85}
 
+
+/* ===== Lead-Theme (nach Original-Website, siehe design.md) ===== */
+/* eurofunk – Theme nach eurofunk.com (Analyse 20.10.2026, siehe design.md)
+   Tokens: Rot #e4003a, Text #222/#444, Grau #f7f7f7 / #f2f2f2, Linie #e5e5e5, Open Sans,
+   Container 1100px, eckig, Outline-Buttons, Header transparent über dem Hero, Burger als roter Kreis. */
+:root{--ef-red:#e4003a;--ef-red-d:#c20031;--ef-ink:#222;--ef-grey:#f7f7f7;--ef-card:#f2f2f2;--ef-line:#e5e5e5;--ef-muted:#676767}
+body{font-size:16px;line-height:1.6;color:#444}
+p{margin-bottom:20px}
+.wrap{width:min(1100px,calc(100% - 56px));max-width:1100px;margin-inline:auto;padding-inline:0}
+.section{padding-top:90px;padding-bottom:90px}
+
+/* Header: transparent über dem Hero, weißes Logo links, roter Kreis-Burger rechts (auf allen Breiten) */
+.site-header{position:absolute;top:0;left:0;right:0;background:transparent;border:0;box-shadow:none;z-index:30}
+.site-header .navrow{width:auto;max-width:none;height:110px;padding-inline:28px}
+.brand img{width:182px;max-height:56px;filter:drop-shadow(0 1px 6px rgba(0,0,0,.45))}
+.navtoggle{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;position:relative;z-index:40;width:44px;height:44px;padding:0;border:0;border-radius:50%;background:var(--ef-red);cursor:pointer;transition:background .2s}
+.navtoggle span{display:block;width:18px;height:2px;background:#fff;border-radius:1px}
+.navtoggle:hover{background:var(--ef-red-d)}
+.navtoggle[aria-expanded=true]{background:#fff}.navtoggle[aria-expanded=true] span{background:var(--ef-red)}
+nav{display:none;position:fixed;top:0;right:0;bottom:0;left:auto;width:min(400px,100%);z-index:35;background:var(--ef-red);flex-direction:column;align-items:flex-start;gap:6px;padding:120px 48px 40px;box-shadow:-10px 0 40px rgba(0,0,0,.25)}
+nav.open{display:flex}
+nav a{color:#fff;font-size:20px;font-weight:700;letter-spacing:.01em;padding:8px 0;border-bottom:2px solid transparent}
+nav a:hover{color:#fff;border-bottom-color:#fff}
+
+/* Hero: randlos, gleichmäßig abgedunkelt, Text + maintool-Logo zentriert */
+.hero-image{height:clamp(480px,40.6vw,780px);display:grid;grid-template-columns:1fr;grid-template-rows:1fr auto auto 1fr;justify-items:center;background:#111}
+.hero-image>img{grid-area:1/1/-1/-1;justify-self:stretch;width:100%;height:100%;min-height:0}
+.hero-shade{grid-area:1/1/-1/-1;justify-self:stretch;align-self:stretch;position:static;background:linear-gradient(180deg,rgba(0,0,0,.5) 0,rgba(0,0,0,0) 220px),rgba(0,0,0,.38)}
+.hero-image>.hero-maintool-logo{position:relative;grid-area:2/1;justify-self:center;top:auto;right:auto;width:clamp(150px,13vw,200px);margin:60px 0 22px;z-index:2}
+.hero-copy{position:relative;grid-area:3/1;left:auto;right:auto;top:auto;transform:none;width:min(900px,90%);text-align:center;z-index:2}
+.hero h1{color:#fff;font-size:clamp(34px,4.2vw,60px);font-weight:400;line-height:1.02;letter-spacing:-1px;text-shadow:none;margin-bottom:34px}
+
+/* Buttons: eckige Outline-Buttons, Versal mit Laufweite */
+.button{gap:0;padding:13px 22px;background:transparent;color:#fff;border:2px solid rgba(255,255,255,.75);border-radius:0;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;transition:background .2s,color .2s}
+.button:hover{background:#fff;color:var(--ef-red);border-color:#fff}
+.button>span{display:none}
+
+/* Typografie */
+h1,h2,h3{font-family:'Open Sans',Arial,sans-serif}
+h2{font-size:clamp(26px,2.4vw,36px);font-weight:600;line-height:1.2;color:var(--ef-red);letter-spacing:0;margin-bottom:26px}
+h3{font-size:25px;font-weight:700;line-height:1.2;color:var(--ef-red)}
+strong{color:var(--ef-ink)}
+a{color:var(--ef-red)}
+.more{color:var(--ef-red);font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;text-decoration:none}
+.more:before{content:none}
+.more:after{content:' ›';font-size:15px}
+.more:hover{text-decoration:underline}
+
+/* Intro */
+.intro{gap:60px}
+.intro-visual{background:var(--ef-grey);border:0;border-radius:0;padding:32px 26px}
+
+/* Kacheln: 3 Spalten auf Grau, getrennt durch feine Linien, zentriert, Hover weiß */
+.overview{background:var(--ef-grey)}
+.overview h2,#video>h2,.clients-head h2{text-align:center;max-width:none}
+.overview h2{margin-bottom:50px}
+.topic-grid{gap:0}
+.topic-grid>a{align-items:center;text-align:center;background:transparent;border:0;border-right:1px solid var(--ef-line);border-radius:0;box-shadow:none;padding:40px 36px 34px;transition:background .2s}
+.topic-grid>a:nth-child(3n){border-right:0}
+.topic-grid>a:nth-child(-n+3){border-bottom:1px solid var(--ef-line)}
+.topic-grid>a:hover{transform:none;box-shadow:none;background:#fff}
+.topic-symbol{height:72px}
+.topic-symbol svg{width:58px;height:58px;stroke:var(--ef-red);stroke-width:1.5}
+.topic-grid h3{margin:14px 0 10px}
+.topic-grid p{color:var(--ef-muted)}
+
+/* Video */
+.video-shell{border-radius:0}
+#video .video-external{display:table;margin:22px auto 0}
+
+/* Split-Abschnitte: Rhythmus weiß / #f7f7f7 */
+#rollen,#anlagen,.mobile-section{background:var(--ef-grey);border-top:0}
+.split{gap:60px}
+.split-section figure .image-button,.reverse figure .image-button{background:#fff;padding:0}
+figcaption{color:var(--ef-muted)}
+
+/* Listen + Details */
+.checks li{padding-left:26px}
+.checks li:before{content:'✓';color:var(--ef-red);font-weight:700}
+.detail-pair{gap:40px}
+.detail-pair article{border-top:0;background:var(--ef-card);padding:40px 36px}
+details{border-color:#dcdcdc}
+summary{color:var(--ef-red);font-weight:600}
+
+/* Logos */
+.clients{background:#fff}
+.clients-head{max-width:760px;margin:0 auto 55px;text-align:center}
+
+/* Footer: Rot vollflächig, weiße Schrift, Versal-Köpfe 12px, feine weiße Linie */
+footer{background:var(--ef-red);border-top:0;color:#fff;padding:60px 0 64px}
+footer .footer-grid{padding-bottom:42px;border-bottom:1px solid rgba(255,255,255,.5)}
+footer h2{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;margin-bottom:16px}
+footer p{font-size:14px;line-height:1.7;color:#fff}
+footer strong{color:#fff;font-size:16px}
+footer a{color:#fff;font-size:14px;font-weight:600;text-decoration:none}
+footer a:hover{color:#fff;text-decoration:underline}
+footer .footer-download{color:#fff}
+footer .footer-cta{gap:0;margin-top:24px;padding:13px 22px;background:transparent!important;color:#fff!important;border:2px solid #fff;border-radius:0;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+footer .footer-cta:hover{background:#fff!important;color:var(--ef-red)!important;opacity:1;text-decoration:none}
+footer .footer-cta>span{display:none}
+
+@media(max-width:1100px){.topic-grid>a{padding:32px 22px}}
+@media(max-width:760px){
+ .wrap{width:calc(100% - 40px)}
+ .section{padding-top:60px;padding-bottom:60px}
+ .site-header .navrow{height:84px;padding-inline:20px}
+ .brand img{width:150px}
+ .navtoggle{display:flex;width:40px;height:40px;border:0;padding:0}
+ nav{top:0;left:auto;right:0;width:100%;padding:100px 36px 30px;border:0;box-shadow:none;align-items:flex-start}
+ nav a{font-size:20px;padding:8px 0;border-bottom:2px solid transparent}
+ .hero-image{height:500px}
+ .hero-image>.hero-maintool-logo{width:140px;margin-top:70px}
+ .hero h1{font-size:30px;line-height:1.15}
+ h2{font-size:26px}
+ .topic-grid{grid-template-columns:1fr}
+ .topic-grid>a,.topic-grid>a:nth-child(3n){border-right:0;border-bottom:1px solid var(--ef-line)}
+ .topic-grid>a:last-child{border-bottom:0}
+ .topic-grid h3{font-size:22px}.topic-grid p{font-size:15px}
+ .detail-pair article{padding:28px 22px}
+ .intro-visual{padding:16px}
+}
+.hero.wrap{width:100%;max-width:none;margin-inline:0;padding-inline:0}
+
+/* Feste Vorgaben (Regelwerk §5) – nicht überschreibbar */
+.clients-head{display:block!important}.clients-head h2{grid-column:auto}.client-row{flex-wrap:nowrap!important}

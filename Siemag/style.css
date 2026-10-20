@@ -1,7 +1,7 @@
 /* collana maintool × SIEMAG TECBERG – CI nach https://www.siemag-tecberg.com (generiert) */
 @font-face{font-family:'PT Sans';src:url('assets/ptsans-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:'PT Sans';src:url('assets/ptsans-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
-:root{--primary:#0069b4;--primary-dark:#005a9b;--on-primary:#ffffff;--text:#212529;--head:#0069b4;--ink:#001f41;--light:#e9ecef;--line:#e3e3e3;--hbg:#ffffff;--htx:#000000;--hbd:#e3e3e3;--fbg:#00203e;--ftx:#ffffff;--fhd:#ffffff;--flk:#ffffff;--h3:#001f41;--r:0px}
+:root{--primary:#0069b4;--primary-dark:#005a9b;--on-primary:#ffffff;--text:#212529;--head:#0069b4;--ink:#001f41;--light:#e9ecef;--line:#dee2e6;--hbg:#ffffff;--htx:#000000;--hbd:#dee2e6;--fbg:#0069b4;--ftx:#ffffff;--fhd:#ffffff;--flk:#ffffff;--h3:#001f41;--r:0px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:100px}
 body{margin:0;color:var(--text);font:16px/1.7 'PT Sans',Arial,Helvetica,sans-serif;background:#fff}
@@ -23,7 +23,7 @@ img{max-width:100%;height:auto}
 .site-header a{text-decoration:none}
 .navrow{height:88px;display:flex;align-items:center;justify-content:space-between;gap:40px}
 .brand{display:flex;flex-shrink:0;align-items:center}
-.brand img{width:125px;max-height:60px;object-fit:contain;object-position:left center;height:auto}
+.brand img{width:170px;max-height:60px;object-fit:contain;object-position:left center;height:auto}
 nav{display:flex;align-items:center;gap:32px}
 nav a{color:var(--htx);text-transform:none;font-size:15px;font-weight:600;padding:6px 0;border-bottom:2px solid transparent}
 nav a:hover{color:var(--primary);border-bottom-color:var(--primary)}
@@ -109,7 +109,7 @@ dialog>img{display:block;margin:auto;max-width:90vw;max-height:82vh;width:auto;h
 @media(max-width:1100px){.wrap{width:92%}.navrow{gap:20px}nav{gap:18px}nav a{font-size:13px}.split,.intro,.detail-pair{gap:35px}.hero-copy{left:40%}}
 @media(max-width:760px){
  html{scroll-padding-top:80px}
- .navrow{height:72px}.brand img{width:125px;max-height:48px}
+ .navrow{height:72px}.brand img{width:150px;max-height:48px}
  .navtoggle{display:flex;flex-direction:column;justify-content:center;gap:5px;background:transparent;border:1px solid var(--hbd);width:44px;height:40px;padding:8px}
  .navtoggle span{display:block;background:var(--htx);height:2px;width:100%}
  nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--hbg);padding:12px 4% 20px;flex-direction:column;align-items:stretch;gap:0;border-bottom:3px solid var(--primary);box-shadow:0 8px 16px rgba(0,0,0,.08)}
@@ -133,5 +133,150 @@ dialog>img{display:block;margin:auto;max-width:90vw;max-height:82vh;width:auto;h
 @media(max-width:420px){.topic-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.topic-grid>a,.client-row img{transition:none}}
 @media print{.navtoggle,nav,.video-shell,.dialog-close{display:none}.site-header,footer{-webkit-print-color-adjust:exact;print-color-adjust:exact}.site-header{position:static}.section{padding-block:25px}.hero-image{height:350px}.split{break-inside:avoid}.client-row img{filter:none;opacity:1}}
+footer{border-top-color:#001f41}footer a:hover{color:#ffffff;text-decoration:underline}.footer-cta{background:#ffffff!important;color:#0069b4!important}.footer-cta:hover{opacity:.85}
 
 
+/* ===== Lead-Theme (nach Original-Website, siehe design.md) ===== */
+/* SIEMAG TECBERG – Theme nach siemag-tecberg.com (Analyse 20.10.2026, siehe design.md)
+   Tokens: Blau #0069b4, Navy #00203e, Text #212529, Seite #e9ecef, Linie #dee2e6, PT Sans,
+   weiße Inhaltsbox mit 45px Rand, Versal-Überschriften mit Laufweite, eckig, L-Rahmen an Bildern. */
+:root{--s-blue:#0069b4;--s-blue-d:#005a9b;--s-navy:#00203e;--s-text:#212529;--s-page:#e9ecef;--s-line:#dee2e6;--s-pad:clamp(18px,calc((100vw - 1120px)*.05625),45px)}
+body{background:var(--s-page);color:var(--s-text);font-size:18px;line-height:1.5}
+p{margin-bottom:20px}
+main{display:block;background:#fff;margin:0 45px 90px}
+.wrap{width:auto;max-width:none;margin-inline:0;padding-inline:var(--s-pad);box-sizing:border-box}
+.section{padding-top:90px;padding-bottom:90px}
+
+/* Header: sticky, weiß, 5px blaue Oberkante, Logo an der Inhaltskante, Burger rechts (alle Breiten) */
+.site-header{background:#fff;border-top:5px solid var(--s-blue);border-bottom:1px solid var(--s-line);box-shadow:none}
+.site-header .navrow{height:94px;padding-inline:calc(45px + var(--s-pad))}
+.brand img{width:170px;max-height:80px}
+.navtoggle{display:flex;flex-direction:column;align-items:flex-end;justify-content:center;gap:6px;width:44px;height:44px;padding:8px 4px;background:transparent;border:0;cursor:pointer}
+.navtoggle span{display:block;height:3px;background:var(--s-blue);border-radius:2px;width:100%}
+.navtoggle span:nth-child(2){width:70%}.navtoggle span:nth-child(3){width:85%}
+nav{display:none;position:absolute;top:100%;left:calc(45px + var(--s-pad));right:auto;width:330px;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:6px 0;border:0;box-shadow:0 0 15px rgba(0,0,0,.16)}
+nav.open{display:flex}
+nav a{display:flex;justify-content:space-between;color:var(--s-text);font-size:15px;font-weight:700;padding:11px 18px;border-bottom:1px solid var(--s-line)}
+nav a:last-child{border-bottom:0}
+nav a::after{content:'›';font-size:18px;line-height:1}
+nav a:hover{color:var(--s-blue);background:var(--s-page);border-bottom-color:var(--s-line)}
+html{scroll-padding-top:120px}
+
+/* Hero: randlos (aus der weißen Box heraus), kein Overlay, Textkarte unten links, maintool-Logo oben rechts */
+.hero.wrap{margin-inline:-45px;padding-inline:0;width:auto}
+.hero-image{height:clamp(420px,55.5vw,900px);background:var(--s-page)}
+.hero-shade{display:none}
+.hero-copy{left:calc(45px + var(--s-pad));right:auto;top:auto;bottom:9%;transform:none;max-width:760px;background:#fff;padding:36px 45px 40px}
+.hero h1{color:var(--s-blue);font-size:clamp(28px,2.5vw,38px);font-weight:700;line-height:1.2;letter-spacing:2px;text-transform:uppercase;text-shadow:none;margin-bottom:28px}
+.hero-image>.hero-maintool-logo{top:8%;right:calc(45px + var(--s-pad));width:clamp(150px,13vw,210px)}
+
+/* Buttons: btn-primary blau, eckig, Versal, weicher Schatten */
+.button{gap:0;padding:9px 32px;background:var(--s-blue);color:#fff;border:1px solid var(--s-blue);border-radius:0;font-size:15px;font-weight:400;letter-spacing:.02em;text-transform:uppercase;box-shadow:0 0 15px rgba(0,0,0,.16)}
+.button:hover{background:var(--s-navy);border-color:var(--s-navy)}
+.button>span{display:none}
+
+/* Typografie: Versal mit Laufweite, Unterzeile dunkel */
+h1,h2,h3{font-family:'PT Sans',Arial,sans-serif}
+h2{font-size:clamp(26px,2.2vw,34px);font-weight:700;line-height:1.2;letter-spacing:3px;text-transform:uppercase;color:var(--s-blue);margin-bottom:30px}
+h2 .hl{display:block;margin-top:6px;font-size:.88em;font-weight:400;letter-spacing:1.5px;color:var(--s-text)}
+.split h2,.intro h2,.detail-pair h2{font-size:clamp(24px,1.9vw,30px);letter-spacing:1.25px}
+.overview h2,#video>h2,.clients-head h2{text-align:center}
+h3{font-size:19px;font-weight:700;color:var(--s-text);letter-spacing:0}
+a{color:var(--s-blue)}
+.more{display:inline-block;padding:4px 18px;border:2px solid var(--s-text);color:var(--s-text);font-size:13.5px;font-weight:400;letter-spacing:.03em;text-transform:uppercase;text-decoration:none;transition:background .2s,color .2s}
+.more:before{content:none}
+.more:hover{background:var(--s-blue);border-color:var(--s-blue);color:#fff}
+
+/* Intro */
+.intro{gap:60px}
+.intro-visual{background:#fff;border:0;border-radius:0;padding:0;box-shadow:-5px -5px 0 var(--s-blue)}
+
+/* Anwendungskacheln: weiße Zellen mit Trennlinien, Leiste mit Schatten, zentriert */
+.overview{background:#fff}
+.overview h2{max-width:none;margin-bottom:50px}
+.topic-grid{gap:0;box-shadow:0 -10px 10px -4px rgba(0,0,0,.18),0 0 15px rgba(0,0,0,.08)}
+.topic-grid>a{align-items:center;text-align:center;background:#fff;border:0;border-right:1px solid var(--s-line);border-radius:0;box-shadow:none;padding:32px;color:var(--s-text)}
+.topic-grid>a:nth-child(3n){border-right:0}
+.topic-grid>a:nth-child(-n+3){border-bottom:1px solid var(--s-line)}
+.topic-grid>a:hover{transform:none;box-shadow:none;background:#f6f8fa}
+.topic-symbol{height:70px}
+.topic-symbol svg{width:56px;height:56px;stroke:var(--s-blue);stroke-width:1.6}
+.topic-grid p{font-size:16px}
+
+/* Video */
+.video-shell{border-radius:0;box-shadow:-5px -5px 0 var(--s-blue)}
+#video .video-external{display:table;margin:24px auto 0}
+
+/* Split-Abschnitte: weiß in der Box, Bilder mit blauem L-Rahmen */
+.split-section,.mobile-section{background:#fff;border-top:0}
+.split{gap:60px}
+.split-section figure .image-button,.reverse figure .image-button{background:#fff;padding:0;box-shadow:-5px -5px 0 var(--s-blue)}
+.phone-figure .image-button{box-shadow:none!important}
+figcaption{color:#5a6169}
+#rollen,#anlagen{border-top:1px solid var(--s-line)}
+
+/* Listen + Details */
+.checks li{padding-left:26px}
+.checks li:before{content:'✓';color:var(--s-blue);font-weight:700}
+.detail-pair{gap:60px;border-top:1px solid var(--s-line)}
+.detail-pair article{border-top:0;padding-top:0}
+details{border-color:var(--s-line)}
+summary{list-style:none;display:flex;justify-content:space-between;color:var(--s-blue);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:15px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'›';font-size:22px;line-height:1;transition:transform .2s}
+details[open] summary::after{transform:rotate(90deg)}
+
+/* Logos */
+.clients{background:#fff;border-top:1px solid var(--s-line)}
+.clients-head{max-width:820px;margin:0 auto 55px;text-align:center}
+
+/* Footer: Blau mit weißer Schrift, Navy-Leiste unten */
+footer{background:var(--s-blue);border-top:0;border-bottom:36px solid var(--s-navy);color:#fff;padding:42px 0 50px}
+footer .wrap{padding-inline:calc(45px + var(--s-pad))}
+footer h2{font-size:18px;font-weight:700;letter-spacing:0;text-transform:uppercase;color:#fff;margin-bottom:18px}
+footer p,footer strong{color:#fff}
+footer p{font-size:17px}
+footer a{color:#fff;text-decoration:underline}
+footer a:hover{color:#fff;text-decoration:none}
+footer .footer-download{color:#fff;font-weight:700}
+.footer-cta{gap:0;margin-top:22px;padding:9px 32px;background:#fff;color:var(--s-blue)!important;border-radius:0;font-size:15px;font-weight:400;text-transform:uppercase;text-decoration:none!important;box-shadow:0 0 15px rgba(0,0,0,.16)}
+.footer-cta:hover{background:var(--s-navy);color:#fff!important}
+.footer-cta>span{display:none}
+
+@media(max-width:1100px){
+ main{margin:0 24px 60px}
+ .hero.wrap{margin-inline:-24px}
+ .site-header .navrow,footer .wrap{padding-inline:calc(24px + var(--s-pad))}
+ nav{left:calc(24px + var(--s-pad))}
+ .hero-copy{left:calc(24px + var(--s-pad))}
+ .hero-image>.hero-maintool-logo{right:calc(24px + var(--s-pad))}
+}
+@media(max-width:760px){
+ main{margin:0}
+ .hero.wrap{margin-inline:0}
+ .wrap{padding-inline:18px}
+ .section{padding-top:60px;padding-bottom:60px}
+ .site-header .navrow,footer .wrap{padding-inline:18px}
+ .site-header .navrow{height:92px}
+ .brand img{width:150px;max-height:76px}
+ .navtoggle{border:0;width:44px;height:44px;padding:8px 4px}
+ .navtoggle span{background:var(--s-blue);height:3px}
+ nav{top:100%;left:0;right:0;width:auto;box-shadow:0 10px 15px rgba(0,0,0,.12)}
+ nav a{font-size:16px;padding:14px 18px}
+ .hero-image{height:auto;display:flex;flex-direction:column}
+ .hero-image>img{height:340px}
+ .hero-copy{position:static;max-width:none;padding:28px 18px 34px;text-align:center}
+ .hero h1{font-size:24px;letter-spacing:1.5px}
+ .hero-image>.hero-maintool-logo{top:20px;right:18px;width:130px}
+ .topic-grid{grid-template-columns:1fr;gap:18px;box-shadow:none}
+ .topic-grid>a,.topic-grid>a:nth-child(3n){background:var(--s-blue);color:#fff;border:0;padding:32px 22px}
+ .topic-grid>a:hover{background:var(--s-blue-d)}
+ .topic-grid h3,.topic-grid p{color:#fff}.topic-grid h3{font-size:20px}
+ .topic-symbol svg{stroke:#fff}
+ .topic-grid .more{border-color:#fff;color:#fff}
+ h2{letter-spacing:1.5px}
+ footer{padding:36px 0 40px}
+}
+
+/* Feste Vorgaben (Regelwerk §5) – nicht überschreibbar */
+.clients-head{display:block!important}.clients-head h2{grid-column:auto}.client-row{flex-wrap:nowrap!important}

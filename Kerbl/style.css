@@ -2,7 +2,7 @@
 @font-face{font-family:'Inter';src:url('assets/inter-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:'Inter';src:url('assets/inter-600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
 @font-face{font-family:'Inter';src:url('assets/inter-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
-:root{--primary:#63744f;--primary-dark:#536241;--on-primary:#ffffff;--text:#414141;--head:#63744f;--ink:#414141;--light:#e6e8e2;--line:#e3e3e3;--hbg:#ffffff;--htx:#414141;--hbd:#e6e8e2;--fbg:#e6e8e2;--ftx:#414141;--fhd:#63744f;--flk:#63744f;--h3:#414141;--r:0px}
+:root{--primary:#63744f;--primary-dark:#536241;--on-primary:#ffffff;--text:#414141;--head:#63744f;--ink:#414141;--light:#e6e8e2;--line:#e5e7eb;--hbg:#ffffff;--htx:#414141;--hbd:#e5e7eb;--fbg:#e6e8e2;--ftx:#414141;--fhd:#63744f;--flk:#414141;--h3:#414141;--r:0px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:100px}
 body{margin:0;color:var(--text);font:16px/1.7 'Inter',Arial,Helvetica,sans-serif;background:#fff}
@@ -24,7 +24,7 @@ img{max-width:100%;height:auto}
 .site-header a{text-decoration:none}
 .navrow{height:88px;display:flex;align-items:center;justify-content:space-between;gap:40px}
 .brand{display:flex;flex-shrink:0;align-items:center}
-.brand img{width:170px;max-height:60px;object-fit:contain;object-position:left center;height:auto}
+.brand img{width:160px;max-height:60px;object-fit:contain;object-position:left center;height:auto}
 nav{display:flex;align-items:center;gap:32px}
 nav a{color:var(--htx);text-transform:none;font-size:15px;font-weight:600;padding:6px 0;border-bottom:2px solid transparent}
 nav a:hover{color:var(--primary);border-bottom-color:var(--primary)}
@@ -136,3 +136,139 @@ dialog>img{display:block;margin:auto;max-width:90vw;max-height:82vh;width:auto;h
 @media print{.navtoggle,nav,.video-shell,.dialog-close{display:none}.site-header,footer{-webkit-print-color-adjust:exact;print-color-adjust:exact}.site-header{position:static}.section{padding-block:25px}.hero-image{height:350px}.split{break-inside:avoid}.client-row img{filter:none;opacity:1}}
 
 
+
+/* ===== Lead-Theme (nach Original-Website, siehe design.md) ===== */
+/* Kerbl – Theme nach kerbl.com/de (Analyse 20.10.2026, siehe design.md)
+   Tokens: Grün #63744f, Gelb #f0dd28 (nur Box/Balken), Text #414141, Grau #e6e8e2, Linie #e5e7eb,
+   Inter, body 20px/32.5px -0.25px, H1 48/400, H2 30/600, H3 24/600, eckig (0px), Container 1600px / 32px. */
+:root{--k-green:#63744f;--k-green-d:#536241;--k-yellow:#f0dd28;--k-text:#414141;--k-grey:#e6e8e2;--k-line:#e5e7eb;--k-sh:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1)}
+body{font-size:20px;line-height:1.625;letter-spacing:-.25px;color:var(--k-text)}
+p{margin-bottom:24px}
+.wrap{width:auto;max-width:1600px;margin-inline:auto;padding-inline:32px;box-sizing:border-box}
+.section{padding-top:96px;padding-bottom:96px}
+
+/* Header: weiß, volle Breite, sticky, feine Linie */
+.site-header{background:#fff;border-bottom:1px solid var(--k-line);box-shadow:none}
+.site-header .navrow{max-width:none;height:88px;padding-inline:32px;justify-content:flex-start;gap:56px}
+.brand img{width:160px}
+nav{gap:36px}
+nav a{color:var(--k-text);font-size:18px;font-weight:400;letter-spacing:-.25px;padding:4px 0;border-bottom:1px solid transparent}
+nav a:hover{color:var(--k-text);border-bottom-color:var(--k-text)}
+html{scroll-padding-top:100px}
+
+/* Hero: geteilt – weiße Textspalte links, randloses Foto rechts, kein Overlay */
+.hero-image{height:clamp(460px,35vw,680px);background:#fff;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr auto auto 1fr}
+.hero-image>img{grid-column:2;grid-row:1/-1;width:100%;height:100%;object-fit:cover;min-height:0}
+.hero-shade{display:none}
+.hero-image>.hero-maintool-logo{position:static;grid-column:1;grid-row:2;justify-self:center;width:min(512px,calc(100% - 64px));height:auto;object-fit:contain;object-position:left center;max-height:58px;margin-bottom:30px}
+.hero-copy{position:static;grid-column:1;grid-row:3;justify-self:center;width:min(512px,calc(100% - 64px));transform:none}
+.hero h1{color:var(--k-green);font-size:48px;font-weight:400;line-height:1;letter-spacing:-1.2px;text-shadow:none;margin-bottom:48px}
+@media(min-width:1600px){.hero-image{grid-template-columns:7fr 9fr}}
+
+/* Buttons: Unterstrich-Link mit gelber Pfeil-Box (Hero-CTA) / grüner Block-Button (Footer) */
+.button{display:inline-flex;justify-content:space-between;align-items:center;gap:20px;width:240px;max-width:100%;padding:0 0 4px;background:transparent;color:var(--k-text);border-bottom:1px solid var(--k-text);border-radius:0;font-size:16px;font-weight:600;letter-spacing:-.25px;text-transform:none}
+.button:hover{background:transparent;color:var(--k-green);border-bottom-color:var(--k-green)}
+.button>span{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:var(--k-yellow);color:var(--k-text);font-size:17px;font-weight:400;transition:background .2s}
+.button:hover>span{background:var(--k-green);color:#fff}
+
+/* Typografie */
+h1,h2,h3{font-family:'Inter',Arial,sans-serif}
+h2{font-size:30px;font-weight:600;line-height:1.2;letter-spacing:-.75px;color:var(--k-green);margin-bottom:28px}
+h2 .hl{display:block;margin-top:6px;font-size:20px;font-weight:400;font-style:italic;letter-spacing:-.25px;line-height:1.6;color:var(--k-text)}
+h2 .hl::after{content:'';display:block;width:64px;height:3px;margin-top:20px;background:var(--k-yellow)}
+h3{font-size:24px;font-weight:600;line-height:1.33;letter-spacing:-.6px;color:var(--k-text)}
+a{color:var(--k-green)}
+.more{display:inline-flex;align-items:center;justify-content:space-between;gap:20px;min-width:240px;padding-bottom:4px;border-bottom:1px solid var(--k-text);color:var(--k-text);font-size:16px;font-weight:600;text-decoration:none}
+.more:before{content:none}
+.more:after{content:'↗';display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:var(--k-green);color:#fff;font-weight:400;font-size:17px}
+.more:hover{color:var(--k-green);border-bottom-color:var(--k-green)}
+
+/* Intro wie „Unternehmen"-Block: Bild in grauer Fläche, Text daneben */
+.intro{gap:64px}
+.intro-visual{background:var(--k-grey);border:0;border-radius:0;padding:40px 32px}
+
+/* Kacheln: weiße Produktkarten auf Grau, eckig, leichter Schatten, Pfeil unten rechts */
+.overview{background:var(--k-grey)}
+.overview h2{max-width:none;margin-bottom:48px}
+.topic-grid{gap:32px}
+.topic-grid>a{position:relative;background:#fff;border:0;border-radius:0;box-shadow:var(--k-sh);padding:32px 32px 80px;color:var(--k-text)}
+.topic-grid>a:hover{transform:none;box-shadow:0 10px 15px -3px rgba(0,0,0,.12),0 4px 6px -4px rgba(0,0,0,.1)}
+.topic-grid h3{margin:16px 0 8px}
+.topic-grid p{font-size:16px;line-height:1.5;color:var(--k-text)}
+.topic-grid .more{position:absolute;right:24px;bottom:24px;min-width:0;border:0;padding:0;gap:12px;font-weight:500;font-size:15px}
+.topic-grid .more:after{content:'↗';background:transparent;color:var(--k-green);width:auto;height:auto;font-size:24px}
+.topic-symbol svg{stroke:var(--k-green);stroke-width:1.5}
+
+/* Video */
+.video-shell{border-radius:0}
+
+/* Split-Abschnitte im Kerbl-Rhythmus: Grün (Rollen, Mobil) / Grau (Anlagen) */
+#rollen,.mobile-section{background:var(--k-green);color:#fff;border-top:0}
+#rollen h2,.mobile-section h2,#rollen h2 .hl,.mobile-section h2 .hl{color:#fff}
+#rollen strong,.mobile-section strong{color:#fff}
+#rollen .checks li:before,.mobile-section .checks li:before{color:var(--k-yellow)}
+#anlagen{background:var(--k-grey)}
+.split{gap:64px}
+.split-section figure .image-button,.reverse figure .image-button{background:#fff;box-shadow:var(--k-sh);padding:0}
+#rollen figcaption,.mobile-section figcaption{color:#eef0ea}
+figcaption{color:#5c5c5c;font-size:13px}
+.phone-figure .image-button{background:transparent!important;box-shadow:none!important}
+
+/* Listen + Details: Linien und Chevron wie im Kerbl-Menü */
+.checks li{padding-left:28px}
+.checks li:before{content:'✓';color:var(--k-green);font-weight:700}
+.detail-pair{gap:64px}
+.detail-pair article{border-top:0;padding-top:0}
+details{border-top:1px solid #d9dcd3;border-bottom:1px solid #d9dcd3}
+summary{list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--k-text);font-weight:600;font-size:18px;padding:16px 0}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'›';font-size:26px;line-height:1;font-weight:400;transition:transform .2s}
+details[open] summary::after{transform:rotate(90deg)}
+
+/* Logos */
+.clients{background:#fff}
+.clients-head{max-width:860px;text-align:left;margin:0 0 56px}
+.clients-head h2{margin:0 0 20px}
+
+/* Footer: hellgrau, grüne Überschriften, graue Links, grüne Copyright-Leiste */
+footer{background:var(--k-grey);border-top:0;border-bottom:56px solid var(--k-green);color:var(--k-text);padding:72px 0 80px}
+footer h2{font-size:20px;font-weight:600;letter-spacing:-.5px;color:var(--k-green);margin-bottom:16px}
+footer p{font-size:16px;line-height:1.5;color:var(--k-text)}
+footer strong{color:var(--k-text)}
+footer a{color:var(--k-text);font-size:16px;text-decoration:none}
+footer a:hover{color:var(--k-green);text-decoration:underline}
+footer .footer-download{font-weight:600;color:var(--k-text)}
+.footer-cta{display:inline-flex;justify-content:space-between;width:240px;margin-top:24px;padding:12px 16px;background:var(--k-green);color:#fff!important;border-radius:0;font-size:16px;font-weight:600;text-transform:none;text-decoration:none!important}
+.footer-cta:hover{background:var(--k-green-d)}
+.footer-cta>span{color:#fff}
+
+@media(max-width:1100px){
+ .site-header .navrow{gap:28px;padding-inline:24px}nav{gap:20px}nav a{font-size:15px}
+ .hero h1{font-size:40px}
+ .topic-grid{gap:20px}
+}
+@media(max-width:760px){
+ body{font-size:18px}
+ .wrap{padding-inline:16px}
+ .section{padding-top:64px;padding-bottom:64px}
+ .site-header .navrow{height:72px;padding-inline:16px;justify-content:space-between}
+ .brand img{width:150px}
+ .navtoggle{border:0;width:44px;height:40px;padding:9px 6px}.navtoggle span{background:var(--k-text);height:2.5px;border-radius:2px}
+ nav{top:72px;background:#fff;padding:8px 16px 24px;border-bottom:1px solid var(--k-line);box-shadow:0 8px 16px rgba(0,0,0,.06)}
+ nav a{display:flex;justify-content:space-between;font-size:17px;padding:14px 12px;border-bottom:1px solid var(--k-line)}
+ nav a::after{content:'›';font-size:22px;line-height:1}
+ nav a:hover{border-bottom-color:var(--k-line);color:var(--k-green)}
+ .hero-image{height:auto;grid-template-columns:1fr;grid-template-rows:auto auto auto}
+ .hero-image>img{grid-column:1;grid-row:1;height:300px}
+ .hero-image>.hero-maintool-logo{grid-column:1;grid-row:2;justify-self:start;margin:32px 16px 22px;width:160px}
+ .hero-copy{grid-column:1;grid-row:3;justify-self:stretch;width:auto;padding:0 16px 48px}
+ .hero h1{font-size:32px;line-height:1.12;margin-bottom:36px}
+ h2{font-size:26px}h2 .hl{font-size:18px}
+ .topic-grid>a{padding:24px 20px 64px}.topic-grid h3{font-size:18px}.topic-grid p{font-size:15px}
+ .intro-visual{padding:16px}
+ footer{padding:56px 0 56px;border-bottom-width:48px}
+}
+.hero.wrap{max-width:none;margin-inline:0;padding-inline:0}
+
+/* Feste Vorgaben (Regelwerk §5) – nicht überschreibbar */
+.clients-head{display:block!important}.clients-head h2{grid-column:auto}.client-row{flex-wrap:nowrap!important}

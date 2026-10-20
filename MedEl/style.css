@@ -1,8 +1,9 @@
 /* collana maintool × MED-EL – CI nach https://www.medel.com/de/ (generiert) */
-@font-face{font-family:'Open Sans';src:url('assets/opensans-var.woff2') format('woff2');font-weight:300;font-style:normal;font-display:swap}
 @font-face{font-family:'Open Sans';src:url('assets/opensans-var.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:'Open Sans';src:url('assets/opensans-var.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
-:root{--primary:#c60c30;--primary-dark:#a50a28;--on-primary:#ffffff;--text:#0d0d0d;--head:#c60c30;--ink:#0d0d0d;--light:#f2f1f1;--line:#e3e3e3;--hbg:#c60c30;--htx:#ffffff;--hbd:#a50a28;--fbg:#4d4d4d;--ftx:#ffffff;--fhd:#ffffff;--flk:#ffffff;--h3:#0d0d0d;--r:0px}
+@font-face{font-family:'Signika';src:url('assets/signika-var.woff2') format('woff2');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Signika';src:url('assets/signika-var.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+:root{--primary:#c60c30;--primary-dark:#a50a28;--on-primary:#ffffff;--text:#0d0d0d;--head:#0d0d0d;--ink:#0d0d0d;--light:#f2f1f1;--line:#e3e3e3;--hbg:#c60c30;--htx:#ffffff;--hbd:#a50a28;--fbg:#4d4d4d;--ftx:#ffffff;--fhd:#ffffff;--flk:#ffffff;--h3:#0d0d0d;--r:0px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:100px}
 body{margin:0;color:var(--text);font:16px/1.7 'Open Sans',Arial,Helvetica,sans-serif;background:#fff}
@@ -12,7 +13,7 @@ a{color:var(--primary);text-underline-offset:4px}
 a:hover{text-decoration:none}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--primary);outline-offset:4px}
 strong{color:var(--ink)}
-h1,h2,h3{font-family:'Open Sans',Arial,Helvetica,sans-serif;font-weight:300;line-height:1.2;letter-spacing:0;margin:0 0 24px;text-transform:none;color:var(--head)}
+h1,h2,h3{font-family:'Signika',Arial,Helvetica,sans-serif;font-weight:300;line-height:1.2;letter-spacing:0;margin:0 0 24px;text-transform:none;color:var(--head)}
 h2{font-size:clamp(26px,2.4vw,36px)}
 h3{font-size:20px;color:var(--h3)}
 p{margin:0 0 22px}
@@ -135,4 +136,110 @@ dialog>img{display:block;margin:auto;max-width:90vw;max-height:82vh;width:auto;h
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.topic-grid>a,.client-row img{transition:none}}
 @media print{.navtoggle,nav,.video-shell,.dialog-close{display:none}.site-header,footer{-webkit-print-color-adjust:exact;print-color-adjust:exact}.site-header{position:static}.section{padding-block:25px}.hero-image{height:350px}.split{break-inside:avoid}.client-row img{filter:none;opacity:1}}
 
-.hero-shade{background:linear-gradient(90deg,rgba(90,5,20,0) 15%,rgba(90,5,20,.62) 45%,rgba(90,5,20,.86))}.hero h1{font-weight:400}@media(max-width:760px){.hero-shade{background:linear-gradient(0deg,rgba(90,5,20,.88) 15%,rgba(90,5,20,.1) 75%)}}
+
+
+/* ===== Lead-Theme (nach Original-Website, siehe design.md) ===== */
+/* MED-EL – Theme nach medel.com/de (Analyse 20.10.2026, siehe design.md)
+   Tokens: Rot #c60c30 (Header-Leiste, Hero-Titel, Buttons, Links), Hover #a50a28, Text #0d0d0d, Grau #f2f1f1,
+   Footer #4d4d4d / Unterleiste #0d0d0d, Grün #8cc152 (Kreis-Häkchen); Container 1220px/10px; eckig; Signika 300 statt SignaWebPro-Light. */
+:root{--mr:#c60c30;--mr-d:#a50a28;--mg:#f2f1f1;--ml:#d9d9d9;--mgr:#8cc152}
+body{font-size:16px;line-height:24px;color:#0d0d0d}
+p{margin-bottom:16px}
+.wrap{width:auto;max-width:1220px;margin-inline:auto;padding-inline:10px;box-sizing:border-box}
+.section{padding-top:70px;padding-bottom:70px}
+html{scroll-padding-top:20px}
+
+/* Header: statisch – schwarze Meta-Leiste 32px + rote Leiste 100px, Navigation links, helles Logo rechts */
+.site-header{position:relative;background:var(--mr);border:0}
+.site-header:before{content:'';display:block;height:32px;background:#000}
+.navrow{height:100px;gap:0}
+.brand{order:2;margin-left:auto}
+.brand img{width:115px;max-height:40px;object-position:right center}
+nav{order:1;gap:0;height:100%;align-items:stretch}
+nav a{display:flex;align-items:center;padding:0 20px;font-size:16px;font-weight:400;color:#fff;border:0;border-left:1px solid rgba(255,255,255,.3)}
+nav a:last-child{border-right:1px solid rgba(255,255,255,.3)}
+nav a:hover{color:#fff;background:var(--mr-d);border-bottom:0}
+
+/* Hero: randlos 700px, Produktbild rechts auf hellem Verlauf, Text in weißer Box links an der Containerkante */
+.hero-image{height:700px;background:linear-gradient(180deg,#e0e0e0,#f5f5f5)}
+.hero-image>img{position:absolute;top:0;right:-12%;width:auto;height:100%;max-width:none;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 18%);mask-image:linear-gradient(90deg,transparent 0,#000 18%)}
+.hero-shade{display:none}
+.hero-copy{left:max(10px,calc((100vw - 1220px)/2 + 10px));right:auto;top:50%;transform:translateY(-50%);width:min(560px,46vw);background:#fff;padding:34px 30px 36px}
+.hero h1{font-size:42px;line-height:1.3;font-weight:300;color:var(--mr);text-shadow:none;margin-bottom:26px}
+.hero-image>.hero-maintool-logo{top:40px;right:max(10px,calc((100vw - 1220px)/2 + 10px));width:clamp(150px,13vw,200px)}
+
+/* Buttons: eckig, Rot, 16px/400, 6px 32px, ohne Icon */
+.button,.footer-cta{gap:0;padding:6px 32px;border:1px solid transparent;border-radius:0;background:var(--mr);color:#fff!important;font-size:16px;line-height:24px;font-weight:400;text-transform:none}
+.button:hover,.footer-cta:hover{background:var(--mr-d)}
+.button>span,.footer-cta>span{display:none}
+
+/* Typografie: Signika Light für Überschriften */
+h1,h2,h3{font-family:'Signika','Open Sans',Arial,sans-serif;font-weight:300;letter-spacing:0;color:#0d0d0d}
+h2{font-size:clamp(28px,2.6vw,36px);line-height:1.3;margin-bottom:22px}
+h3{font-size:22px;line-height:1.3;font-weight:400;color:#0d0d0d}
+a{color:var(--mr)}
+strong{color:#0d0d0d}
+.more{color:var(--mr);font-size:14px;font-weight:400;text-decoration:none}
+.more:before{content:none}
+.more:after{content:' ›'}
+.more:hover{text-decoration:underline}
+
+.intro-visual{background:var(--mg);border:0;border-radius:0}
+
+/* Kacheln: eckig, ohne Schatten, weiß auf Grau, Titel Light */
+.overview{background:var(--mg)}
+.overview h2{max-width:none}
+.topic-grid{gap:20px}
+.topic-grid>a{background:#fff;border:0;border-bottom:3px solid transparent;border-radius:0;box-shadow:none;padding:28px 24px 24px}
+.topic-grid>a:hover{transform:none;box-shadow:none;border-bottom-color:var(--mr)}
+.topic-grid h3{font-size:24px;font-weight:300}
+.topic-symbol svg{stroke:var(--mr);stroke-width:1.4}
+
+.video-shell{border-radius:0}
+.split-section{background:#fff}
+#anlagen.split-section{background:var(--mg)}
+figcaption{color:#666}
+
+/* Checks: grüne Kreis-Häkchen wie „Warum MED-EL?" */
+.checks li{padding-left:32px;margin-bottom:12px}
+.checks li:before{content:'';top:2px;width:20px;height:20px;border-radius:50%;background:var(--mgr) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E") center/100% no-repeat}
+
+.detail-pair article{border-top:0;padding-top:0}
+details{border-color:var(--ml)}
+summary{color:var(--mr);font-weight:400}
+.mobile-section{border-top:1px solid var(--ml)}
+.clients{background:var(--mg)}
+
+/* Footer: #4d4d4d, Köpfe Light weiß, kleine weiße Links, schwarze Unterleiste */
+footer{background:#4d4d4d;border-top:0;color:#fff;padding:40px 0 50px;box-shadow:inset 0 -22px 0 #0d0d0d}
+.footer-grid{padding-bottom:30px}
+footer h2{font-family:'Signika','Open Sans',Arial,sans-serif;font-size:21px;font-weight:300;letter-spacing:0;color:#fff;margin-bottom:16px}
+footer p{font-size:14px;line-height:21px;color:#fff}
+footer a{color:#fff;font-size:14px;text-decoration:none}
+footer a:hover{color:#fff;text-decoration:underline}
+footer .footer-download{font-weight:700}
+
+@media(max-width:1100px){nav a{padding:0 12px;font-size:14px}.hero-copy{width:min(520px,52vw)}}
+@media(max-width:760px){
+ .wrap{padding-inline:15px}
+ .site-header:before{display:none}
+ .navrow{height:52px}
+ .navtoggle{order:0;border:0;width:36px;padding:6px 4px;gap:6px}
+ .navtoggle span{background:#fff;height:2px}
+ .brand img{width:105px}
+ nav{top:52px;height:auto;padding:0;background:#fff;border:0;box-shadow:0 8px 16px rgba(0,0,0,.15)}
+ nav a,nav a:last-child{color:#0d0d0d;padding:15px 20px;border:0;border-bottom:1px solid var(--ml)}
+ nav a:hover{color:#fff;background:var(--mr)}
+ .hero-image{height:auto;background:var(--mg);padding:0 0 25px}
+ .hero-image>img{position:static;display:block;width:100%;height:250px;object-fit:cover;object-position:60% 50%;-webkit-mask-image:none;mask-image:none}
+ .hero-copy{position:relative;left:auto;right:auto;top:auto;bottom:auto;transform:none;width:auto;margin:0 25px;padding:26px 20px 28px}
+ .hero h1{font-size:30px;line-height:1.3;color:var(--mr)}
+ .hero .button{display:flex;justify-content:center}
+ .hero-image>.hero-maintool-logo{top:16px;right:16px;width:130px}
+ .section{padding-top:50px;padding-bottom:50px}
+ .topic-grid>a{padding:20px 16px}.topic-grid h3{font-size:19px}
+ footer{padding:36px 0 46px}
+}
+
+/* Feste Vorgaben (Regelwerk §5) – nicht überschreibbar */
+.clients-head{display:block!important}.clients-head h2{grid-column:auto}.client-row{flex-wrap:nowrap!important}

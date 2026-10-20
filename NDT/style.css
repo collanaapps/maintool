@@ -1,8 +1,9 @@
 /* collana maintool × NDT Global – CI nach https://www.ndt-global.com/ (generiert) */
+@font-face{font-family:'Inter';src:url('assets/inter-400.woff2') format('woff2');font-weight:300;font-style:normal;font-display:swap}
 @font-face{font-family:'Inter';src:url('assets/inter-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:'Inter';src:url('assets/inter-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
 @font-face{font-family:'Inter';src:url('assets/inter-700.woff2') format('woff2');font-weight:900;font-style:normal;font-display:swap}
-:root{--primary:#011a76;--primary-dark:#00135a;--on-primary:#ffffff;--text:#17181a;--head:#011a76;--ink:#17181a;--light:#f5f5f5;--line:#e3e3e3;--hbg:#ffffff;--htx:#011a76;--hbd:#e6e6e6;--fbg:#f5f5f5;--ftx:#17181a;--fhd:#011a76;--flk:#17181a;--h3:#011a76;--r:0px}
+:root{--primary:#011a76;--primary-dark:#00135a;--on-primary:#ffffff;--text:#17181a;--head:#011a76;--ink:#17181a;--light:#f5f5f5;--line:#e3e3e3;--hbg:#ffffff;--htx:#606569;--hbd:#e6e6e6;--fbg:#ffffff;--ftx:#17181a;--fhd:#011a76;--flk:#011a76;--h3:#011a76;--r:0px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:100px}
 body{margin:0;color:var(--text);font:16px/1.7 'Inter',Arial,Helvetica,sans-serif;background:#fff}
@@ -24,7 +25,7 @@ img{max-width:100%;height:auto}
 .site-header a{text-decoration:none}
 .navrow{height:88px;display:flex;align-items:center;justify-content:space-between;gap:40px}
 .brand{display:flex;flex-shrink:0;align-items:center}
-.brand img{width:120px;max-height:60px;object-fit:contain;object-position:left center;height:auto}
+.brand img{width:101px;max-height:60px;object-fit:contain;object-position:left center;height:auto}
 nav{display:flex;align-items:center;gap:32px}
 nav a{color:var(--htx);text-transform:none;font-size:15px;font-weight:600;padding:6px 0;border-bottom:2px solid transparent}
 nav a:hover{color:var(--primary);border-bottom-color:var(--primary)}
@@ -110,7 +111,7 @@ dialog>img{display:block;margin:auto;max-width:90vw;max-height:82vh;width:auto;h
 @media(max-width:1100px){.wrap{width:92%}.navrow{gap:20px}nav{gap:18px}nav a{font-size:13px}.split,.intro,.detail-pair{gap:35px}.hero-copy{left:40%}}
 @media(max-width:760px){
  html{scroll-padding-top:80px}
- .navrow{height:72px}.brand img{width:120px;max-height:48px}
+ .navrow{height:72px}.brand img{width:101px;max-height:48px}
  .navtoggle{display:flex;flex-direction:column;justify-content:center;gap:5px;background:transparent;border:1px solid var(--hbd);width:44px;height:40px;padding:8px}
  .navtoggle span{display:block;background:var(--htx);height:2px;width:100%}
  nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--hbg);padding:12px 4% 20px;flex-direction:column;align-items:stretch;gap:0;border-bottom:3px solid var(--primary);box-shadow:0 8px 16px rgba(0,0,0,.08)}
@@ -136,3 +137,111 @@ dialog>img{display:block;margin:auto;max-width:90vw;max-height:82vh;width:auto;h
 @media print{.navtoggle,nav,.video-shell,.dialog-close{display:none}.site-header,footer{-webkit-print-color-adjust:exact;print-color-adjust:exact}.site-header{position:static}.section{padding-block:25px}.hero-image{height:350px}.split{break-inside:avoid}.client-row img{filter:none;opacity:1}}
 
 
+
+/* ===== Lead-Theme (nach Original-Website, siehe design.md) ===== */
+/* NDT Global – Theme nach ndt-global.com (Analyse 20.10.2026, siehe design.md)
+   Tokens: Navy #011a76 (Überschriften, Buttons, Footer-Links), Grün #019e1d (Glossar-Links/Akzent), CTA-Grün #169d28,
+   Text #17181a, Nav-Grau #606569, Karte #17181a, Linie #b9b5b2; fluider Container, Rand 80px@1440 / 100px@1920; eckig; Inter statt AkkuratLL. */
+:root{--nn:#011a76;--ng:#019e1d;--ngc:#169d28;--nt:#17181a;--nl:#b9b5b2;--gut:clamp(24px,5.55vw,100px)}
+body{font-size:18px;line-height:1.6;color:var(--nt)}
+p{margin-bottom:20px}
+.wrap{width:auto;max-width:1920px;margin-inline:auto;padding-inline:var(--gut);box-sizing:border-box}
+.section{padding-top:110px;padding-bottom:110px}
+html{scroll-padding-top:100px}
+
+/* Header: fixiert, weiß, 80px, Logo am 40px-Rand, Navigation grau 14px */
+.site-header{position:sticky;top:0;background:#fff;border:0;box-shadow:none}
+.site-header .navrow{max-width:none;height:80px;padding-inline:40px;justify-content:flex-start}
+.brand img{width:101px;max-height:30px}
+nav{gap:28px;margin-left:12px;padding-right:28px;border-right:1px solid #d5d3d1;height:36px}
+nav a{font-size:14px;font-weight:400;letter-spacing:.5px;color:#606569;padding:8px 0;border-bottom:2px solid transparent}
+nav a:hover{color:var(--nn);border-bottom-color:var(--nn)}
+
+/* Hero: randlos 670px, Text oben links an der Inhaltskante, sehr große Black-Headline */
+.hero-image{height:670px;background:#0b1430}
+.hero-image>img{object-position:center 50%}
+.hero-shade{background:linear-gradient(90deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.3) 45%,rgba(0,0,0,.08) 75%)}
+.hero-copy{left:var(--gut);right:auto;top:80px;transform:none;max-width:1400px}
+.hero h1{font-size:clamp(44px,5.2vw,88px);line-height:1;font-weight:900;color:#fff;text-shadow:none;margin-bottom:44px;letter-spacing:-.5px}
+.hero-image>.hero-maintool-logo{top:56px;right:var(--gut);width:clamp(150px,12vw,210px)}
+
+/* Buttons: eckig; Hero Outline weiß 2px 300×60, 18px/700 .82px; ohne Icon */
+.button{justify-content:center;gap:0;min-width:300px;height:60px;padding:10px 15px;border:2px solid #fff;border-radius:0;background:transparent;color:#fff!important;font-size:18px;font-weight:700;letter-spacing:.82px;text-transform:none}
+.button:hover{background:#fff;color:var(--nn)!important}
+.button>span,.footer-cta>span{display:none}
+.footer-cta{gap:0;justify-content:center;min-width:300px;height:60px;padding:10px 15px;border:0;border-radius:0;background:var(--nn);color:#fff!important;font-size:18px;font-weight:700;letter-spacing:.82px;text-transform:none}
+.footer-cta:hover{background:#00135a}
+
+/* Typografie */
+h1,h2,h3{letter-spacing:0;color:var(--nn);font-weight:900}
+h2{font-size:clamp(34px,3.6vw,56px);line-height:1.12;margin-bottom:32px}
+h3{font-size:22px;line-height:1.25;font-weight:700;color:var(--nt)}
+.intro-copy p:first-of-type{font-size:24px;line-height:1.55;font-weight:300}
+a{color:var(--nn);font-weight:700;text-decoration-thickness:1px}
+strong{color:var(--nt)}
+.more{color:var(--ng);font-size:19px;font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.more:before{content:none}
+.more:hover{color:var(--nn)}
+
+.intro-visual{background:#f5f5f5;border:0;border-radius:0}
+.intro{gap:80px}
+
+/* Kacheln: dunkle Karten wie „Proven integrity …", weiße Schrift, grüne Links, Hover navy */
+.overview{background:#fff}
+.overview h2{max-width:none;margin-bottom:40px}
+.topic-grid{gap:16px}
+.topic-grid>a{background:var(--nt);color:#fff;border:0;border-radius:0;box-shadow:none;padding:32px 28px 28px;transition:background .2s}
+.topic-grid>a:hover{transform:none;box-shadow:none;background:var(--nn)}
+.topic-grid h3{color:#fff;font-size:24px;font-weight:700}
+.topic-grid p{color:#e6e6e6;font-size:16px}
+.topic-grid .more{color:#3fcb57;font-size:16px}
+.topic-grid>a:hover .more{color:#fff}
+.topic-symbol svg{stroke:#3fcb57;stroke-width:1.6}
+
+.video-shell{border-radius:0}
+.split-section{background:#fff}
+.split{gap:80px}
+figcaption{color:#606569}
+
+/* Checks + Details */
+.checks li{padding-left:30px}
+.checks li:before{content:'';top:.45em;width:14px;height:8px;border-left:3px solid var(--ng);border-bottom:3px solid var(--ng);transform:rotate(-45deg)}
+.detail-pair article{border-top:1px solid var(--nl);padding-top:36px}
+details{border-color:var(--nl)}
+summary{color:var(--nn);font-weight:700}
+.mobile-section{border-top:0}
+.clients{background:#f5f5f5}
+
+/* Footer: weiß, Linie oben, navy Köpfe 28px/900, navy Links */
+footer{background:#fff;border-top:1px solid var(--nl);color:var(--nt);padding:56px 0 64px}
+footer h2{font-size:28px;font-weight:900;letter-spacing:0;color:var(--nn);margin-bottom:18px}
+footer p{font-size:16px;color:var(--nt)}
+footer a{color:var(--nn);font-weight:400;font-size:16px;text-decoration:none}
+footer a:hover{color:var(--nn);text-decoration:underline}
+footer .footer-download{font-weight:700}
+
+@media(max-width:1100px){.site-header .navrow{padding-inline:24px}nav{gap:16px;padding-right:16px}nav a{font-size:13px}.intro,.split{gap:40px}}
+@media(max-width:760px){
+ body{font-size:17px}
+ .site-header .navrow{height:58px;padding-inline:16px;justify-content:space-between}
+ .brand img{width:82px}
+ nav{top:58px;height:auto;padding:0 24px 12px;margin:0;border-right:0;border-bottom:1px solid var(--nl);box-shadow:0 10px 18px rgba(0,0,0,.08)}
+ nav a{font-size:16px;color:var(--nt);padding:16px 0;border-bottom:1px solid #e6e6e6}
+ .navtoggle{border:0;width:42px;padding:6px;gap:5px}
+ .navtoggle span{background:#8a8f93;height:4px}
+ .hero-image{height:560px}
+ .hero-shade{background:linear-gradient(180deg,rgba(0,0,0,.6) 0%,rgba(0,0,0,.25) 60%,rgba(0,0,0,.35) 100%)}
+ .hero-copy{left:24px;right:24px;top:40px}
+ .hero h1{font-size:40px;margin-bottom:28px}
+ h2{font-size:30px;overflow-wrap:break-word;hyphens:auto}
+ .button{display:flex;width:100%;min-width:0}
+ .hero-image>.hero-maintool-logo{top:auto;bottom:24px;right:24px;width:140px}
+ .section{padding-top:64px;padding-bottom:64px}
+ .intro-copy p:first-of-type{font-size:20px}
+ .topic-grid>a{padding:22px 16px}.topic-grid h3{font-size:18px}
+ .footer-cta{min-width:0;width:100%}
+ footer{padding:44px 0 50px}
+}
+
+/* Feste Vorgaben (Regelwerk §5) – nicht überschreibbar */
+.clients-head{display:block!important}.clients-head h2{grid-column:auto}.client-row{flex-wrap:nowrap!important}
