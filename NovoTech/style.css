@@ -1,0 +1,270 @@
+/* collana maintool × megawood (NOVO-TECH) – CI nach https://www.megawood.com (generiert) */
+@font-face{font-family:'Work Sans';src:url('assets/worksans-300.woff2') format('woff2');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Work Sans';src:url('assets/worksans-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Roboto Slab';src:url('assets/robotoslab-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+:root{--primary:#b4032f;--primary-dark:#911e2e;--on-primary:#ffffff;--text:#66665e;--head:#b4032f;--ink:#3c3c3c;--light:#f2f1f0;--line:#dddcd9;--hbg:#ffffff;--htx:#777568;--hbd:#ffffff;--fbg:#353b41;--ftx:#d6d6d6;--fhd:#ffffff;--flk:#e6e6e6;--h3:#444444;--r:8px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{margin:0;color:var(--text);font:16px/1.7 'Work Sans',Arial,Helvetica,sans-serif;background:#fff}
+button,a{-webkit-tap-highlight-color:transparent}
+button{font:inherit}
+a{color:var(--primary);text-underline-offset:4px}
+a:hover{text-decoration:none}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--primary);outline-offset:4px}
+strong{color:var(--ink)}
+h1,h2,h3{font-family:'Roboto Slab',Arial,Helvetica,sans-serif;font-weight:400;line-height:1.2;letter-spacing:0;margin:0 0 24px;text-transform:none;color:var(--head)}
+h2{font-size:clamp(26px,2.4vw,36px)}
+h3{font-size:20px;color:var(--h3)}
+p{margin:0 0 22px}
+img{max-width:100%;height:auto}
+.wrap{width:86%;max-width:1240px;margin-inline:auto}
+.section{padding-top:85px;padding-bottom:85px}
+.skip{position:fixed;top:-100px;left:20px;background:#fff;padding:12px;z-index:100}.skip:focus{top:10px}
+.site-header{background:var(--hbg);border-bottom:1px solid var(--hbd);position:sticky;top:0;z-index:20}
+.site-header a{text-decoration:none}
+.navrow{height:88px;display:flex;align-items:center;justify-content:space-between;gap:40px}
+.brand{display:flex;flex-shrink:0;align-items:center}
+.brand img{width:92px;max-height:60px;object-fit:contain;object-position:left center;height:auto}
+nav{display:flex;align-items:center;gap:32px}
+nav a{color:var(--htx);text-transform:uppercase;font-size:15px;font-weight:600;padding:6px 0;border-bottom:2px solid transparent}
+nav a:hover{color:var(--primary);border-bottom-color:var(--primary)}
+.navtoggle{display:none}
+.hero.wrap{width:100%;max-width:none;padding:0}
+.hero-image{height:clamp(440px,46vw,640px);position:relative;overflow:hidden;background:var(--ink)}
+.hero-image>img{width:100%;height:100%;object-fit:cover;object-position:center 60%}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(40,20,20,0) 22%,rgba(40,20,20,.5) 55%,rgba(40,20,20,.78))}
+.hero-copy{position:absolute;top:50%;right:7%;left:47%;transform:translateY(-35%)}
+.hero-kicker{display:inline-block;margin:0 0 14px;padding:4px 12px;background:var(--primary);color:var(--on-primary);text-transform:uppercase;letter-spacing:.1em;font-size:13px;font-weight:700;border-radius:var(--r)}
+.hero h1{color:#fff;font-size:clamp(30px,3.2vw,50px);text-shadow:0 2px 8px rgba(0,0,0,.35);margin-bottom:30px}
+.hero-image>.hero-maintool-logo{position:absolute;top:7%;right:7%;width:clamp(150px,17vw,250px);height:auto;object-fit:contain;z-index:2}
+.button{display:inline-flex;gap:18px;align-items:center;padding:13px 26px;color:var(--on-primary);background:var(--primary);font-weight:700;text-transform:none;font-size:15px;text-decoration:none;border-radius:var(--r);transition:background .2s}
+.button:hover{background:var(--primary-dark)}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.intro-visual{background:var(--light);padding:30px 24px;border-bottom:5px solid var(--primary);border-radius:var(--r)}
+.intro-copy{padding:20px 0}
+.bc-note{margin-top:0;margin-bottom:20px;line-height:0}
+.bc-note img{width:230px;height:72px;object-fit:cover;object-position:center}
+.more{font-weight:700;color:var(--primary)}
+.more:before{content:'» '}
+.overview{background:var(--light)}
+.overview h2{max-width:820px;margin-bottom:45px}
+.topic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.topic-grid>a{padding:32px 28px;background:#fff;text-decoration:none;color:var(--text);display:flex;flex-direction:column;align-items:flex-start;border-bottom:4px solid var(--primary);border-radius:var(--r);box-shadow:0 1px 3px rgba(0,0,0,.06);transition:transform .2s,box-shadow .2s}
+.topic-grid>a:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,.09)}
+.topic-grid h3{margin:12px 0}
+.topic-grid p{margin-bottom:18px}
+.topic-grid .more{margin-top:auto}
+.topic-symbol{height:55px;line-height:1;display:flex;align-items:center}
+.topic-symbol svg{width:44px;height:44px;fill:none;stroke:var(--primary);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.video-shell{aspect-ratio:16/9;width:100%;background:#202129;position:relative;border-radius:var(--r);overflow:hidden}
+.video-start{border:0;position:absolute;inset:0;width:100%;padding:0;background:#202129;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.video-start>.youtube-thumbnail{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.play{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;border:0;background:#ff0033;color:#fff;width:86px;height:60px;border-radius:14px;font-size:28px;padding-left:4px;box-shadow:0 2px 14px #0005}
+.video-start:hover .play{background:#d9002b}
+.video-shell iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-external{display:inline-block;margin-top:18px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.split-section{background:var(--light)}
+figure{margin:0;min-width:0}
+.image-button{display:block;border:0;padding:0;background:none;width:100%;cursor:zoom-in;text-align:center}
+.image-button img{vertical-align:middle;width:100%;height:auto}
+.reverse>div{grid-column:2}.reverse>figure{grid-column:1;grid-row:1}
+figcaption{font-size:12px;line-height:1.5;text-align:center;color:#888;margin-top:16px}
+.checks{list-style:none;padding:0;margin:25px 0 0}
+.checks li{position:relative;padding-left:26px;margin-bottom:12px}
+.checks li:before{content:'✓';position:absolute;left:0;font-weight:700;color:var(--primary)}
+.detail-pair{display:grid;grid-template-columns:1fr 1fr;gap:65px}
+.detail-pair article{scroll-margin-top:120px;border-top:4px solid var(--primary);padding-top:30px}
+details{margin-top:25px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+summary{cursor:pointer;padding:17px 0;font-weight:700;color:var(--primary)}
+details .checks{margin-bottom:25px}
+.mobile-section{background:#fff;border-top:1px solid var(--line)}
+.phone-figure .image-button img{max-width:260px}
+.phone-figure{padding:10px 0}
+.clients{background:var(--light)}
+.clients-head{max-width:720px;margin:0 auto 55px;text-align:center}
+.clients-head h2{margin-bottom:20px}
+.clients-head p{margin-bottom:0}
+/* Referenz-Logos: IMMER in einer Reihe (Vorgabe Marcel) */
+.client-row{list-style:none;margin:0;padding:0;display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:clamp(6px,3vw,48px)}
+.client-row li{flex:1 1 0;min-width:0;display:flex;align-items:center;justify-content:center}
+.client-row img{width:auto;height:clamp(10px,2.4vw,33px);max-width:100%;object-fit:contain;filter:grayscale(1);opacity:.6;transition:filter .25s,opacity .25s}
+.client-row li.tall img{height:clamp(16px,3.8vw,52px)}
+.client-row li:hover img{filter:grayscale(0);opacity:1}
+footer{background:var(--fbg);color:var(--ftx);border-top:5px solid var(--primary);padding:60px 0}
+footer a{color:var(--flk)}
+footer a:hover{color:var(--primary)}
+footer h2{font-size:16px;font-weight:700;letter-spacing:.04em;color:var(--fhd);margin-bottom:18px}
+footer p{font-size:15px}
+footer strong{color:inherit}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:60px}
+footer .footer-brand{display:inline-block;width:238px;max-width:100%;line-height:0;margin-bottom:22px}
+.footer-brand img{display:block;width:100%;height:auto}
+footer .footer-download{font-weight:700}
+.footer-cta{display:inline-flex;align-items:center;gap:14px;margin-top:22px;padding:12px 24px;background:var(--primary);color:var(--on-primary)!important;font-weight:700;text-transform:none;font-size:15px;text-decoration:none;border-radius:var(--r);transition:background .2s}
+.footer-cta:hover{background:var(--primary-dark)}
+dialog{padding:50px 15px 15px;border:0;background:transparent;max-width:96vw;max-height:96vh;overflow:auto}
+dialog::backdrop{background:rgba(0,0,0,.9)}
+dialog>img{display:block;margin:auto;max-width:90vw;max-height:82vh;width:auto;height:auto;object-fit:contain}
+.dialog-close{position:fixed;right:20px;top:15px;background:#fff;border:0;padding:10px 18px;cursor:pointer;font-weight:700}
+@media(max-width:1100px){.wrap{width:92%}.navrow{gap:20px}nav{gap:18px}nav a{font-size:13px}.split,.intro,.detail-pair{gap:35px}.hero-copy{left:40%}}
+@media(max-width:760px){
+ html{scroll-padding-top:80px}
+ .navrow{height:72px}.brand img{width:72px;max-height:48px}
+ .navtoggle{display:flex;flex-direction:column;justify-content:center;gap:5px;background:transparent;border:1px solid var(--hbd);width:44px;height:40px;padding:8px}
+ .navtoggle span{display:block;background:var(--htx);height:2px;width:100%}
+ nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--hbg);padding:12px 4% 20px;flex-direction:column;align-items:stretch;gap:0;border-bottom:3px solid var(--primary);box-shadow:0 8px 16px rgba(0,0,0,.08)}
+ nav.open{display:flex}nav a{font-size:15px;padding:13px 0;border-bottom:1px solid var(--hbd)}
+ .hero-image{height:520px}.hero-image>img{object-position:30% 60%}
+ .hero-shade{background:linear-gradient(0deg,rgba(40,20,20,.8) 12%,rgba(40,20,20,.1) 72%)}
+ .hero-copy{left:6%;right:6%;top:auto;bottom:7%;transform:none}
+ .hero h1{font-size:27px}
+ .hero-image>.hero-maintool-logo{width:160px;top:5%;right:5%}
+ .section{padding-top:55px;padding-bottom:55px}
+ .intro,.split,.detail-pair{grid-template-columns:1fr;gap:35px}
+ .intro-copy{grid-row:1;padding:0}.intro-visual{padding:16px}
+ .topic-grid{grid-template-columns:1fr 1fr;gap:14px}.topic-grid>a{padding:22px 16px}.topic-grid h3{font-size:16px}.topic-grid p{font-size:14px}
+ .reverse>div{grid-column:1}.reverse>figure{grid-column:1;grid-row:auto}
+ .play{width:68px;height:48px;font-size:23px}
+ .footer-grid{grid-template-columns:1fr;gap:35px}
+ .phone-figure .image-button img{max-width:230px}
+ dialog>img{max-height:78vh}
+ .clients-head{margin-bottom:42px}
+}
+@media(max-width:420px){.topic-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.topic-grid>a,.client-row img{transition:none}}
+@media print{.navtoggle,nav,.video-shell,.dialog-close{display:none}.site-header,footer{-webkit-print-color-adjust:exact;print-color-adjust:exact}.site-header{position:static}.section{padding-block:25px}.hero-image{height:350px}.split{break-inside:avoid}.client-row img{filter:none;opacity:1}}
+
+
+
+/* ===== Lead-Theme (nach Original-Website, siehe design.md) ===== */
+/* megawood (NOVO-TECH) – Theme nach megawood.com (Analyse 20.10.2026, siehe design.md)
+   Tokens: Rot #b4032f, Dunkelrot #911e2e (Topbar), Text Warmgrau #66665e (Original #75756b), Nav #777568,
+   Fläche #f2f1f0, Footer #353b41, DepotNew → Work Sans 300/500, Überschriften Roboto Slab 400,
+   Buttons 8px Radius, Hero randlos mit 8px-Rundung unten, Container 1480px inkl. 20px Rand. */
+:root{--m-red:#b4032f;--m-red-d:#911e2e;--m-text:#66665e;--m-nav:#777568;--m-muted:#f2f1f0;--m-dark:#353b41;--m-ink:#3c3c3c;--m-line:#dddcd9}
+body{font-size:16.5px;line-height:1.5;font-weight:300;color:var(--m-text)}
+p{margin-bottom:20px}
+.wrap{width:auto;max-width:1480px;margin-inline:auto;padding-inline:20px;box-sizing:border-box}
+.section{padding-top:70px;padding-bottom:70px}
+
+/* Header: weiß, 100px, Schildkröten-Logo links, Hauptnavigation mittig in Versalien (DepotNew 19px/600, -0.6px) */
+.site-header{background:#fff;border-bottom:0;box-shadow:0 1px 0 rgba(50,50,50,.1);border-top:34px solid var(--m-red-d)}
+.site-header .navrow{max-width:none;height:100px;padding-inline:40px;position:relative;justify-content:flex-start}
+.brand img{width:92px;max-height:92px}
+nav{position:absolute;left:50%;transform:translateX(-50%);gap:0}
+nav a{color:var(--m-nav);font-size:19px;font-weight:500;letter-spacing:-.6px;text-transform:uppercase;padding:0 12px;line-height:28px;border-bottom:0;white-space:nowrap}
+nav a:hover{color:var(--m-red);border-bottom:0}
+html{scroll-padding-top:150px}
+
+/* Hero: randlos 1920×700 (36.5vw), unten 8px gerundet; rote Textfläche rechts (H1 Versal Bold + Button) */
+.hero-image{height:clamp(420px,36.5vw,700px);border-radius:0 0 8px 8px;background:#6d6a62}
+.hero-shade{display:none}
+.hero-copy{left:auto;right:max(20px,calc((100vw - 1440px)/2 + 120px));top:12%;transform:none;width:max-content;max-width:min(680px,60vw);background:var(--m-red);padding:22px 26px 26px;color:#fff}
+.hero h1{font-family:'Work Sans',Arial,sans-serif;color:#fff;font-size:clamp(28px,2.6vw,40px);font-weight:500;line-height:1.12;letter-spacing:-.5px;text-transform:uppercase;text-shadow:none;margin-bottom:22px}
+.hero-image>.hero-maintool-logo{top:auto;bottom:28px;right:auto;left:max(20px,calc((100vw - 1440px)/2));width:clamp(150px,12vw,200px)}
+
+/* Buttons: 8px Radius, Work Sans; im Hero weiß (wie „3D Terrassenplanung“), sonst Rot gefüllt (wie „Lignum entdecken“) */
+.button,.footer-cta{gap:0;border-radius:8px;text-transform:none;letter-spacing:-.5px;line-height:1}
+.button{padding:15px 22px;font-size:20px;font-weight:300;background:#fff;color:var(--m-ink);border:2px solid #fff}
+.button:hover{background:transparent;color:#fff;border-color:#fff}
+.button>span,.footer-cta>span{display:none}
+.footer-cta{padding:14px 26px;font-size:17px;font-weight:300;background:var(--m-red);color:#fff!important;border:2px solid var(--m-red);text-decoration:none!important}
+.footer-cta:hover{background:var(--m-red-d);border-color:var(--m-red-d)}
+
+/* Typografie: Roboto Slab 400 rot, zentriert; Fließtext Work Sans 300 Warmgrau */
+h1,h2,h3{letter-spacing:0}
+h2{font-family:'Roboto Slab',Georgia,serif;font-size:clamp(28px,2.9vw,42px);font-weight:400;line-height:1.3;color:var(--m-red);margin-bottom:28px}
+h3{font-family:'Roboto Slab',Georgia,serif;font-size:20px;font-weight:400;line-height:1.3;color:#444}
+strong{color:var(--m-red);font-weight:500}
+a{color:var(--m-red)}
+.intro-copy h2,.split h2,.detail-pair h2{font-size:clamp(26px,2.4vw,36px)}
+.overview h2,#video h2,.clients-head h2{text-align:center}
+/* „mehr“-Links: Outline-Button Rot 2px, Radius 8px (wie „Jetzt kostenfrei Muster bestellen“) */
+.more{display:inline-block;padding:0 28px;line-height:44px;border:2px solid var(--m-red);border-radius:8px;background:var(--m-muted);color:var(--m-red);font-weight:500;font-size:15.5px;letter-spacing:-.5px;text-decoration:none}
+.more:before{content:none}
+.more:hover{background:var(--m-red);color:#fff}
+
+/* Intro */
+.intro{gap:60px}
+.intro-visual{background:var(--m-muted);border:0;border-radius:8px;padding:36px 30px}
+
+/* Kacheln: weiß auf #f2f1f0, 8px Radius, weicher Schatten (wie Sortiments-/News-Karten) */
+.overview{background:var(--m-muted)}
+.overview h2{max-width:none;margin-bottom:44px}
+.topic-grid{gap:20px}
+.topic-grid>a{background:#fff;border:0;border-radius:8px;box-shadow:0 2px 8px rgba(50,50,50,.1);padding:30px 26px;color:var(--m-text)}
+.topic-grid>a:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(50,50,50,.14)}
+.topic-grid h3{margin:12px 0 8px;color:#444}
+.topic-grid p{font-size:15px}
+.topic-grid .more{padding:0;border:0;background:transparent;line-height:1.4;font-size:15px}
+.topic-grid>a:hover .more{background:transparent;color:var(--m-red);text-decoration:underline}
+.topic-symbol svg{stroke:var(--m-red);stroke-width:1.5}
+
+/* Video: 8px Radius, Schatten wie YouTube-Teaser */
+.video-shell{border-radius:8px;box-shadow:0 4px 14px rgba(50,50,50,.25)}
+.video-external{display:table;margin:22px auto 0}
+
+/* Abschnitts-Rhythmus: weiß / #f2f1f0 / Anthrazit-Band */
+.split-section{background:var(--m-muted)}
+.mobile-section{background:var(--m-dark);color:#e6e6e6;border-top:0}
+.mobile-section h2,.mobile-section strong{color:#fff}
+.mobile-section .checks li:before{color:#fff}
+.mobile-section figcaption{color:#c8c8c8}
+.split{gap:60px}
+.split-section figure .image-button,.reverse figure .image-button{border-radius:8px;overflow:hidden;background:#fff}
+figcaption{color:#6d6d64;font-size:12px}
+
+/* Listen + Details */
+.checks li{padding-left:28px}
+.checks li:before{content:'✓';color:var(--m-red);font-weight:700}
+.detail-pair{gap:60px}
+.detail-pair article{border-top:0;padding-top:0}
+details{border-top:1px solid var(--m-line);border-bottom:1px solid var(--m-line)}
+summary{list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--m-red);font-weight:500;font-size:17px;padding:15px 0}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'›';font-size:24px;line-height:1;transition:transform .2s}
+details[open] summary::after{transform:rotate(90deg)}
+
+/* Logos */
+.clients{background:#fff}
+
+/* Footer: Anthrazit #353b41, Versal-Links mit Laufweite 2px und feinen Linien */
+footer{background:var(--m-dark);border-top:0;color:#d6d6d6;padding:64px 0}
+footer h2{font-family:'Work Sans',Arial,sans-serif;font-size:14px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:#fff;margin-bottom:16px}
+footer p{font-size:15px;line-height:1.7}
+footer strong{color:#fff}
+footer a{color:#e6e6e6;font-size:15px;letter-spacing:.5px;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3)}
+footer a:hover{color:#fff;border-bottom-color:#fff}
+footer .footer-brand{border-bottom:0}
+footer .footer-download{font-weight:500}
+
+@media(max-width:1100px){
+ nav a{font-size:15px;padding:0 8px}
+ nav{position:static;transform:none;margin-left:auto}
+}
+@media(max-width:760px){
+ body{font-size:16px}
+ .section{padding-top:50px;padding-bottom:50px}
+ /* Mobil: Burger links, Logo mittig, Offcanvas-Panel weiß mit Linien und Laufweite */
+ .site-header{border-top-width:0}
+ .site-header .navrow{height:100px;padding-inline:16px;justify-content:center}
+ .brand img{width:80px;max-height:80px}
+ .navtoggle{position:absolute;left:16px;top:30px;border:0;width:40px;height:40px;padding:11px 6px;gap:5px}.navtoggle span{background:var(--m-ink);height:2px}
+ nav{position:absolute;top:100px;left:0;right:0;transform:none;margin:0;background:#fff;padding:8px 0 16px;border-bottom:0;box-shadow:0 8px 16px rgba(0,0,0,.12)}
+ nav a{font-size:14px;font-weight:300;letter-spacing:1.5px;color:var(--m-ink);padding:12px 30px;border-bottom:1px solid var(--m-line)}
+ /* Hero: Bild flach mit Rundung, Text darunter zentriert (wie Original mobil) */
+ .hero-image{height:auto;display:flex;flex-direction:column;background:#fff;border-radius:0}
+ .hero-image>img{height:220px;border-radius:0 0 8px 8px}
+ .hero-image>.hero-maintool-logo{position:static;order:2;width:160px;margin:32px auto 0}
+ .hero-copy{position:static;order:3;background:transparent;color:var(--m-ink);padding:22px 16px 44px;max-width:none;text-align:center}
+ .hero h1{font-family:'Roboto Slab',Georgia,serif;color:#727272;text-transform:none;font-size:30px;font-weight:400;line-height:1.25;letter-spacing:0}
+ .button{background:var(--m-red);color:#fff;border-color:var(--m-red);font-size:18px}
+ .button:hover{background:var(--m-red-d);border-color:var(--m-red-d);color:#fff}
+ h2{font-size:28px}
+ .topic-grid{gap:12px}.topic-grid>a{padding:20px 16px}.topic-grid h3{font-size:17px}
+ .intro-visual{padding:16px}
+}
+
+/* Feste Vorgaben (Regelwerk §5) – nicht überschreibbar */
+.clients-head{display:block!important}.clients-head h2{grid-column:auto}.client-row{flex-wrap:nowrap!important}
