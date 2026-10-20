@@ -31,3 +31,9 @@ footer .footer-brand { display:inline-block;width:238px;max-width:100%;line-heig
 /* Footer-CTA: Gespräch buchen */
 .footer-cta { display:inline-flex;align-items:center;gap:14px;margin-top:22px;padding:12px 22px;background:var(--lime);color:var(--ink);font-weight:700;text-decoration:none;transition:background .2s; }
 .footer-cta:hover { background:#c3e83a;color:var(--ink); }
+
+/* Referenz-Logos: IMMER in einer Reihe (Vorgabe Marcel, gilt für alle Landingpages) */
+.client-row{flex-wrap:nowrap!important;justify-content:space-between;gap:clamp(6px,3vw,48px)!important}
+.client-row li{flex:1 1 0;min-width:0}
+.client-row img{height:clamp(10px,2.4vw,33px)!important;max-width:100%!important}
+.client-row li.tall img{height:clamp(16px,3.8vw,52px)!important}
