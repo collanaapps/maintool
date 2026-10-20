@@ -1,0 +1,278 @@
+/* collana maintool × QATM – CI nach https://www.qatm.com (generiert) */
+@font-face{font-family:'Montserrat';src:url('assets/montserrat-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Montserrat';src:url('assets/montserrat-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Montserrat';src:url('assets/montserrat-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+:root{--primary:#cc4800;--primary-dark:#a83b00;--on-primary:#ffffff;--text:#000000;--head:#000000;--ink:#000000;--light:#ededed;--line:#c8c8c8;--hbg:#ffffff;--htx:#757575;--hbd:#ffffff;--fbg:#1a2833;--ftx:#b1bac3;--fhd:#ffffff;--flk:#b1bac3;--h3:#000000;--r:4px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{margin:0;color:var(--text);font:16px/1.7 'Montserrat',Arial,Helvetica,sans-serif;background:#fff}
+button,a{-webkit-tap-highlight-color:transparent}
+button{font:inherit}
+a{color:var(--primary);text-underline-offset:4px}
+a:hover{text-decoration:none}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--primary);outline-offset:4px}
+strong{color:var(--ink)}
+h1,h2,h3{font-family:'Montserrat',Arial,Helvetica,sans-serif;font-weight:700;line-height:1.2;letter-spacing:0;margin:0 0 24px;text-transform:uppercase;color:var(--head)}
+h2{font-size:clamp(26px,2.4vw,36px)}
+h3{font-size:20px;color:var(--h3)}
+p{margin:0 0 22px}
+img{max-width:100%;height:auto}
+.wrap{width:86%;max-width:1240px;margin-inline:auto}
+.section{padding-top:85px;padding-bottom:85px}
+.skip{position:fixed;top:-100px;left:20px;background:#fff;padding:12px;z-index:100}.skip:focus{top:10px}
+.site-header{background:var(--hbg);border-bottom:1px solid var(--hbd);position:sticky;top:0;z-index:20}
+.site-header a{text-decoration:none}
+.navrow{height:88px;display:flex;align-items:center;justify-content:space-between;gap:40px}
+.brand{display:flex;flex-shrink:0;align-items:center}
+.brand img{width:155px;max-height:60px;object-fit:contain;object-position:left center;height:auto}
+nav{display:flex;align-items:center;gap:32px}
+nav a{color:var(--htx);text-transform:uppercase;font-size:15px;font-weight:600;padding:6px 0;border-bottom:2px solid transparent}
+nav a:hover{color:var(--primary);border-bottom-color:var(--primary)}
+.navtoggle{display:none}
+.hero.wrap{width:100%;max-width:none;padding:0}
+.hero-image{height:clamp(440px,46vw,640px);position:relative;overflow:hidden;background:var(--ink)}
+.hero-image>img{width:100%;height:100%;object-fit:cover;object-position:70% 50%}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,0) 22%,rgba(0,0,0,.5) 55%,rgba(0,0,0,.78))}
+.hero-copy{position:absolute;top:50%;right:7%;left:47%;transform:translateY(-35%)}
+.hero-kicker{display:inline-block;margin:0 0 14px;padding:4px 12px;background:var(--primary);color:var(--on-primary);text-transform:uppercase;letter-spacing:.1em;font-size:13px;font-weight:700;border-radius:var(--r)}
+.hero h1{color:#fff;font-size:clamp(30px,3.2vw,50px);text-shadow:0 2px 8px rgba(0,0,0,.35);margin-bottom:30px}
+.hero-image>.hero-maintool-logo{position:absolute;top:7%;right:7%;width:clamp(150px,17vw,250px);height:auto;object-fit:contain;z-index:2}
+.button{display:inline-flex;gap:18px;align-items:center;padding:13px 26px;color:var(--on-primary);background:var(--primary);font-weight:700;text-transform:none;font-size:15px;text-decoration:none;border-radius:var(--r);transition:background .2s}
+.button:hover{background:var(--primary-dark)}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.intro-visual{background:var(--light);padding:30px 24px;border-bottom:5px solid var(--primary);border-radius:var(--r)}
+.intro-copy{padding:20px 0}
+.bc-note{margin-top:0;margin-bottom:20px;line-height:0}
+.bc-note img{width:230px;height:72px;object-fit:cover;object-position:center}
+.more{font-weight:700;color:var(--primary)}
+.more:before{content:'» '}
+.overview{background:var(--light)}
+.overview h2{max-width:820px;margin-bottom:45px}
+.topic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.topic-grid>a{padding:32px 28px;background:#fff;text-decoration:none;color:var(--text);display:flex;flex-direction:column;align-items:flex-start;border-bottom:4px solid var(--primary);border-radius:var(--r);box-shadow:0 1px 3px rgba(0,0,0,.06);transition:transform .2s,box-shadow .2s}
+.topic-grid>a:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,.09)}
+.topic-grid h3{margin:12px 0}
+.topic-grid p{margin-bottom:18px}
+.topic-grid .more{margin-top:auto}
+.topic-symbol{height:55px;line-height:1;display:flex;align-items:center}
+.topic-symbol svg{width:44px;height:44px;fill:none;stroke:var(--primary);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.video-shell{aspect-ratio:16/9;width:100%;background:#202129;position:relative;border-radius:var(--r);overflow:hidden}
+.video-start{border:0;position:absolute;inset:0;width:100%;padding:0;background:#202129;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.video-start>.youtube-thumbnail{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.play{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;border:0;background:#ff0033;color:#fff;width:86px;height:60px;border-radius:14px;font-size:28px;padding-left:4px;box-shadow:0 2px 14px #0005}
+.video-start:hover .play{background:#d9002b}
+.video-shell iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-external{display:inline-block;margin-top:18px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.split-section{background:var(--light)}
+figure{margin:0;min-width:0}
+.image-button{display:block;border:0;padding:0;background:none;width:100%;cursor:zoom-in;text-align:center}
+.image-button img{vertical-align:middle;width:100%;height:auto}
+.reverse>div{grid-column:2}.reverse>figure{grid-column:1;grid-row:1}
+figcaption{font-size:12px;line-height:1.5;text-align:center;color:#888;margin-top:16px}
+.checks{list-style:none;padding:0;margin:25px 0 0}
+.checks li{position:relative;padding-left:26px;margin-bottom:12px}
+.checks li:before{content:'✓';position:absolute;left:0;font-weight:700;color:var(--primary)}
+.detail-pair{display:grid;grid-template-columns:1fr 1fr;gap:65px}
+.detail-pair article{scroll-margin-top:120px;border-top:4px solid var(--primary);padding-top:30px}
+details{margin-top:25px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+summary{cursor:pointer;padding:17px 0;font-weight:700;color:var(--primary)}
+details .checks{margin-bottom:25px}
+.mobile-section{background:#fff;border-top:1px solid var(--line)}
+.phone-figure .image-button img{max-width:260px}
+.phone-figure{padding:10px 0}
+.clients{background:var(--light)}
+.clients-head{max-width:720px;margin:0 auto 55px;text-align:center}
+.clients-head h2{margin-bottom:20px}
+.clients-head p{margin-bottom:0}
+/* Referenz-Logos: IMMER in einer Reihe (Vorgabe Marcel) */
+.client-row{list-style:none;margin:0;padding:0;display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:clamp(6px,3vw,48px)}
+.client-row li{flex:1 1 0;min-width:0;display:flex;align-items:center;justify-content:center}
+.client-row img{width:auto;height:clamp(10px,2.4vw,33px);max-width:100%;object-fit:contain;filter:grayscale(1);opacity:.6;transition:filter .25s,opacity .25s}
+.client-row li.tall img{height:clamp(16px,3.8vw,52px)}
+.client-row li:hover img{filter:grayscale(0);opacity:1}
+footer{background:var(--fbg);color:var(--ftx);border-top:5px solid var(--primary);padding:60px 0}
+footer a{color:var(--flk)}
+footer a:hover{color:var(--primary)}
+footer h2{font-size:16px;font-weight:700;letter-spacing:.04em;color:var(--fhd);margin-bottom:18px}
+footer p{font-size:15px}
+footer strong{color:inherit}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:60px}
+footer .footer-brand{display:inline-block;width:238px;max-width:100%;line-height:0;margin-bottom:22px}
+.footer-brand img{display:block;width:100%;height:auto}
+footer .footer-download{font-weight:700}
+.footer-cta{display:inline-flex;align-items:center;gap:14px;margin-top:22px;padding:12px 24px;background:var(--primary);color:var(--on-primary)!important;font-weight:700;text-transform:none;font-size:15px;text-decoration:none;border-radius:var(--r);transition:background .2s}
+.footer-cta:hover{background:var(--primary-dark)}
+dialog{padding:50px 15px 15px;border:0;background:transparent;max-width:96vw;max-height:96vh;overflow:auto}
+dialog::backdrop{background:rgba(0,0,0,.9)}
+dialog>img{display:block;margin:auto;max-width:90vw;max-height:82vh;width:auto;height:auto;object-fit:contain}
+.dialog-close{position:fixed;right:20px;top:15px;background:#fff;border:0;padding:10px 18px;cursor:pointer;font-weight:700}
+@media(max-width:1100px){.wrap{width:92%}.navrow{gap:20px}nav{gap:18px}nav a{font-size:13px}.split,.intro,.detail-pair{gap:35px}.hero-copy{left:40%}}
+@media(max-width:760px){
+ html{scroll-padding-top:80px}
+ .navrow{height:72px}.brand img{width:110px;max-height:48px}
+ .navtoggle{display:flex;flex-direction:column;justify-content:center;gap:5px;background:transparent;border:1px solid var(--hbd);width:44px;height:40px;padding:8px}
+ .navtoggle span{display:block;background:var(--htx);height:2px;width:100%}
+ nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--hbg);padding:12px 4% 20px;flex-direction:column;align-items:stretch;gap:0;border-bottom:3px solid var(--primary);box-shadow:0 8px 16px rgba(0,0,0,.08)}
+ nav.open{display:flex}nav a{font-size:15px;padding:13px 0;border-bottom:1px solid var(--hbd)}
+ .hero-image{height:520px}.hero-image>img{object-position:68% 50%}
+ .hero-shade{background:linear-gradient(0deg,rgba(0,0,0,.8) 12%,rgba(0,0,0,.1) 72%)}
+ .hero-copy{left:6%;right:6%;top:auto;bottom:7%;transform:none}
+ .hero h1{font-size:27px}
+ .hero-image>.hero-maintool-logo{width:160px;top:5%;right:5%}
+ .section{padding-top:55px;padding-bottom:55px}
+ .intro,.split,.detail-pair{grid-template-columns:1fr;gap:35px}
+ .intro-copy{grid-row:1;padding:0}.intro-visual{padding:16px}
+ .topic-grid{grid-template-columns:1fr 1fr;gap:14px}.topic-grid>a{padding:22px 16px}.topic-grid h3{font-size:16px}.topic-grid p{font-size:14px}
+ .reverse>div{grid-column:1}.reverse>figure{grid-column:1;grid-row:auto}
+ .play{width:68px;height:48px;font-size:23px}
+ .footer-grid{grid-template-columns:1fr;gap:35px}
+ .phone-figure .image-button img{max-width:230px}
+ dialog>img{max-height:78vh}
+ .clients-head{margin-bottom:42px}
+}
+@media(max-width:420px){.topic-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.topic-grid>a,.client-row img{transition:none}}
+@media print{.navtoggle,nav,.video-shell,.dialog-close{display:none}.site-header,footer{-webkit-print-color-adjust:exact;print-color-adjust:exact}.site-header{position:static}.section{padding-block:25px}.hero-image{height:350px}.split{break-inside:avoid}.client-row img{filter:none;opacity:1}}
+
+
+
+/* ===== Lead-Theme (nach Original-Website, siehe design.md) ===== */
+/* QATM – Theme nach qatm.com (Analyse 20.10.2026, 1920 / 1440 / 375px, siehe design.md)
+   Tokens: CI-Orange #ec5300 (Linie/Icons) bzw. #cc4800 (Button-Fläche, AA), Text #000, Grau #ededed,
+   Nav-Grau #757575, Footer #1a2833 + Werkstattfoto, Montserrat, Versal-Überschriften,
+   Buttons 4px Radius, Karten eckig, Abschnitte mit „Tab“-Kante (150px/202px, 21px). */
+:root{--q-orange:#ec5300;--q-btn:#cc4800;--q-btn-d:#a83b00;--q-grey:#ededed;--q-line:#c8c8c8;--q-nav:#757575;--q-foot:#1a2833;--q-foot-tx:#b1bac3;
+ --q-tab:polygon(0 0,150px 0,202px 100%,calc(100% - 202px) 100%,calc(100% - 150px) 0,100% 0,100% 100%,0 100%)}
+body{font-size:16px;line-height:1.6;color:#000;background:#fff;overflow-x:clip}
+p{margin-bottom:20px}
+.wrap{width:auto;max-width:1440px;margin-inline:auto;padding-inline:52px;box-sizing:border-box}
+.section{padding-top:90px;padding-bottom:90px}
+
+/* Header: weiß, volle Breite, 60px, weicher Schatten nach unten, orange Oberkante mit schrägen Enden (Logo-/Aktions-Keile) */
+.site-header{position:sticky;top:0;background:#fff;border-bottom:0;box-shadow:rgba(0,0,0,.2) 0 6px 6px -6px}
+.site-header::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:var(--q-orange);clip-path:polygon(320px 0,calc(100% - 320px) 0,calc(100% - 310px) 100%,310px 100%)}
+.site-header .navrow{max-width:none;height:60px;padding-inline:34px;gap:24px}
+.brand img{width:155px;max-height:54px}
+nav{gap:0;margin-inline:auto;padding-right:155px}
+nav a{color:var(--q-nav);font-size:14px;font-weight:400;letter-spacing:0;text-transform:uppercase;padding:0 14px;border:0;line-height:24px}
+nav a:hover{color:#000;border:0}
+html{scroll-padding-top:80px}
+
+/* Hero: randloses Video-Standbild 650px, Text zentriert in Weiß (wie „QATM – Materialography & Hardness Testing“) */
+.hero-image{height:650px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:#1f1f1f}
+.hero-image>img:first-child{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-shade{background:rgba(0,0,0,.16)}
+.hero-image>.hero-maintool-logo{position:relative;top:auto;right:auto;width:230px;margin-bottom:26px;filter:drop-shadow(0 1px 6px rgba(0,0,0,.35))}
+.hero-copy{position:relative;top:auto;left:auto;right:auto;transform:none;max-width:1336px;padding-inline:20px}
+.hero h1{font-size:45px;font-weight:700;line-height:1.15;text-transform:uppercase;letter-spacing:0;text-shadow:none;margin-bottom:34px}
+/* Tab-Kante: Abschnitt darunter greift an den Rändern 21px in den Hero */
+.hero-image::after{content:'';position:absolute;left:0;right:0;bottom:0;height:21px;background:#fff;clip-path:var(--q-tab);z-index:3}
+
+/* Buttons: orange gefüllt, 4px Radius, 8/16px, 16px normal, ohne Icon */
+.button,.footer-cta,.more{display:inline-flex;align-items:center;gap:0;padding:8px 16px;background:var(--q-btn);color:#fff!important;border:0;border-radius:4px;font-size:16px;font-weight:400;line-height:24px;text-transform:none;letter-spacing:0;text-decoration:none;transition:background .2s}
+.button:hover,.footer-cta:hover,.more:hover{background:var(--q-btn-d)}
+.button>span,.footer-cta>span{display:none}
+.more:before{content:none}
+.video-external{margin-top:24px}
+
+/* Typografie: H2 = kleine Versal-Zeile + fette Versal-Zeile (wie „Our latest updates / What's new at QATM“) */
+h1,h2,h3{font-family:'Montserrat',Arial,sans-serif;text-transform:uppercase;color:#000;letter-spacing:0}
+h2{font-size:16px;font-weight:400;line-height:1.3;margin-bottom:32px}
+h2 .hl{display:block;margin-top:4px;font-size:25px;font-weight:700;line-height:1.2}
+#video h2,.clients h2{font-size:25px;font-weight:700;line-height:1.2}
+.overview h2,#video h2,.clients-head{text-align:center;margin-inline:auto}
+h3{font-size:20px;font-weight:700;line-height:1.3;color:#000}
+a{color:var(--q-btn)}
+strong{color:#000}
+
+/* Intro + Bildkarten: weiße Karte mit 1px-Rahmen #aaa, 4px Radius (wie News-Kacheln) */
+.intro{gap:56px}
+.intro-visual{background:#fff;border:1px solid #aaa;border-radius:4px;padding:24px}
+.split{gap:56px}
+.split-section figure .image-button,.reverse figure .image-button{background:#fff;border:1px solid #aaa;border-radius:4px;padding:20px}
+#rollen figure .image-button,#anlagen figure .image-button{border:0;border-radius:0;padding:32px}
+figcaption{color:#555;font-size:13px}
+
+/* Abschnitts-Rhythmus weiß / grau (#ededed) mit Tab-Kanten oben und unten */
+.overview,#rollen,#anlagen,.mobile-section{position:relative;background:var(--q-grey);border-top:0}
+.overview::before,#rollen::before,#anlagen::before,.mobile-section::before{content:'';position:absolute;left:0;right:0;top:-21px;height:21px;background:var(--q-grey);clip-path:var(--q-tab)}
+.overview::after,#rollen::after,#anlagen::after,.mobile-section::after{content:'';position:absolute;left:0;right:0;bottom:0;height:21px;background:#fff;clip-path:var(--q-tab)}
+.phone-figure .image-button{background:transparent!important;border:0!important;padding:0!important}
+
+/* Funktionskacheln: weiße Produktkarten, eckig, 32px Innenabstand, orange Button unten */
+.overview h2{max-width:none;margin-bottom:40px}
+.topic-grid{gap:16px}
+.topic-grid>a{background:#fff;border:0;border-radius:0;box-shadow:none;padding:32px;color:#000}
+.topic-grid>a:hover{transform:none;box-shadow:0 6px 16px rgba(0,0,0,.08)}
+.topic-grid h3{margin:14px 0 12px}
+.topic-grid p{color:#000}
+.topic-grid .more{margin-top:auto}
+.topic-symbol svg{stroke:var(--q-orange);stroke-width:1.6}
+
+.video-shell{border-radius:0}
+
+/* Listen: schwarzer Chevron › (FontAwesome chevron-right) */
+.checks li{padding-left:22px;margin-bottom:8px}
+.checks li:before{content:'';top:.55em;left:2px;width:6px;height:6px;border-top:2px solid #000;border-right:2px solid #000;transform:rotate(45deg)}
+
+/* Details: Linien + dünner Chevron wie im mobilen Menü */
+.detail-pair{gap:56px}
+.detail-pair article{border-top:0;padding-top:0}
+details{border-top:1px solid var(--q-line);border-bottom:1px solid var(--q-line)}
+summary{list-style:none;display:flex;justify-content:space-between;align-items:center;color:#000;font-size:14px;font-weight:700;text-transform:uppercase;padding:18px 0}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'';width:9px;height:9px;margin-right:6px;border-right:1.5px solid #000;border-bottom:1.5px solid #000;transform:rotate(45deg) translateY(-3px);transition:transform .2s}
+details[open] summary::after{transform:rotate(225deg)}
+
+/* Logos */
+.clients{background:#fff}
+.clients-head{max-width:860px;margin-bottom:56px}
+.clients-head h2{margin:0 0 20px}
+
+/* Footer: dunkles Blaugrau mit Werkstattfoto, Tab-Kante (110/145px, 20px), weiße Versal-Überschriften, graue Links */
+footer{position:relative;background:var(--q-foot) url('assets/footer-bg.jpg') center/cover no-repeat;background-image:linear-gradient(rgba(26,40,51,.82),rgba(26,40,51,.82)),url('assets/footer-bg.jpg');border-top:0;color:var(--q-foot-tx);padding:80px 0 70px}
+footer::before{content:'';position:absolute;left:0;right:0;top:-20px;height:20px;background:var(--q-foot);clip-path:polygon(0 0,110px 0,145px 100%,calc(100% - 145px) 100%,calc(100% - 110px) 0,100% 0,100% 100%,0 100%)}
+footer .wrap{max-width:1440px;padding-inline:36px}
+footer h2{font-size:20px;font-weight:400;text-transform:uppercase;color:#fff;margin-bottom:22px}
+footer p{font-size:16px;color:var(--q-foot-tx)}
+footer strong{color:#fff}
+footer a{color:var(--q-foot-tx);text-decoration:none}
+footer a:hover{color:#fff;text-decoration:underline}
+footer .footer-download{font-weight:400;color:#fff}
+.footer-cta{margin-top:24px}
+.footer-cta:hover{text-decoration:none!important}
+
+@media(max-width:1100px){
+ .site-header::before{clip-path:polygon(220px 0,calc(100% - 220px) 0,calc(100% - 212px) 100%,212px 100%)}
+ nav{padding-right:0}nav a{font-size:12px;padding:0 9px}
+ .wrap{padding-inline:32px}
+ .hero h1{font-size:38px}
+}
+@media(max-width:760px){
+ .wrap{padding-inline:16px}
+ .section{padding-top:64px;padding-bottom:64px}
+ .site-header::before{display:none}
+ .site-header .navrow{height:60px;padding-inline:10px 12px}
+ .brand img{width:110px}
+ .navtoggle{border:0;width:44px;height:44px;padding:12px 6px;gap:7px}.navtoggle span{background:#000;height:2px}
+ nav{top:60px;left:0;right:0;margin:0;padding:12px 0 24px;background:#fff;border-bottom:0;box-shadow:0 8px 16px rgba(0,0,0,.08);min-height:calc(100vh - 60px)}
+ nav a{display:flex;justify-content:space-between;align-items:center;color:#000;font-size:14px;font-weight:700;padding:18px 24px;border-bottom:1px solid #e0e0e0;line-height:1.4}
+ nav a::after{content:'';width:9px;height:9px;border-right:1.5px solid #000;border-bottom:1.5px solid #000;transform:rotate(45deg) translateY(-3px)}
+ .hero-image{height:600px}
+ .hero-image>.hero-maintool-logo{width:170px;margin-bottom:20px;top:auto;right:auto}
+ .hero-image>img:first-child{object-position:68% 50%}
+ .hero-copy{padding-inline:12px;top:auto;bottom:auto;left:auto;right:auto}
+ .hero h1{font-size:26px;margin-bottom:28px}
+ h2 .hl,#video h2,.clients h2{font-size:22px}
+ .topic-grid>a{padding:22px 18px}.topic-grid h3{font-size:16px}
+ .topic-grid .more{font-size:14px;padding:6px 12px}
+ .intro-visual{padding:12px}
+ #rollen figure .image-button,#anlagen figure .image-button{padding:14px}
+ footer{padding:60px 0 50px}
+ footer .wrap{padding-inline:16px}
+}
+.hero.wrap{max-width:none;margin-inline:0;padding-inline:0}
+
+/* Feste Vorgaben (Regelwerk §5) – nicht überschreibbar */
+.clients-head{display:block!important}.clients-head h2{grid-column:auto}.client-row{flex-wrap:nowrap!important}

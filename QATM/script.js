@@ -1,0 +1,13 @@
+'use strict';
+const toggle=document.querySelector('.navtoggle');
+const navigation=document.getElementById('navigation');
+toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')!=='true';toggle.setAttribute('aria-expanded',String(open));navigation.classList.toggle('open',open);toggle.setAttribute('aria-label',open?'Menü schließen':'Menü öffnen');});
+navigation.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navigation.classList.remove('open');toggle.setAttribute('aria-expanded','false');}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){navigation.classList.remove('open');toggle.setAttribute('aria-expanded','false');}});
+const dialog=document.getElementById('image-dialog');
+let previousImageButton;
+document.querySelectorAll('[data-image]').forEach(button=>button.addEventListener('click',()=>{const source=button.querySelector('img'),large=dialog.querySelector('img');large.src=source.currentSrc||source.src;large.alt=source.alt;previousImageButton=button;dialog.showModal();}));
+dialog.querySelector('button').addEventListener('click',()=>dialog.close());
+dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
+dialog.addEventListener('close',()=>{dialog.querySelector('img').removeAttribute('src');if(previousImageButton)previousImageButton.focus();});
+document.getElementById('video-start').addEventListener('click',()=>{const url='https://www.youtube.com/watch?v=hJ2-AeW1EHE';if(location.protocol==='file:'){window.open(url,'_blank','noopener,noreferrer');return;}const frame=document.createElement('iframe');frame.src='https://www.youtube-nocookie.com/embed/hJ2-AeW1EHE?autoplay=1';frame.title='collana maintool kurz erklärt';frame.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';frame.referrerPolicy='strict-origin-when-cross-origin';frame.allowFullscreen=true;document.querySelector('.video-shell').replaceChildren(frame);});

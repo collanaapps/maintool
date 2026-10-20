@@ -1,0 +1,284 @@
+/* collana maintool × Kettenbach Dental – CI nach https://www.kettenbach-dental.de (generiert) */
+@font-face{font-family:'Montserrat';src:url('assets/montserrat.woff2') format('woff2');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Montserrat';src:url('assets/montserrat.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Montserrat';src:url('assets/montserrat.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Montserrat';src:url('assets/montserrat.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+:root{--primary:#00468e;--primary-dark:#003296;--on-primary:#ffffff;--text:#555555;--head:#00468e;--ink:#444444;--light:#f2f2f2;--line:#ebebeb;--hbg:#ffffff;--htx:#003296;--hbd:#ebebeb;--fbg:#dadada;--ftx:#444444;--fhd:#444444;--flk:#444444;--h3:#00468e;--r:10px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{margin:0;color:var(--text);font:16px/1.7 'Montserrat',Arial,Helvetica,sans-serif;background:#fff}
+button,a{-webkit-tap-highlight-color:transparent}
+button{font:inherit}
+a{color:var(--primary);text-underline-offset:4px}
+a:hover{text-decoration:none}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--primary);outline-offset:4px}
+strong{color:var(--ink)}
+h1,h2,h3{font-family:'Montserrat',Arial,Helvetica,sans-serif;font-weight:700;line-height:1.2;letter-spacing:0;margin:0 0 24px;text-transform:uppercase;color:var(--head)}
+h2{font-size:clamp(26px,2.4vw,36px)}
+h3{font-size:20px;color:var(--h3)}
+p{margin:0 0 22px}
+img{max-width:100%;height:auto}
+.wrap{width:86%;max-width:1240px;margin-inline:auto}
+.section{padding-top:85px;padding-bottom:85px}
+.skip{position:fixed;top:-100px;left:20px;background:#fff;padding:12px;z-index:100}.skip:focus{top:10px}
+.site-header{background:var(--hbg);border-bottom:1px solid var(--hbd);position:sticky;top:0;z-index:20}
+.site-header a{text-decoration:none}
+.navrow{height:88px;display:flex;align-items:center;justify-content:space-between;gap:40px}
+.brand{display:flex;flex-shrink:0;align-items:center}
+.brand img{width:260px;max-height:60px;object-fit:contain;object-position:left center;height:auto}
+nav{display:flex;align-items:center;gap:32px}
+nav a{color:var(--htx);text-transform:uppercase;font-size:15px;font-weight:600;padding:6px 0;border-bottom:2px solid transparent}
+nav a:hover{color:var(--primary);border-bottom-color:var(--primary)}
+.navtoggle{display:none}
+.hero.wrap{width:100%;max-width:none;padding:0}
+.hero-image{height:clamp(440px,46vw,640px);position:relative;overflow:hidden;background:var(--ink)}
+.hero-image>img{width:100%;height:100%;object-fit:cover;object-position:left 15%}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,0) 22%,rgba(255,255,255,.5) 55%,rgba(255,255,255,.78))}
+.hero-copy{position:absolute;top:50%;right:7%;left:47%;transform:translateY(-35%)}
+.hero-kicker{display:inline-block;margin:0 0 14px;padding:4px 12px;background:var(--primary);color:var(--on-primary);text-transform:uppercase;letter-spacing:.1em;font-size:13px;font-weight:700;border-radius:var(--r)}
+.hero h1{color:#fff;font-size:clamp(30px,3.2vw,50px);text-shadow:0 2px 8px rgba(0,0,0,.35);margin-bottom:30px}
+.hero-image>.hero-maintool-logo{position:absolute;top:7%;right:7%;width:clamp(150px,17vw,250px);height:auto;object-fit:contain;z-index:2}
+.button{display:inline-flex;gap:18px;align-items:center;padding:13px 26px;color:var(--on-primary);background:var(--primary);font-weight:700;text-transform:none;font-size:15px;text-decoration:none;border-radius:var(--r);transition:background .2s}
+.button:hover{background:var(--primary-dark)}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.intro-visual{background:var(--light);padding:30px 24px;border-bottom:5px solid var(--primary);border-radius:var(--r)}
+.intro-copy{padding:20px 0}
+.bc-note{margin-top:0;margin-bottom:20px;line-height:0}
+.bc-note img{width:230px;height:72px;object-fit:cover;object-position:center}
+.more{font-weight:700;color:var(--primary)}
+.more:before{content:'» '}
+.overview{background:var(--light)}
+.overview h2{max-width:820px;margin-bottom:45px}
+.topic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.topic-grid>a{padding:32px 28px;background:#fff;text-decoration:none;color:var(--text);display:flex;flex-direction:column;align-items:flex-start;border-bottom:4px solid var(--primary);border-radius:var(--r);box-shadow:0 1px 3px rgba(0,0,0,.06);transition:transform .2s,box-shadow .2s}
+.topic-grid>a:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,.09)}
+.topic-grid h3{margin:12px 0}
+.topic-grid p{margin-bottom:18px}
+.topic-grid .more{margin-top:auto}
+.topic-symbol{height:55px;line-height:1;display:flex;align-items:center}
+.topic-symbol svg{width:44px;height:44px;fill:none;stroke:var(--primary);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.video-shell{aspect-ratio:16/9;width:100%;background:#202129;position:relative;border-radius:var(--r);overflow:hidden}
+.video-start{border:0;position:absolute;inset:0;width:100%;padding:0;background:#202129;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.video-start>.youtube-thumbnail{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.play{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;border:0;background:#ff0033;color:#fff;width:86px;height:60px;border-radius:14px;font-size:28px;padding-left:4px;box-shadow:0 2px 14px #0005}
+.video-start:hover .play{background:#d9002b}
+.video-shell iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-external{display:inline-block;margin-top:18px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.split-section{background:var(--light)}
+figure{margin:0;min-width:0}
+.image-button{display:block;border:0;padding:0;background:none;width:100%;cursor:zoom-in;text-align:center}
+.image-button img{vertical-align:middle;width:100%;height:auto}
+.reverse>div{grid-column:2}.reverse>figure{grid-column:1;grid-row:1}
+figcaption{font-size:12px;line-height:1.5;text-align:center;color:#888;margin-top:16px}
+.checks{list-style:none;padding:0;margin:25px 0 0}
+.checks li{position:relative;padding-left:26px;margin-bottom:12px}
+.checks li:before{content:'✓';position:absolute;left:0;font-weight:700;color:var(--primary)}
+.detail-pair{display:grid;grid-template-columns:1fr 1fr;gap:65px}
+.detail-pair article{scroll-margin-top:120px;border-top:4px solid var(--primary);padding-top:30px}
+details{margin-top:25px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+summary{cursor:pointer;padding:17px 0;font-weight:700;color:var(--primary)}
+details .checks{margin-bottom:25px}
+.mobile-section{background:#fff;border-top:1px solid var(--line)}
+.phone-figure .image-button img{max-width:260px}
+.phone-figure{padding:10px 0}
+.clients{background:var(--light)}
+.clients-head{max-width:720px;margin:0 auto 55px;text-align:center}
+.clients-head h2{margin-bottom:20px}
+.clients-head p{margin-bottom:0}
+/* Referenz-Logos: IMMER in einer Reihe (Vorgabe Marcel) */
+.client-row{list-style:none;margin:0;padding:0;display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:clamp(6px,3vw,48px)}
+.client-row li{flex:1 1 0;min-width:0;display:flex;align-items:center;justify-content:center}
+.client-row img{width:auto;height:clamp(10px,2.4vw,33px);max-width:100%;object-fit:contain;filter:grayscale(1);opacity:.6;transition:filter .25s,opacity .25s}
+.client-row li.tall img{height:clamp(16px,3.8vw,52px)}
+.client-row li:hover img{filter:grayscale(0);opacity:1}
+footer{background:var(--fbg);color:var(--ftx);border-top:5px solid var(--primary);padding:60px 0}
+footer a{color:var(--flk)}
+footer a:hover{color:var(--primary)}
+footer h2{font-size:16px;font-weight:700;letter-spacing:.04em;color:var(--fhd);margin-bottom:18px}
+footer p{font-size:15px}
+footer strong{color:inherit}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:60px}
+footer .footer-brand{display:inline-block;width:238px;max-width:100%;line-height:0;margin-bottom:22px}
+.footer-brand img{display:block;width:100%;height:auto}
+footer .footer-download{font-weight:700}
+.footer-cta{display:inline-flex;align-items:center;gap:14px;margin-top:22px;padding:12px 24px;background:var(--primary);color:var(--on-primary)!important;font-weight:700;text-transform:none;font-size:15px;text-decoration:none;border-radius:var(--r);transition:background .2s}
+.footer-cta:hover{background:var(--primary-dark)}
+dialog{padding:50px 15px 15px;border:0;background:transparent;max-width:96vw;max-height:96vh;overflow:auto}
+dialog::backdrop{background:rgba(0,0,0,.9)}
+dialog>img{display:block;margin:auto;max-width:90vw;max-height:82vh;width:auto;height:auto;object-fit:contain}
+.dialog-close{position:fixed;right:20px;top:15px;background:#fff;border:0;padding:10px 18px;cursor:pointer;font-weight:700}
+@media(max-width:1100px){.wrap{width:92%}.navrow{gap:20px}nav{gap:18px}nav a{font-size:13px}.split,.intro,.detail-pair{gap:35px}.hero-copy{left:40%}}
+@media(max-width:760px){
+ html{scroll-padding-top:80px}
+ .navrow{height:72px}.brand img{width:175px;max-height:48px}
+ .navtoggle{display:flex;flex-direction:column;justify-content:center;gap:5px;background:transparent;border:1px solid var(--hbd);width:44px;height:40px;padding:8px}
+ .navtoggle span{display:block;background:var(--htx);height:2px;width:100%}
+ nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--hbg);padding:12px 4% 20px;flex-direction:column;align-items:stretch;gap:0;border-bottom:3px solid var(--primary);box-shadow:0 8px 16px rgba(0,0,0,.08)}
+ nav.open{display:flex}nav a{font-size:15px;padding:13px 0;border-bottom:1px solid var(--hbd)}
+ .hero-image{height:520px}.hero-image>img{object-position:12% 50%}
+ .hero-shade{background:linear-gradient(0deg,rgba(255,255,255,.8) 12%,rgba(255,255,255,.1) 72%)}
+ .hero-copy{left:6%;right:6%;top:auto;bottom:7%;transform:none}
+ .hero h1{font-size:27px}
+ .hero-image>.hero-maintool-logo{width:160px;top:5%;right:5%}
+ .section{padding-top:55px;padding-bottom:55px}
+ .intro,.split,.detail-pair{grid-template-columns:1fr;gap:35px}
+ .intro-copy{grid-row:1;padding:0}.intro-visual{padding:16px}
+ .topic-grid{grid-template-columns:1fr 1fr;gap:14px}.topic-grid>a{padding:22px 16px}.topic-grid h3{font-size:16px}.topic-grid p{font-size:14px}
+ .reverse>div{grid-column:1}.reverse>figure{grid-column:1;grid-row:auto}
+ .play{width:68px;height:48px;font-size:23px}
+ .footer-grid{grid-template-columns:1fr;gap:35px}
+ .phone-figure .image-button img{max-width:230px}
+ dialog>img{max-height:78vh}
+ .clients-head{margin-bottom:42px}
+}
+@media(max-width:420px){.topic-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.topic-grid>a,.client-row img{transition:none}}
+@media print{.navtoggle,nav,.video-shell,.dialog-close{display:none}.site-header,footer{-webkit-print-color-adjust:exact;print-color-adjust:exact}.site-header{position:static}.section{padding-block:25px}.hero-image{height:350px}.split{break-inside:avoid}.client-row img{filter:none;opacity:1}}
+
+
+
+/* ===== Lead-Theme (nach Original-Website, siehe design.md) ===== */
+/* Kettenbach Dental – Theme nach kettenbach-dental.de (Analyse 20.10.2026, siehe design.md)
+   Tokens: Dunkelblau #00468e (Überschriften/Buttons), Navi #003296, Text #555 (300), Hellblau #7fd3f0, Mittelblau #1588ca, Pink #d9437c,
+   Grau #f2f2f2 (News), Footer #dadada, Montserrat, Text 18.67px/1.6, H1 49.8px/700 Versal, H2 31px/700 Versal,
+   Buttons Radius 10px Outline 2px, Header-Karte 15px Radius mit 1px #ebebeb, Textcontainer 1040px@1440 / 1160px@1920. */
+:root{--k-blue:#00468e;--k-nav:#003296;--k-sky:#7fd3f0;--k-mid:#1588ca;--k-pink:#d9437c;--k-grey:#f2f2f2;--k-foot:#dadada;--k-line:#ebebeb;--k-bd:#439fd8}
+body{font-size:18.67px;line-height:1.6;font-weight:300;color:#555;background:#fff}
+p{margin-bottom:24px}
+strong{font-weight:700;color:#555}
+/* Container: 1040px bei 1440 (x=200), max. 1160px bei 1920 (x=380); Header-Karte 1400/1680px */
+.wrap{width:min(1160px,calc(100% - 400px));max-width:none;margin-inline:auto;padding-inline:0}
+.section{padding-top:90px;padding-bottom:90px}
+
+/* Header: schwebende weiße Karte, 20px Rand, Radius 15px, 1px #ebebeb, Padding 15px; darüber weißer Verlauf */
+.site-header{position:sticky;top:0;background:linear-gradient(rgba(255,255,255,.95) 0,rgba(255,255,255,.75) 50%,rgba(255,255,255,0));border:0;padding:10px 20px 18px}
+.site-header .navrow{width:min(1680px,100%);height:82px;padding:15px 25px;background:#fff;border:1px solid var(--k-line);border-radius:15px}
+.brand img{width:260px;max-height:46px}
+nav{gap:0}
+nav a{position:relative;color:var(--k-nav);font-size:14px;font-weight:500;letter-spacing:.42px;padding:12px 18px;border:0;border-radius:999px;transition:background .2s}
+nav a+a::before{content:'';position:absolute;left:-1px;top:50%;width:1px;height:18px;margin-top:-9px;background:var(--k-nav)}
+nav a:hover{color:var(--k-nav);background:#cdeefa;border:0}
+html{scroll-padding-top:130px}
+
+/* Hero: heller Slider-Look – Pasten-Striche oben, Produkt links, blaue Welle unten; Text dunkelblau rechts zentriert */
+.hero-image{height:clamp(470px,37vw,720px);background:#eef5fb}
+.hero-shade{display:none}
+.hero-copy{left:46%;right:4%;top:50%;transform:translateY(-42%);text-align:center}
+.hero h1{color:var(--k-blue);font-size:clamp(34px,3.6vw,58px);font-weight:700;line-height:1.15;text-shadow:none;margin-bottom:30px}
+.hero h1::first-line{font-weight:400;font-size:.82em}
+.hero-image>.hero-maintool-logo{top:auto;bottom:calc(50% + 120px);right:auto;left:calc(46% + (50% - 4%)/2);transform:translateX(-50%);width:clamp(150px,13vw,200px)}
+
+/* Buttons: Radius 10px, 2px Rahmen, 18.67px/300; Standard = blau Outline auf Weiß, Hover gefüllt */
+.button,.footer-cta{gap:14px;padding:12px 20px;border:2px solid var(--k-blue);border-radius:10px;background:#fff;color:var(--k-blue)!important;font-size:18.67px;font-weight:300;line-height:22px;text-transform:none;letter-spacing:0}
+.button:hover,.footer-cta:hover{background:var(--k-blue);color:#fff!important}
+
+/* Typografie */
+h1,h2,h3{font-family:'Montserrat',Arial,sans-serif;letter-spacing:0}
+h2{font-size:clamp(26px,2.2vw,31px);font-weight:700;line-height:1.4;color:var(--k-blue);margin-bottom:26px}
+h3{font-size:20px;font-weight:700;line-height:1.3;color:var(--k-blue);text-transform:uppercase}
+a{color:var(--k-blue)}
+.more{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border:2px solid var(--k-blue);border-radius:10px;color:var(--k-blue);font-weight:300;text-decoration:none;line-height:22px}
+.more:before{content:none}
+.more:hover{background:var(--k-blue);color:#fff}
+
+/* Intro wie „Simply intelligent“: Text + Bild 50/50 */
+.intro{gap:60px}
+.intro-visual{background:transparent;border:0;border-radius:0;padding:0}
+.intro-visual img{filter:drop-shadow(0 18px 30px rgba(0,40,90,.18))}
+
+/* Funktionskacheln wie Produkt-/News-Teaser: weiße Karten auf Grau, blaue Versal-Titel, Outline-Button */
+.overview{background:var(--k-grey)}
+.overview h2{max-width:none;text-align:center;font-size:clamp(28px,2.8vw,39.4px);margin-bottom:56px}
+.topic-grid{gap:30px}
+.topic-grid>a{background:#fff;border:0;border-radius:15px;box-shadow:none;padding:34px 30px 30px;color:#555}
+.topic-grid>a:hover{transform:none;box-shadow:0 22px 50px rgba(0,0,0,.08)}
+.topic-grid p{font-size:17px}
+.topic-grid .more{padding:9px 18px;font-size:16px}
+.topic-symbol svg{stroke:var(--k-mid);stroke-width:1.6}
+
+/* Video */
+.video-shell{border-radius:15px}
+
+/* Abschnitts-Rhythmus: weiß / Dunkelblau-Band (wie Produktkatalog/Newsletter, weiße Schrift) / Grau */
+#rollen,.mobile-section{background:var(--k-blue);color:#fff;border-top:0}
+#rollen h2,.mobile-section h2,#rollen strong,.mobile-section strong{color:#fff}
+#rollen .checks li:before,.mobile-section .checks li:before{color:var(--k-sky)}
+#rollen figcaption,.mobile-section figcaption{color:#d6e6f5}
+#anlagen{background:#fff}
+.split{gap:60px}
+.split-section figure .image-button,.reverse figure .image-button{background:transparent;padding:0}
+.split figure img{filter:drop-shadow(0 18px 30px rgba(0,20,60,.25))}
+figcaption{color:#777;font-size:13px}
+
+/* Listen: Häkchen in Hellblau/Blau */
+.checks li{padding-left:28px}
+.checks li:before{content:'✓';color:var(--k-mid);font-weight:700}
+
+/* Details als umrandete Karten wie im mobilen Menü (1px #439fd8, Radius 15px, Chevron) */
+.detail-pair{gap:60px}
+.detail-pair article{border-top:0;padding-top:0}
+details{border:1px solid var(--k-bd);border-radius:15px;padding:0 20px;margin-top:28px}
+summary{list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--k-nav);font-weight:500;font-size:15px;text-transform:uppercase;padding:18px 0}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'';width:9px;height:9px;border-right:2px solid var(--k-nav);border-top:2px solid var(--k-nav);transform:rotate(45deg);transition:transform .2s}
+details[open] summary::after{transform:rotate(135deg)}
+
+/* Logos */
+.clients{background:var(--k-grey)}
+.clients-head{max-width:none;text-align:center;margin:0 auto 56px}
+.clients-head h2{margin:0 0 18px;font-size:clamp(28px,2.8vw,39.4px)}
+
+/* Footer: Grau #dadada, Text #444 300, Firmenname fett, Links mit Unterstrich */
+footer{background:var(--k-foot);border-top:0;color:#444;padding:70px 0 60px}
+footer h2{font-size:16.6px;font-weight:700;letter-spacing:0;text-transform:none;color:#444;margin-bottom:10px}
+footer p{font-size:16.6px;font-weight:300;line-height:1.8;color:#444}
+footer strong{color:#444;font-weight:700}
+footer a{color:#444;font-weight:400;text-decoration:none;background:linear-gradient(#444,#444) left bottom/0 1px no-repeat;transition:background-size .25s}
+footer a:hover{color:#444;background-size:100% 1px}
+footer .footer-download{font-weight:500}
+footer .footer-cta{background:#fff;background-image:none}
+footer .footer-cta:hover{background:var(--k-blue)}
+
+/* Gate */
+#gate{background:#eef5fb}
+#gate .gate-card{border:1px solid var(--k-line);border-bottom:1px solid var(--k-line);border-radius:15px;box-shadow:0 22px 50px rgba(0,0,0,.08)}
+#gate .gate-logo{width:240px}
+#gate .gate-card h1{color:var(--k-blue);text-transform:uppercase}
+#gate .gate-card p{color:#555;font-weight:300}
+#gate .gate-card input{border-radius:999px;background:#f0f0f0;border:0;text-align:center}
+#gate .gate-btn{background:#fff;color:var(--k-blue);border:2px solid var(--k-blue);border-radius:10px;font-weight:300;font-size:18px}
+#gate .gate-btn:hover{background:var(--k-blue);color:#fff}
+
+@media(max-width:1300px){.wrap{width:calc(100% - 120px)}nav a{padding:12px 11px;font-size:13px}.brand img{width:220px}}
+@media(max-width:1100px){.wrap{width:calc(100% - 60px)}nav a{padding:10px 8px;font-size:12px;letter-spacing:0}.brand img{width:190px}.hero-copy{left:44%}}
+@media(max-width:760px){
+ body{font-size:17px}
+ .wrap{width:calc(100% - 30px)}
+ .section{padding-top:60px;padding-bottom:60px}
+ /* Mobil: schwebende Header-Karte 10px Rand, Burger 3 blaue Linien; Menü als umrandete 15px-Karten mit Chevron */
+ .site-header{padding:10px}
+ .site-header .navrow{height:76px;padding:12px 18px}
+ .brand img{width:175px;max-height:32px}
+ .navtoggle{border:0;width:36px;height:36px;padding:8px 2px;gap:6px}.navtoggle span{background:var(--k-nav);height:2.5px;border-radius:2px}
+ nav{top:92px;left:15px;right:15px;background:#fff;padding:6px 18px;border:1px solid var(--k-bd);border-radius:15px;box-shadow:0 22px 50px rgba(0,0,0,.08)}
+ nav a{display:flex;justify-content:space-between;align-items:center;font-size:15px;padding:15px 0;border-radius:0}
+ nav a+a::before{display:none}
+ nav a::after{content:'';width:8px;height:8px;border-right:2px solid var(--k-nav);border-top:2px solid var(--k-nav);transform:rotate(45deg)}
+ nav a:hover{background:transparent}
+ .hero-image{height:auto;display:flex;flex-direction:column;background:#eef5fb}
+ .hero-image>img{height:300px;object-position:12% 50%}
+ .hero-image>.hero-maintool-logo{position:static;transform:none;margin:28px auto 6px;width:160px}
+ .hero-copy{position:static;transform:none;padding:12px 15px 44px}
+ .hero h1{font-size:28px}
+ .intro{grid-template-columns:1fr}
+ .topic-grid>a{padding:22px 16px}.topic-grid h3{font-size:16px}
+ .topic-grid .more{padding:7px 12px;font-size:14px}
+ h2{font-size:24px;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
+ .overview h2,.clients-head h2{font-size:26px}
+ footer{padding:50px 0}
+}
+.hero.wrap{width:100%;max-width:none;margin-inline:0;padding-inline:0}
+
+/* Feste Vorgaben (Regelwerk §5) – nicht überschreibbar */
+.clients-head{display:block!important}.clients-head h2{grid-column:auto}.client-row{flex-wrap:nowrap!important}
