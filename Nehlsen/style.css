@@ -28,6 +28,22 @@ footer .footer-brand { display:inline-block;width:238px;max-width:100%;line-heig
 @media(prefers-reduced-motion:reduce){ .client-row img { transition:none; } }
 @media print{ .client-row img { filter:none;opacity:1; } }
 
+/* Passwort-Gate */
+#gate { position:fixed;inset:0;z-index:99999;background:var(--light);display:flex;align-items:center;justify-content:center;padding:24px; }
+html.unlocked #gate { display:none; }
+html:not(.unlocked) body > *:not(#gate){ display:none !important; }
+html:not(.unlocked) body { overflow:hidden; }
+.gate-card { background:#fff;width:100%;max-width:400px;padding:48px 40px;text-align:center;box-shadow:-24px 24px var(--lime);display:flex;flex-direction:column;align-items:center; }
+.gate-mark { color:var(--green);line-height:0;margin-bottom:22px; }
+.gate-mark svg { width:46px;height:46px;fill:none;stroke:var(--green);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round; }
+.gate-card h1 { font-size:26px;font-weight:700;color:var(--ink);margin:0 0 12px; }
+.gate-card p { font-size:15px;color:#595e65;margin:0 0 26px; }
+.gate-card input { width:100%;padding:13px 16px;font:16px 'Open Sans',Arial,sans-serif;border:1px solid #ccc;background:#fff;color:var(--ink);margin-bottom:18px; }
+.gate-card input:focus { outline:none;border-color:var(--green); }
+.gate-btn { width:100%;justify-content:center;border:0;cursor:pointer; }
+.gate-error { color:#db2853;font-size:14px;margin:18px 0 0; }
+@media(max-width:760px){ .gate-card { padding:38px 26px;box-shadow:-16px 16px var(--lime); } }
+
 /* Footer-CTA: Gespräch buchen */
 .footer-cta { display:inline-flex;align-items:center;gap:14px;margin-top:22px;padding:12px 22px;background:var(--lime);color:var(--ink);font-weight:700;text-decoration:none;transition:background .2s; }
 .footer-cta:hover { background:#c3e83a;color:var(--ink); }
