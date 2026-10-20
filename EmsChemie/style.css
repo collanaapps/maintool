@@ -1,0 +1,268 @@
+/* collana maintool × EMS – CI nach https://www.ems-group.com (generiert) */
+@font-face{font-family:'Arimo';src:url('assets/arimo-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Arimo';src:url('assets/arimo-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+:root{--primary:#e2001a;--primary-dark:#b80015;--on-primary:#ffffff;--text:#404040;--head:#404040;--ink:#333333;--light:#f5f5f5;--line:#aaaaaa;--hbg:#ffffff;--htx:#404040;--hbd:#e2001a;--fbg:#ffffff;--ftx:#404040;--fhd:#404040;--flk:#404040;--h3:#404040;--r:5px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{margin:0;color:var(--text);font:16px/1.7 'Arimo',Arial,Helvetica,sans-serif;background:#fff}
+button,a{-webkit-tap-highlight-color:transparent}
+button{font:inherit}
+a{color:var(--primary);text-underline-offset:4px}
+a:hover{text-decoration:none}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--primary);outline-offset:4px}
+strong{color:var(--ink)}
+h1,h2,h3{font-family:'Arimo',Arial,Helvetica,sans-serif;font-weight:700;line-height:1.2;letter-spacing:0;margin:0 0 24px;text-transform:none;color:var(--head)}
+h2{font-size:clamp(26px,2.4vw,36px)}
+h3{font-size:20px;color:var(--h3)}
+p{margin:0 0 22px}
+img{max-width:100%;height:auto}
+.wrap{width:86%;max-width:1240px;margin-inline:auto}
+.section{padding-top:85px;padding-bottom:85px}
+.skip{position:fixed;top:-100px;left:20px;background:#fff;padding:12px;z-index:100}.skip:focus{top:10px}
+.site-header{background:var(--hbg);border-bottom:1px solid var(--hbd);position:sticky;top:0;z-index:20}
+.site-header a{text-decoration:none}
+.navrow{height:88px;display:flex;align-items:center;justify-content:space-between;gap:40px}
+.brand{display:flex;flex-shrink:0;align-items:center}
+.brand img{width:122px;max-height:60px;object-fit:contain;object-position:left center;height:auto}
+nav{display:flex;align-items:center;gap:32px}
+nav a{color:var(--htx);text-transform:none;font-size:15px;font-weight:600;padding:6px 0;border-bottom:2px solid transparent}
+nav a:hover{color:var(--primary);border-bottom-color:var(--primary)}
+.navtoggle{display:none}
+.hero.wrap{width:100%;max-width:none;padding:0}
+.hero-image{height:clamp(440px,46vw,640px);position:relative;overflow:hidden;background:var(--ink)}
+.hero-image>img{width:100%;height:100%;object-fit:cover;object-position:center 60%}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(40,40,40,0) 22%,rgba(40,40,40,.5) 55%,rgba(40,40,40,.78))}
+.hero-copy{position:absolute;top:50%;right:7%;left:47%;transform:translateY(-35%)}
+.hero-kicker{display:inline-block;margin:0 0 14px;padding:4px 12px;background:var(--primary);color:var(--on-primary);text-transform:uppercase;letter-spacing:.1em;font-size:13px;font-weight:700;border-radius:var(--r)}
+.hero h1{color:#fff;font-size:clamp(30px,3.2vw,50px);text-shadow:0 2px 8px rgba(0,0,0,.35);margin-bottom:30px}
+.hero-image>.hero-maintool-logo{position:absolute;top:7%;right:7%;width:clamp(150px,17vw,250px);height:auto;object-fit:contain;z-index:2}
+.button{display:inline-flex;gap:18px;align-items:center;padding:13px 26px;color:var(--on-primary);background:var(--primary);font-weight:700;text-transform:none;font-size:15px;text-decoration:none;border-radius:var(--r);transition:background .2s}
+.button:hover{background:var(--primary-dark)}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.intro-visual{background:var(--light);padding:30px 24px;border-bottom:5px solid var(--primary);border-radius:var(--r)}
+.intro-copy{padding:20px 0}
+.bc-note{margin-top:0;margin-bottom:20px;line-height:0}
+.bc-note img{width:230px;height:72px;object-fit:cover;object-position:center}
+.more{font-weight:700;color:var(--primary)}
+.more:before{content:'» '}
+.overview{background:var(--light)}
+.overview h2{max-width:820px;margin-bottom:45px}
+.topic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.topic-grid>a{padding:32px 28px;background:#fff;text-decoration:none;color:var(--text);display:flex;flex-direction:column;align-items:flex-start;border-bottom:4px solid var(--primary);border-radius:var(--r);box-shadow:0 1px 3px rgba(0,0,0,.06);transition:transform .2s,box-shadow .2s}
+.topic-grid>a:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,.09)}
+.topic-grid h3{margin:12px 0}
+.topic-grid p{margin-bottom:18px}
+.topic-grid .more{margin-top:auto}
+.topic-symbol{height:55px;line-height:1;display:flex;align-items:center}
+.topic-symbol svg{width:44px;height:44px;fill:none;stroke:var(--primary);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.video-shell{aspect-ratio:16/9;width:100%;background:#202129;position:relative;border-radius:var(--r);overflow:hidden}
+.video-start{border:0;position:absolute;inset:0;width:100%;padding:0;background:#202129;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.video-start>.youtube-thumbnail{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.play{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;border:0;background:#ff0033;color:#fff;width:86px;height:60px;border-radius:14px;font-size:28px;padding-left:4px;box-shadow:0 2px 14px #0005}
+.video-start:hover .play{background:#d9002b}
+.video-shell iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-external{display:inline-block;margin-top:18px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.split-section{background:var(--light)}
+figure{margin:0;min-width:0}
+.image-button{display:block;border:0;padding:0;background:none;width:100%;cursor:zoom-in;text-align:center}
+.image-button img{vertical-align:middle;width:100%;height:auto}
+.reverse>div{grid-column:2}.reverse>figure{grid-column:1;grid-row:1}
+figcaption{font-size:12px;line-height:1.5;text-align:center;color:#888;margin-top:16px}
+.checks{list-style:none;padding:0;margin:25px 0 0}
+.checks li{position:relative;padding-left:26px;margin-bottom:12px}
+.checks li:before{content:'✓';position:absolute;left:0;font-weight:700;color:var(--primary)}
+.detail-pair{display:grid;grid-template-columns:1fr 1fr;gap:65px}
+.detail-pair article{scroll-margin-top:120px;border-top:4px solid var(--primary);padding-top:30px}
+details{margin-top:25px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+summary{cursor:pointer;padding:17px 0;font-weight:700;color:var(--primary)}
+details .checks{margin-bottom:25px}
+.mobile-section{background:#fff;border-top:1px solid var(--line)}
+.phone-figure .image-button img{max-width:260px}
+.phone-figure{padding:10px 0}
+.clients{background:var(--light)}
+.clients-head{max-width:720px;margin:0 auto 55px;text-align:center}
+.clients-head h2{margin-bottom:20px}
+.clients-head p{margin-bottom:0}
+/* Referenz-Logos: IMMER in einer Reihe (Vorgabe Marcel) */
+.client-row{list-style:none;margin:0;padding:0;display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:clamp(6px,3vw,48px)}
+.client-row li{flex:1 1 0;min-width:0;display:flex;align-items:center;justify-content:center}
+.client-row img{width:auto;height:clamp(10px,2.4vw,33px);max-width:100%;object-fit:contain;filter:grayscale(1);opacity:.6;transition:filter .25s,opacity .25s}
+.client-row li.tall img{height:clamp(16px,3.8vw,52px)}
+.client-row li:hover img{filter:grayscale(0);opacity:1}
+footer{background:var(--fbg);color:var(--ftx);border-top:5px solid var(--primary);padding:60px 0}
+footer a{color:var(--flk)}
+footer a:hover{color:var(--primary)}
+footer h2{font-size:16px;font-weight:700;letter-spacing:.04em;color:var(--fhd);margin-bottom:18px}
+footer p{font-size:15px}
+footer strong{color:inherit}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:60px}
+footer .footer-brand{display:inline-block;width:238px;max-width:100%;line-height:0;margin-bottom:22px}
+.footer-brand img{display:block;width:100%;height:auto}
+footer .footer-download{font-weight:700}
+.footer-cta{display:inline-flex;align-items:center;gap:14px;margin-top:22px;padding:12px 24px;background:var(--primary);color:var(--on-primary)!important;font-weight:700;text-transform:none;font-size:15px;text-decoration:none;border-radius:var(--r);transition:background .2s}
+.footer-cta:hover{background:var(--primary-dark)}
+dialog{padding:50px 15px 15px;border:0;background:transparent;max-width:96vw;max-height:96vh;overflow:auto}
+dialog::backdrop{background:rgba(0,0,0,.9)}
+dialog>img{display:block;margin:auto;max-width:90vw;max-height:82vh;width:auto;height:auto;object-fit:contain}
+.dialog-close{position:fixed;right:20px;top:15px;background:#fff;border:0;padding:10px 18px;cursor:pointer;font-weight:700}
+@media(max-width:1100px){.wrap{width:92%}.navrow{gap:20px}nav{gap:18px}nav a{font-size:13px}.split,.intro,.detail-pair{gap:35px}.hero-copy{left:40%}}
+@media(max-width:760px){
+ html{scroll-padding-top:80px}
+ .navrow{height:72px}.brand img{width:92px;max-height:48px}
+ .navtoggle{display:flex;flex-direction:column;justify-content:center;gap:5px;background:transparent;border:1px solid var(--hbd);width:44px;height:40px;padding:8px}
+ .navtoggle span{display:block;background:var(--htx);height:2px;width:100%}
+ nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--hbg);padding:12px 4% 20px;flex-direction:column;align-items:stretch;gap:0;border-bottom:3px solid var(--primary);box-shadow:0 8px 16px rgba(0,0,0,.08)}
+ nav.open{display:flex}nav a{font-size:15px;padding:13px 0;border-bottom:1px solid var(--hbd)}
+ .hero-image{height:520px}.hero-image>img{object-position:22% 50%}
+ .hero-shade{background:linear-gradient(0deg,rgba(40,40,40,.8) 12%,rgba(40,40,40,.1) 72%)}
+ .hero-copy{left:6%;right:6%;top:auto;bottom:7%;transform:none}
+ .hero h1{font-size:27px}
+ .hero-image>.hero-maintool-logo{width:160px;top:5%;right:5%}
+ .section{padding-top:55px;padding-bottom:55px}
+ .intro,.split,.detail-pair{grid-template-columns:1fr;gap:35px}
+ .intro-copy{grid-row:1;padding:0}.intro-visual{padding:16px}
+ .topic-grid{grid-template-columns:1fr 1fr;gap:14px}.topic-grid>a{padding:22px 16px}.topic-grid h3{font-size:16px}.topic-grid p{font-size:14px}
+ .reverse>div{grid-column:1}.reverse>figure{grid-column:1;grid-row:auto}
+ .play{width:68px;height:48px;font-size:23px}
+ .footer-grid{grid-template-columns:1fr;gap:35px}
+ .phone-figure .image-button img{max-width:230px}
+ dialog>img{max-height:78vh}
+ .clients-head{margin-bottom:42px}
+}
+@media(max-width:420px){.topic-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.topic-grid>a,.client-row img{transition:none}}
+@media print{.navtoggle,nav,.video-shell,.dialog-close{display:none}.site-header,footer{-webkit-print-color-adjust:exact;print-color-adjust:exact}.site-header{position:static}.section{padding-block:25px}.hero-image{height:350px}.split{break-inside:avoid}.client-row img{filter:none;opacity:1}}
+
+
+
+/* ===== Lead-Theme (nach Original-Website, siehe design.md) ===== */
+/* EMS – Theme nach ems-group.com/de (Analyse 20.10.2026, 1920 / 1440 / 390px, siehe design.md)
+   Tokens: Rot #e2001a, Text #404040, Grau #f5f5f5, Schiefer #637384, Linie #aaa / #dee2e6,
+   Arimo (= Arial, wie sichtbar gerendert) 400/700, Buttons weiß mit rotem Dreieck, Radius 5px, Karten Radius 10px,
+   Container 1280px (bei 1920: x=320), Seitenrand 80px @1440. */
+:root{--e-red:#e2001a;--e-red-d:#b80015;--e-text:#404040;--e-ink:#333;--e-grey:#f5f5f5;--e-slate:#637384;--e-line:#dee2e6;--e-line2:#aaa;--e-menu:rgba(227,229,230,.95)}
+body{font-size:16px;line-height:1.8;color:var(--e-text)}
+p{margin-bottom:22px}
+.wrap{width:auto;max-width:1440px;margin-inline:auto;padding-inline:80px;box-sizing:border-box}
+.section{padding-top:80px;padding-bottom:80px}
+
+/* Header: fixiert/sticky, weiß, 85px, feiner Schatten + 2px rote Linie unten; Logo links an der Containerkante */
+.site-header{background:#fff;border-bottom:2px solid var(--e-red);box-shadow:0 1px 0 rgba(52,53,52,.25)}
+.site-header .navrow{height:85px;align-items:center}
+.brand img{width:122px;max-height:none}
+nav{gap:clamp(24px,4.4vw,64px);align-self:flex-end;height:52px}
+nav a{display:flex;align-items:center;gap:6px;color:var(--e-text);font-size:16px;font-weight:700;padding:0 0 10px;border-bottom:3px solid transparent}
+nav a:hover{color:var(--e-red);border-bottom-color:transparent}
+html{scroll-padding-top:100px}
+
+/* Hero: randlos, bildschirmhoch, H1 48px/700 weiß mittig im oberen Bereich mit weichem Schatten, kein Overlay */
+.hero-image{height:clamp(520px,calc(100vh - 87px),900px)}
+.hero-shade{background:linear-gradient(180deg,rgba(40,40,40,.28) 0%,rgba(40,40,40,.08) 40%,rgba(40,40,40,0) 60%)}
+.hero-copy{left:50%;right:auto;top:clamp(70px,13vh,130px);transform:translateX(-50%);width:min(1280px,calc(100% - 50px));text-align:center}
+.hero h1{color:#fff;font-size:clamp(34px,3.4vw,48px);font-weight:700;line-height:1.12;text-shadow:0 0 8px #4e4e4e;margin-bottom:30px}
+.hero-image>.hero-maintool-logo{left:50%;right:auto;top:auto;bottom:clamp(40px,7vh,72px);transform:translateX(-50%);width:clamp(170px,14vw,220px);filter:drop-shadow(0 0 8px rgba(0,0,0,.35))}
+
+/* Buttons: weiß, roter Text 16px/700, Radius 5px, Schatten 0 0 8px, rotes ▸ davor, Padding 12/12/12/24 */
+.button,.footer-cta{position:relative;display:inline-flex;align-items:center;gap:10px;padding:12px 16px 12px 26px;background:#fff;color:var(--e-red);border:0;border-radius:5px;box-shadow:0 0 8px rgb(78,78,78);font-size:16px;font-weight:700;line-height:1;text-transform:none;transition:box-shadow .2s,color .2s}
+.button::before,.footer-cta::before{content:'';position:absolute;left:13px;top:50%;margin-top:-5px;border-left:6px solid currentColor;border-top:5px solid transparent;border-bottom:5px solid transparent}
+.button:hover,.footer-cta:hover{background:#fff;color:var(--e-red-d);box-shadow:0 0 12px rgb(78,78,78)}
+.button>span,.footer-cta>span{display:none}
+
+/* Typografie: Arial-Look, H2 32px/700 zentriert */
+h1,h2,h3{font-family:'Arimo',Arial,sans-serif}
+h2{font-size:32px;font-weight:700;line-height:1.12;color:var(--e-text);margin-bottom:28px}
+h3{font-size:16px;font-weight:700;line-height:1.5;color:var(--e-text)}
+a{color:var(--e-red);text-decoration:none}
+a:hover{text-decoration:underline}
+.more{position:relative;display:inline-block;padding-left:14px;color:var(--e-red);font-weight:700}
+.more:before{content:'';position:absolute;left:0;top:50%;margin-top:-5px;border-left:6px solid currentColor;border-top:5px solid transparent;border-bottom:5px solid transparent}
+
+/* Intro wie „EMS auf einen Blick" (grau, zentrierte Überschrift) */
+#ueberblick{max-width:none;padding-inline:max(80px,calc((100vw - 1280px)/2));background:var(--e-grey)}
+.intro{gap:64px}
+.intro-visual{background:#fff;border:0;border-radius:10px;box-shadow:0 0 8px #d2d2d2;padding:28px 24px}
+.bc-note img{width:200px;height:62px}
+
+/* Kacheln wie „Geschäftsbereiche": Schiefer-Fläche, weiße Karten Radius 10px, Schatten 0 0 8px */
+.overview{background:var(--e-slate);color:#fff}
+.overview h2{max-width:none;color:#fff;text-align:center;margin-bottom:48px}
+.topic-grid{gap:24px}
+.topic-grid>a{background:#fff;border:0;border-radius:10px;box-shadow:0 0 8px rgba(30,40,50,.35);padding:28px 24px;color:var(--e-text)}
+.topic-grid>a:hover{transform:none;box-shadow:0 0 14px rgba(30,40,50,.5);text-decoration:none}
+.topic-grid h3{margin:10px 0 6px}
+.topic-grid p{font-size:16px;line-height:1.6}
+.topic-symbol svg{stroke:var(--e-red);stroke-width:1.6}
+
+/* Video zentriert wie Medien-Abschnitt */
+#video h2{text-align:center}
+.video-shell{border-radius:10px}
+
+/* Split-Abschnitte: weiß / grau im Wechsel */
+.split-section{background:#fff}
+#anlagen{background:var(--e-grey)}
+#rollen{background:#fff}
+.split{gap:64px}
+.split-section .image-button,.reverse .image-button{background:#fff;border-radius:10px;box-shadow:0 0 8px #d2d2d2;overflow:hidden}
+figcaption{color:#545454;font-size:13px}
+.mobile-section{background:var(--e-grey);border-top:0}
+.phone-figure .image-button{background:transparent!important;box-shadow:none!important}
+
+/* Listen wie Quicklinks/Footer: ▸-Dreiecke, graue Trennlinien */
+.checks li{padding-left:20px}
+.checks li:before{content:'';top:.62em;border-left:6px solid var(--e-red);border-top:5px solid transparent;border-bottom:5px solid transparent}
+.detail-pair{gap:64px}
+.detail-pair article{border-top:0;padding-top:0}
+details{border-top:1px solid var(--e-line2);border-bottom:1px solid var(--e-line2)}
+summary{list-style:none;position:relative;color:var(--e-red);font-weight:400;padding:10px 0 10px 18px}
+summary::-webkit-details-marker{display:none}
+summary::before{content:'';position:absolute;left:2px;top:50%;margin-top:-5px;border-left:6px solid currentColor;border-top:5px solid transparent;border-bottom:5px solid transparent;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+
+/* Logos */
+.clients{background:#fff}
+.clients-head{max-width:820px;text-align:center;margin:0 auto 52px}
+.clients-head h2{margin:0 0 20px}
+
+/* Footer: weiß, Überschriften 16px/700, Links #404040 mit ▸, untere Linie #aaa */
+footer{background:#fff;border-top:1px solid var(--e-line);border-bottom:0;color:var(--e-text);padding:56px 0 64px}
+footer .footer-grid{border-bottom:1px solid var(--e-line2);padding-bottom:40px}
+footer h2{font-size:16px;font-weight:700;letter-spacing:0;color:var(--e-text);margin-bottom:14px}
+footer p{font-size:14px;line-height:1.85;color:var(--e-text)}
+footer strong{color:var(--e-text)}
+footer a{color:var(--e-text);font-size:14px}
+footer a:hover{color:var(--e-red)}
+footer .footer-download{font-weight:400;color:var(--e-red)}
+.footer-cta{margin-top:22px;color:var(--e-red)!important;text-decoration:none!important}
+
+@media(max-width:1100px){
+ .wrap{padding-inline:40px}
+ #ueberblick{padding-inline:40px}
+ nav{gap:22px}nav a{font-size:14px}
+ .split,.intro,.detail-pair{gap:40px}
+}
+@media(max-width:760px){
+ .wrap{padding-inline:16px}
+ #ueberblick{padding-inline:16px}
+ .section{padding-top:56px;padding-bottom:56px}
+ /* Mobil: 55px, Logo links, rotes fettes Burger-Icon rechts; Menü als helles, leicht transparentes Panel mit ▸ */
+ .site-header .navrow{height:55px}
+ .brand img{width:92px}
+ .navtoggle{border:0;width:44px;height:40px;padding:9px 6px;gap:5px}
+ .navtoggle span{background:var(--e-red);height:5px;border-radius:3px}
+ nav{top:55px;height:auto;min-height:calc(100vh - 57px);align-self:auto;background:var(--e-menu);padding:40px 16px;border-bottom:0;box-shadow:none}
+ nav a{position:relative;font-size:20px;color:#000;padding:10px 0 10px 24px;border-bottom:0}
+ nav a::before{content:'';position:absolute;left:0;top:50%;margin-top:-6px;border-left:8px solid #333;border-top:6px solid transparent;border-bottom:6px solid transparent}
+ .hero-image{height:calc(100svh - 57px);max-height:787px;min-height:520px}
+ .hero-copy{top:64px;width:calc(100% - 32px)}
+ .hero h1{font-size:34px;line-height:1.12}
+ .hero-image>.hero-maintool-logo{width:160px;bottom:40px}
+ h2{font-size:26px}
+ .topic-grid>a{padding:20px 16px}.topic-grid h3{font-size:15px}.topic-grid p{font-size:14px}
+ .intro-visual{padding:14px}
+ footer{padding:44px 0 48px}
+}
+.hero.wrap{max-width:none;margin-inline:0;padding-inline:0}
+
+/* Feste Vorgaben (Regelwerk §5) – nicht überschreibbar */
+.clients-head{display:block!important}.clients-head h2{grid-column:auto}.client-row{flex-wrap:nowrap!important}

@@ -1,0 +1,265 @@
+/* collana maintool × eurobahn – CI nach https://www.eurobahn.de (generiert) */
+@font-face{font-family:'Roboto';src:url('assets/roboto-300.woff2') format('woff2');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Roboto';src:url('assets/roboto-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Roboto';src:url('assets/roboto-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Roboto Slab';src:url('assets/robotoslab-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+:root{--primary:#253876;--primary-dark:#1b2a5a;--on-primary:#ffffff;--text:#5f5f5f;--head:#389ca1;--ink:#1c1c1c;--light:#f5f5f5;--line:#e3e3e3;--hbg:#ffffff;--htx:#253876;--hbd:#ffffff;--fbg:#f5f5f5;--ftx:#5f5f5f;--fhd:#1c1c1c;--flk:#5f5f5f;--h3:#5f5f5f;--r:12px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{margin:0;color:var(--text);font:16px/1.7 'Roboto',Arial,Helvetica,sans-serif;background:#fff}
+button,a{-webkit-tap-highlight-color:transparent}
+button{font:inherit}
+a{color:var(--primary);text-underline-offset:4px}
+a:hover{text-decoration:none}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--primary);outline-offset:4px}
+strong{color:var(--ink)}
+h1,h2,h3{font-family:'Roboto Slab',Arial,Helvetica,sans-serif;font-weight:700;line-height:1.2;letter-spacing:0;margin:0 0 24px;text-transform:none;color:var(--head)}
+h2{font-size:clamp(26px,2.4vw,36px)}
+h3{font-size:20px;color:var(--h3)}
+p{margin:0 0 22px}
+img{max-width:100%;height:auto}
+.wrap{width:86%;max-width:1240px;margin-inline:auto}
+.section{padding-top:85px;padding-bottom:85px}
+.skip{position:fixed;top:-100px;left:20px;background:#fff;padding:12px;z-index:100}.skip:focus{top:10px}
+.site-header{background:var(--hbg);border-bottom:1px solid var(--hbd);position:sticky;top:0;z-index:20}
+.site-header a{text-decoration:none}
+.navrow{height:88px;display:flex;align-items:center;justify-content:space-between;gap:40px}
+.brand{display:flex;flex-shrink:0;align-items:center}
+.brand img{width:164px;max-height:60px;object-fit:contain;object-position:left center;height:auto}
+nav{display:flex;align-items:center;gap:32px}
+nav a{color:var(--htx);text-transform:none;font-size:15px;font-weight:600;padding:6px 0;border-bottom:2px solid transparent}
+nav a:hover{color:var(--primary);border-bottom-color:var(--primary)}
+.navtoggle{display:none}
+.hero.wrap{width:100%;max-width:none;padding:0}
+.hero-image{height:clamp(440px,46vw,640px);position:relative;overflow:hidden;background:var(--ink)}
+.hero-image>img{width:100%;height:100%;object-fit:cover;object-position:center 55%}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(37,56,118,0) 22%,rgba(37,56,118,.5) 55%,rgba(37,56,118,.78))}
+.hero-copy{position:absolute;top:50%;right:7%;left:47%;transform:translateY(-35%)}
+.hero-kicker{display:inline-block;margin:0 0 14px;padding:4px 12px;background:var(--primary);color:var(--on-primary);text-transform:uppercase;letter-spacing:.1em;font-size:13px;font-weight:700;border-radius:var(--r)}
+.hero h1{color:#fff;font-size:clamp(30px,3.2vw,50px);text-shadow:0 2px 8px rgba(0,0,0,.35);margin-bottom:30px}
+.hero-image>.hero-maintool-logo{position:absolute;top:7%;right:7%;width:clamp(150px,17vw,250px);height:auto;object-fit:contain;z-index:2}
+.button{display:inline-flex;gap:18px;align-items:center;padding:13px 26px;color:var(--on-primary);background:var(--primary);font-weight:700;text-transform:none;font-size:15px;text-decoration:none;border-radius:var(--r);transition:background .2s}
+.button:hover{background:var(--primary-dark)}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.intro-visual{background:var(--light);padding:30px 24px;border-bottom:5px solid var(--primary);border-radius:var(--r)}
+.intro-copy{padding:20px 0}
+.bc-note{margin-top:0;margin-bottom:20px;line-height:0}
+.bc-note img{width:230px;height:72px;object-fit:cover;object-position:center}
+.more{font-weight:700;color:var(--primary)}
+.more:before{content:'» '}
+.overview{background:var(--light)}
+.overview h2{max-width:820px;margin-bottom:45px}
+.topic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.topic-grid>a{padding:32px 28px;background:#fff;text-decoration:none;color:var(--text);display:flex;flex-direction:column;align-items:flex-start;border-bottom:4px solid var(--primary);border-radius:var(--r);box-shadow:0 1px 3px rgba(0,0,0,.06);transition:transform .2s,box-shadow .2s}
+.topic-grid>a:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,.09)}
+.topic-grid h3{margin:12px 0}
+.topic-grid p{margin-bottom:18px}
+.topic-grid .more{margin-top:auto}
+.topic-symbol{height:55px;line-height:1;display:flex;align-items:center}
+.topic-symbol svg{width:44px;height:44px;fill:none;stroke:var(--primary);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.video-shell{aspect-ratio:16/9;width:100%;background:#202129;position:relative;border-radius:var(--r);overflow:hidden}
+.video-start{border:0;position:absolute;inset:0;width:100%;padding:0;background:#202129;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.video-start>.youtube-thumbnail{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.play{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;border:0;background:#ff0033;color:#fff;width:86px;height:60px;border-radius:14px;font-size:28px;padding-left:4px;box-shadow:0 2px 14px #0005}
+.video-start:hover .play{background:#d9002b}
+.video-shell iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-external{display:inline-block;margin-top:18px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.split-section{background:var(--light)}
+figure{margin:0;min-width:0}
+.image-button{display:block;border:0;padding:0;background:none;width:100%;cursor:zoom-in;text-align:center}
+.image-button img{vertical-align:middle;width:100%;height:auto}
+.reverse>div{grid-column:2}.reverse>figure{grid-column:1;grid-row:1}
+figcaption{font-size:12px;line-height:1.5;text-align:center;color:#888;margin-top:16px}
+.checks{list-style:none;padding:0;margin:25px 0 0}
+.checks li{position:relative;padding-left:26px;margin-bottom:12px}
+.checks li:before{content:'✓';position:absolute;left:0;font-weight:700;color:var(--primary)}
+.detail-pair{display:grid;grid-template-columns:1fr 1fr;gap:65px}
+.detail-pair article{scroll-margin-top:120px;border-top:4px solid var(--primary);padding-top:30px}
+details{margin-top:25px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+summary{cursor:pointer;padding:17px 0;font-weight:700;color:var(--primary)}
+details .checks{margin-bottom:25px}
+.mobile-section{background:#fff;border-top:1px solid var(--line)}
+.phone-figure .image-button img{max-width:260px}
+.phone-figure{padding:10px 0}
+.clients{background:var(--light)}
+.clients-head{max-width:720px;margin:0 auto 55px;text-align:center}
+.clients-head h2{margin-bottom:20px}
+.clients-head p{margin-bottom:0}
+/* Referenz-Logos: IMMER in einer Reihe (Vorgabe Marcel) */
+.client-row{list-style:none;margin:0;padding:0;display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:clamp(6px,3vw,48px)}
+.client-row li{flex:1 1 0;min-width:0;display:flex;align-items:center;justify-content:center}
+.client-row img{width:auto;height:clamp(10px,2.4vw,33px);max-width:100%;object-fit:contain;filter:grayscale(1);opacity:.6;transition:filter .25s,opacity .25s}
+.client-row li.tall img{height:clamp(16px,3.8vw,52px)}
+.client-row li:hover img{filter:grayscale(0);opacity:1}
+footer{background:var(--fbg);color:var(--ftx);border-top:5px solid var(--primary);padding:60px 0}
+footer a{color:var(--flk)}
+footer a:hover{color:var(--primary)}
+footer h2{font-size:16px;font-weight:700;letter-spacing:.04em;color:var(--fhd);margin-bottom:18px}
+footer p{font-size:15px}
+footer strong{color:inherit}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:60px}
+footer .footer-brand{display:inline-block;width:238px;max-width:100%;line-height:0;margin-bottom:22px}
+.footer-brand img{display:block;width:100%;height:auto}
+footer .footer-download{font-weight:700}
+.footer-cta{display:inline-flex;align-items:center;gap:14px;margin-top:22px;padding:12px 24px;background:var(--primary);color:var(--on-primary)!important;font-weight:700;text-transform:none;font-size:15px;text-decoration:none;border-radius:var(--r);transition:background .2s}
+.footer-cta:hover{background:var(--primary-dark)}
+dialog{padding:50px 15px 15px;border:0;background:transparent;max-width:96vw;max-height:96vh;overflow:auto}
+dialog::backdrop{background:rgba(0,0,0,.9)}
+dialog>img{display:block;margin:auto;max-width:90vw;max-height:82vh;width:auto;height:auto;object-fit:contain}
+.dialog-close{position:fixed;right:20px;top:15px;background:#fff;border:0;padding:10px 18px;cursor:pointer;font-weight:700}
+@media(max-width:1100px){.wrap{width:92%}.navrow{gap:20px}nav{gap:18px}nav a{font-size:13px}.split,.intro,.detail-pair{gap:35px}.hero-copy{left:40%}}
+@media(max-width:760px){
+ html{scroll-padding-top:80px}
+ .navrow{height:72px}.brand img{width:120px;max-height:48px}
+ .navtoggle{display:flex;flex-direction:column;justify-content:center;gap:5px;background:transparent;border:1px solid var(--hbd);width:44px;height:40px;padding:8px}
+ .navtoggle span{display:block;background:var(--htx);height:2px;width:100%}
+ nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--hbg);padding:12px 4% 20px;flex-direction:column;align-items:stretch;gap:0;border-bottom:3px solid var(--primary);box-shadow:0 8px 16px rgba(0,0,0,.08)}
+ nav.open{display:flex}nav a{font-size:15px;padding:13px 0;border-bottom:1px solid var(--hbd)}
+ .hero-image{height:520px}.hero-image>img{object-position:70% 50%}
+ .hero-shade{background:linear-gradient(0deg,rgba(37,56,118,.8) 12%,rgba(37,56,118,.1) 72%)}
+ .hero-copy{left:6%;right:6%;top:auto;bottom:7%;transform:none}
+ .hero h1{font-size:27px}
+ .hero-image>.hero-maintool-logo{width:160px;top:5%;right:5%}
+ .section{padding-top:55px;padding-bottom:55px}
+ .intro,.split,.detail-pair{grid-template-columns:1fr;gap:35px}
+ .intro-copy{grid-row:1;padding:0}.intro-visual{padding:16px}
+ .topic-grid{grid-template-columns:1fr 1fr;gap:14px}.topic-grid>a{padding:22px 16px}.topic-grid h3{font-size:16px}.topic-grid p{font-size:14px}
+ .reverse>div{grid-column:1}.reverse>figure{grid-column:1;grid-row:auto}
+ .play{width:68px;height:48px;font-size:23px}
+ .footer-grid{grid-template-columns:1fr;gap:35px}
+ .phone-figure .image-button img{max-width:230px}
+ dialog>img{max-height:78vh}
+ .clients-head{margin-bottom:42px}
+}
+@media(max-width:420px){.topic-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.topic-grid>a,.client-row img{transition:none}}
+@media print{.navtoggle,nav,.video-shell,.dialog-close{display:none}.site-header,footer{-webkit-print-color-adjust:exact;print-color-adjust:exact}.site-header{position:static}.section{padding-block:25px}.hero-image{height:350px}.split{break-inside:avoid}.client-row img{filter:none;opacity:1}}
+
+
+
+/* ===== Lead-Theme (nach Original-Website, siehe design.md) ===== */
+/* eurobahn – Theme nach eurobahn.de (Analyse 20.10.2026, siehe design.md)
+   Tokens: Navy #253876 (Navigation, Buttons), Petrol #3FA4A9 (H2, Logo; Text #389CA1), Blau #5578AA (Chip), Hellpetrol #87D7DC,
+   Verlauf 60° #5578AA → #3FA4A9 → #87D7DC, Text #5F5F5F Roboto 300, Überschriften Roboto Slab 700,
+   Buttons 12px Radius, Bootstrap-5-Container 1320px inkl. 12px (Inhalt 1296px), Footer #F5F5F5 mit Verlaufs-Leiste. */
+:root{--e-navy:#253876;--e-teal:#3fa4a9;--e-teal-t:#389ca1;--e-blue:#5578aa;--e-teal-l:#87d7dc;--e-grey:#f5f5f5;--e-tint:#eef8f9;--e-ink:#1c1c1c;--e-text:#5f5f5f;
+ --e-grad:linear-gradient(60deg,#5578aa 0%,#3fa4a9 50%,#87d7dc 100%);--e-sh:0 0 2px 1px rgba(0,0,0,.03),0 4px 14px rgba(0,0,0,.07)}
+body{font-size:16px;line-height:1.6;font-weight:300;color:var(--e-text)}
+strong{font-weight:700;color:var(--e-ink)}
+.wrap{width:auto;max-width:1320px;margin-inline:auto;padding-inline:12px;box-sizing:border-box}
+.section{padding-top:80px;padding-bottom:80px}
+
+/* Header: weiss, 130px, zweizeilig – Logo 164×48 oben links, Hauptnavigation darunter (16px/700 Navy mit Chevron) */
+.site-header{background:#fff;border-bottom:0;box-shadow:0 0 1px rgba(0,0,0,.03),0 2px 8px rgba(0,0,0,.05)}
+.navrow{height:130px;display:grid;grid-template-rows:68px 62px;justify-items:start;align-items:center;gap:0;padding-inline:12px}
+.navrow.wrap{padding-inline:24px}
+.brand{grid-row:1;align-self:end}
+.brand img{width:164px;max-height:48px}
+nav{grid-row:2;gap:34px}
+nav a{color:var(--e-navy);font-size:16px;font-weight:700;padding:12px 0;border-bottom:3px solid transparent;display:inline-flex;align-items:center;gap:8px}
+nav a:after{content:'';width:7px;height:7px;border-right:1.5px solid var(--e-blue);border-bottom:1.5px solid var(--e-blue);transform:rotate(45deg) translateY(-3px)}
+nav a:hover{color:var(--e-navy);border-bottom-color:var(--e-teal)}
+html{scroll-padding-top:150px}
+
+/* Hero: Verlaufsband (60°) mit zentrierter weisser Slab-H1, darunter überlappende weisse Bildkarte (wie Such-Widget) */
+.hero.wrap{background:#fff}
+.hero-image{height:auto;display:grid;justify-items:center;padding:58px 12px 56px;background:var(--e-grad) top/100% 68% no-repeat,var(--e-tint);overflow:visible}
+.hero-shade{display:none}
+.hero-copy{position:static;grid-row:1;transform:none;text-align:center;max-width:900px;margin-bottom:40px}
+.hero h1{color:#fff;font-size:clamp(28px,2.8vw,40px);font-weight:700;line-height:1.2;text-shadow:none;margin-bottom:28px}
+.hero-image>img{grid-row:2;width:min(1296px,100%);height:clamp(300px,34vw,500px);border:12px solid #fff;border-radius:16px;box-shadow:var(--e-sh);background:#fff}
+.hero-image>.hero-maintool-logo{top:auto;bottom:86px;right:max(40px,calc((100% - 1296px)/2 + 36px));width:clamp(150px,13vw,200px)}
+/* Buttons: Navy gefüllt, 12px Radius, 16px/400, Padding 9.6/24; Pfeil als hellblauer Chip rechts (wie „Alle anzeigen | 7“) */
+.button,.footer-cta{border-radius:12px;font-size:16px;font-weight:400;gap:0;padding:0 0 0 24px;height:44px;overflow:hidden;background:var(--e-navy);color:#fff;box-shadow:inset 0 0 2px 1px rgba(0,0,0,.15)}
+.button>span,.footer-cta>span{align-self:stretch;display:flex;align-items:center;margin-left:18px;padding:0 14px;background:var(--e-blue);color:#fff;font-size:14px}
+.button:hover,.footer-cta:hover{background:#1b2a5a}
+
+/* Typografie */
+h1,h2,h3{font-family:'Roboto Slab',Georgia,serif}
+h2{font-size:clamp(26px,2.4vw,34px);font-weight:700;line-height:1.2;color:var(--e-teal-t);margin-bottom:22px}
+h3{font-size:22px;font-weight:700;line-height:1.4;color:var(--e-text)}
+p{margin-bottom:20px}
+.intro-copy p:first-of-type{font-weight:400;font-size:18px;color:var(--e-ink)}
+a{color:var(--e-navy)}
+.more{color:var(--e-navy);font-weight:400;text-decoration:none;display:inline-flex;align-items:center;gap:10px}
+.more:before{content:none}
+.more:after{content:'→';font-size:18px;color:var(--e-navy);transition:transform .2s}
+.more:hover:after{transform:translateX(4px)}
+
+/* Abschnitte: weiss / Hellpetrol (rgba(135,215,220,.15)) / Grau #F5F5F5 */
+.overview,.split-section+.section,.split-section{background:#fff}
+.overview{background:var(--e-tint)}
+#rollen{background:var(--e-grey)}
+#anlagen{background:var(--e-tint)}
+.mobile-section{background:var(--e-grey);border-top:0}
+.clients{background:#fff}
+.intro-visual{background:#fff;border:0;border-radius:0;padding:18px;box-shadow:var(--e-sh)}
+
+/* Kacheln wie Icon-Karten (Karriere): Fläche #F5F5F5 bzw. weiss, eckig, feiner Schatten, Slab-Titel */
+.overview h2{max-width:none;margin-bottom:36px}
+.topic-grid{gap:24px}
+.topic-grid>a{background:#fff;border:0;border-radius:0;box-shadow:var(--e-sh);padding:24px 22px;color:var(--e-text)}
+.topic-grid>a:hover{transform:none;box-shadow:0 0 2px 1px rgba(0,0,0,.04),0 10px 24px rgba(37,56,118,.14)}
+.topic-symbol svg{stroke:var(--e-teal);stroke-width:1.5;width:48px;height:48px}
+.topic-grid h3{font-size:22px;margin:10px 0 8px}
+
+/* Bilder: Screenshot-Karten mit versetzter Petrol-Fläche (wie Teaser „Echte Menschen“) */
+.split figure .image-button{box-shadow:-14px 14px 0 rgba(63,164,169,.28);background:#fff}
+.phone-figure .image-button{box-shadow:none;background:none}
+.video-shell{border-radius:16px}
+figcaption{color:#767676}
+
+/* Listen: Haltestellen-Kreise wie Linienverlauf „Unsere Strecken“ */
+.checks li{padding-left:28px}
+.checks li:before{content:'';top:.35em;width:12px;height:12px;border:2px solid var(--e-text);border-radius:50%;background:#fff}
+
+.detail-pair article{border-top:0;padding:28px 26px;background:var(--e-grey);box-shadow:var(--e-sh)}
+details{border-color:#dcdcdc}
+summary{color:var(--e-navy);font-weight:700}
+
+.clients-head h2{color:var(--e-teal-t)}
+
+/* Footer: #F5F5F5, Überschriften 18px/400 #1C1C1C, Links #5F5F5F; Verlaufs-Leiste unten links */
+footer{position:relative;background:var(--e-grey);border-top:0;color:var(--e-text);padding:48px 0 110px;box-shadow:0 0 2px rgba(0,0,0,.03)}
+footer:after{content:'';position:absolute;left:0;bottom:0;height:43px;width:min(560px,72vw);background:linear-gradient(90deg,#253876,#3fa4a9 70%,#87d7dc);border-radius:0 24px 0 0}
+footer h2{font-family:'Roboto',Arial,sans-serif;font-size:18px;font-weight:400;letter-spacing:0;color:var(--e-ink);margin-bottom:16px}
+footer p{font-size:15px;color:var(--e-text)}
+footer a{color:var(--e-text);text-decoration:none}
+footer a:hover{color:var(--e-navy);text-decoration:underline}
+footer strong{color:var(--e-ink)}
+footer .footer-download{color:var(--e-navy);font-weight:700}
+.footer-cta{color:#fff!important}
+
+/* Passwort-Gate */
+html #gate{background:var(--e-grad)}
+html #gate .gate-card{border-radius:16px;border-bottom:0;box-shadow:var(--e-sh)}
+html #gate .gate-card h1{font-family:'Roboto Slab',Georgia,serif;color:var(--e-teal-t)}
+html #gate .gate-card input{border-radius:12px}
+html #gate .gate-btn{border-radius:12px;font-weight:400;font-size:16px}
+
+@media(max-width:1100px){nav{gap:22px}nav a{font-size:15px}}
+@media(max-width:760px){
+ html{scroll-padding-top:80px}
+ .navrow,.navrow.wrap{height:56px;display:flex;justify-content:space-between;padding-inline:16px}
+ .brand{align-self:center}
+ .brand img{width:120px;max-height:36px}
+ .navtoggle{width:48px;height:42px;border:0;border-radius:10px;background:var(--e-navy);padding:11px 12px;gap:5px}
+ .navtoggle span{background:#fff;height:2px}
+ nav{top:56px;left:0;right:0;background:#fff;padding:0;border:0;box-shadow:0 10px 20px rgba(0,0,0,.12)}
+ nav a{color:var(--e-ink);font-weight:400;font-size:16px;padding:14px 24px;border-bottom:1px solid #e3e3e3;justify-content:space-between}
+ nav a:after{width:9px;height:9px;border-color:var(--e-blue)}
+ .hero-image{padding:32px 12px 36px;background-size:100% 62%,auto}
+ .hero h1{font-size:28px;margin-bottom:22px}
+ .hero-copy{margin-bottom:28px;left:auto;right:auto;bottom:auto}
+ .hero-image>img{height:260px;border-width:8px}
+ .hero-image>.hero-maintool-logo{bottom:56px;right:28px;width:120px}
+ .section{padding-top:56px;padding-bottom:56px}
+ .topic-grid>a{padding:18px 14px}
+ .topic-grid h3{font-size:17px}
+ .detail-pair article{padding:22px 18px}
+ footer{padding-bottom:90px}
+}
+
+/* Feste Vorgaben (Regelwerk §5) – nicht überschreibbar */
+.clients-head{display:block!important}.clients-head h2{grid-column:auto}.client-row{flex-wrap:nowrap!important}
