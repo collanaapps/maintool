@@ -282,5 +282,15 @@ footer .footer-download{font-weight:500}
 }
 .hero.wrap{max-width:none;margin-inline:0;padding-inline:0}
 
+/* Partner-Header: KUMAVISION × collana apps */
+.brand{gap:18px}
+.brand img.cobrand{width:auto;height:54px;max-height:none;object-position:left center}
+.cobrand-x{color:#fff;font-family:'Poppins',sans-serif;font-weight:300;font-size:30px;line-height:1}
+@media(max-width:760px){.brand{gap:10px}.brand img.cobrand{height:36px}.cobrand-x{font-size:20px}}
+
+/* Screenshots ohne Hintergrund/Rahmen – wie das Mobile-App-Bild */
+.intro-visual{background:transparent!important;padding:0!important;box-shadow:none!important}
+.split-section figure .image-button,.reverse figure .image-button{background:transparent!important;box-shadow:none!important;padding:0!important}
+
 /* Feste Vorgaben (Regelwerk §5) – nicht überschreibbar */
 .clients-head{display:block!important}.clients-head h2{grid-column:auto}.client-row{flex-wrap:nowrap!important}
