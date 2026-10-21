@@ -29,7 +29,7 @@ nav a:hover{color:var(--primary);border-bottom-color:var(--primary)}
 .navtoggle{display:none}
 .hero.wrap{width:100%;max-width:none;padding:0}
 .hero-image{height:clamp(440px,46vw,640px);position:relative;overflow:hidden;background:var(--ink)}
-.hero-image>img{width:100%;height:100%;object-fit:cover;object-position:center 45%}
+.hero-image>img{width:100%;height:100%;object-fit:cover;object-position:center 55%}
 .hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,0) 22%,rgba(0,0,0,.5) 55%,rgba(0,0,0,.78))}
 .hero-copy{position:absolute;top:50%;right:7%;left:47%;transform:translateY(-35%)}
 .hero-kicker{display:inline-block;margin:0 0 14px;padding:4px 12px;background:var(--primary);color:var(--on-primary);text-transform:uppercase;letter-spacing:.1em;font-size:13px;font-weight:700;border-radius:var(--r)}
@@ -113,7 +113,7 @@ dialog>img{display:block;margin:auto;max-width:90vw;max-height:82vh;width:auto;h
  .navtoggle span{display:block;background:var(--htx);height:2px;width:100%}
  nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--hbg);padding:12px 4% 20px;flex-direction:column;align-items:stretch;gap:0;border-bottom:3px solid var(--primary);box-shadow:0 8px 16px rgba(0,0,0,.08)}
  nav.open{display:flex}nav a{font-size:15px;padding:13px 0;border-bottom:1px solid var(--hbd)}
- .hero-image{height:520px}.hero-image>img{object-position:60% 50%}
+ .hero-image{height:520px}.hero-image>img{object-position:62% 50%}
  .hero-shade{background:linear-gradient(0deg,rgba(0,0,0,.8) 12%,rgba(0,0,0,.1) 72%)}
  .hero-copy{left:6%;right:6%;top:auto;bottom:7%;transform:none}
  .hero h1{font-size:27px}
