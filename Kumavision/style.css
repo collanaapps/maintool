@@ -292,5 +292,16 @@ footer .footer-download{font-weight:500}
 .intro-visual{background:transparent!important;padding:0!important;box-shadow:none!important}
 .split-section figure .image-button,.reverse figure .image-button{background:transparent!important;box-shadow:none!important;padding:0!important}
 
+/* Feinabstimmung 21.10.: Wortmarken KUMA und collana auf gleicher Höhe, × mittig dazu */
+.brand img.cobrand{position:relative;top:6px}
+.cobrand-x{position:relative;top:-6px}
+/* maintool-Logo im Hero 40 % größer */
+.hero-image>.hero-maintool-logo{width:clamp(238px,21vw,322px)}
+@media(max-width:760px){
+ .brand img.cobrand{height:41px;top:4px}
+ .cobrand-x{top:-3px}
+ .hero-image>.hero-maintool-logo{width:224px}
+}
+
 /* Feste Vorgaben (Regelwerk §5) – nicht überschreibbar */
 .clients-head{display:block!important}.clients-head h2{grid-column:auto}.client-row{flex-wrap:nowrap!important}
