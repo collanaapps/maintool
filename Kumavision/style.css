@@ -307,7 +307,7 @@ footer .footer-download{font-weight:500}
 .partner-section{background:var(--k-grey)}
 .partner-section p{font-size:20px;line-height:1.6}
 .partner-figure{margin:0}
-.partner-figure img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;object-position:70% center}
+.partner-figure img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;object-position:center}
 @media(max-width:760px){.partner-section p{font-size:17px}}
 
 /* Feste Vorgaben (Regelwerk §5) – nicht überschreibbar */
