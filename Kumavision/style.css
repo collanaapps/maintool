@@ -303,5 +303,12 @@ footer .footer-download{font-weight:500}
  .hero-image>.hero-maintool-logo{width:224px}
 }
 
+/* Partner-Abschnitt „Zwei Experten. Ein Ziel." (unter dem Hero) */
+.partner-section{background:var(--k-grey)}
+.partner-section p{font-size:20px;line-height:1.6}
+.partner-figure{margin:0}
+.partner-figure img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;object-position:70% center}
+@media(max-width:760px){.partner-section p{font-size:17px}}
+
 /* Feste Vorgaben (Regelwerk §5) – nicht überschreibbar */
 .clients-head{display:block!important}.clients-head h2{grid-column:auto}.client-row{flex-wrap:nowrap!important}
