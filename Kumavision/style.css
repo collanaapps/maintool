@@ -309,6 +309,7 @@ footer .footer-download{font-weight:500}
 .partner-figure{margin:0}
 .partner-figure img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;object-position:center}
 @media(max-width:760px){.partner-section p{font-size:17px}}
+.partner-cta{margin:34px 0 0}
 
 /* Feste Vorgaben (Regelwerk §5) – nicht überschreibbar */
 .clients-head{display:block!important}.clients-head h2{grid-column:auto}.client-row{flex-wrap:nowrap!important}
